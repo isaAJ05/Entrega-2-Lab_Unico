@@ -107,7 +107,7 @@ public class SOPASTAR extends javax.swing.JFrame {
 
         @Override
         public void paint(Graphics g) {
-            imagen = new ImageIcon(getClass().getResource("\\IMGSP\\outerspace-58.gif")).getImage();
+            imagen = new ImageIcon(getClass().getResource("\\IMGcars\\fondoespacio (1).png")).getImage();
             
             g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
 
