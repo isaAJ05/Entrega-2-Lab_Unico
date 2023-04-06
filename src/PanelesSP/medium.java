@@ -1,4 +1,8 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ */
+package PanelesSP;
 
 import java.awt.Color;
 import java.util.Random;
@@ -9,16 +13,16 @@ import javax.swing.JOptionPane;
  *
  * @author USUARIO
  */
-public class sopaplanetasmedium extends javax.swing.JFrame {
+public class medium extends javax.swing.JPanel {
 
     /**
-     * Creates new form ventana2
+     * Creates new form medium
      */
-    private String user = null;
-    public sopaplanetasmedium(String name) {
+    private String name = null;
+
+    public medium(String user) {
         initComponents();
-        this.setLocationRelativeTo(null);
-        this.user = name;
+        this.name = user;
         int i, j, auxt = 5, auxt2 = 6, auxp = 0, auxp2 = 1, auxv = 4, auxv2 = 5;
         //Matriz de botones [6][6]
         JButton botones[][] = {{boton11, boton12, boton13, boton14, boton15, boton16},
@@ -92,7 +96,6 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
         chulito2.setVisible(false);
         chulito3.setVisible(false);
         chulito4.setVisible(false);
-
     }
 
     /**
@@ -104,8 +107,7 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        chulito6 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        contenido5 = new javax.swing.JPanel();
         boton11 = new javax.swing.JButton();
         boton61 = new javax.swing.JButton();
         boton41 = new javax.swing.JButton();
@@ -154,16 +156,6 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
         boton66 = new javax.swing.JButton();
         boton76 = new javax.swing.JButton();
         boton86 = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        chulito1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        chulito2 = new javax.swing.JLabel();
-        chulito3 = new javax.swing.JLabel();
-        chulito4 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
         sopadeletras = new javax.swing.JLabel();
         salir = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -171,18 +163,25 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
         solucion = new javax.swing.JButton();
         palabrasencontradas = new javax.swing.JLabel();
         instrucciones = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        chulito1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        chulito2 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        chulito3 = new javax.swing.JLabel();
+        chulito4 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
 
-        chulito6.setForeground(new java.awt.Color(255, 0, 0));
-        chulito6.setText("✓");
+        setPreferredSize(new java.awt.Dimension(800, 496));
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jPanel1.setBackground(new java.awt.Color(0, 0, 204));
-        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.setName("STAR GAMES: Sopa de letras Planetas"); // NOI18N
-        jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        contenido5.setBackground(new java.awt.Color(0, 0, 204));
+        contenido5.setName("STAR GAMES: Sopa de letras Planetas"); // NOI18N
+        contenido5.setOpaque(false);
+        contenido5.setPreferredSize(new java.awt.Dimension(800, 496));
+        contenido5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jPanel1MouseMoved(evt);
+                contenido5MouseMoved(evt);
             }
         });
 
@@ -447,95 +446,6 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
             }
         });
 
-        jPanel4.setBackground(new java.awt.Color(102, 102, 255));
-        jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jLabel2.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("PLANETAS");
-
-        chulito1.setForeground(new java.awt.Color(255, 0, 0));
-        chulito1.setText("★");
-
-        jLabel3.setBackground(new java.awt.Color(153, 204, 255));
-        jLabel3.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("TIERRA");
-
-        chulito2.setForeground(new java.awt.Color(255, 0, 0));
-        chulito2.setText("★");
-
-        chulito3.setForeground(new java.awt.Color(255, 0, 0));
-        chulito3.setText("★");
-
-        chulito4.setForeground(new java.awt.Color(255, 0, 0));
-        chulito4.setText("★");
-
-        jLabel10.setBackground(new java.awt.Color(153, 204, 255));
-        jLabel10.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("MARTE");
-
-        jLabel12.setBackground(new java.awt.Color(153, 204, 255));
-        jLabel12.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("VENUS");
-
-        jLabel13.setBackground(new java.awt.Color(153, 204, 255));
-        jLabel13.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("PLUTÓN");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(chulito4)
-                            .addComponent(chulito3)
-                            .addComponent(chulito2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(chulito1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
-                        .addGap(44, 44, 44))))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chulito1)
-                    .addComponent(jLabel3))
-                .addGap(33, 33, 33)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chulito2)
-                    .addComponent(jLabel10))
-                .addGap(33, 33, 33)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chulito3)
-                    .addComponent(jLabel12))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chulito4)
-                    .addComponent(jLabel13))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
         sopadeletras.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 36)); // NOI18N
         sopadeletras.setForeground(new java.awt.Color(255, 255, 255));
         sopadeletras.setText("SOPA DE LETRAS STAR ");
@@ -594,187 +504,256 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(instrucciones)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(pista, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("PLANETAS");
+
+        chulito1.setForeground(new java.awt.Color(255, 0, 0));
+        chulito1.setText("★");
+
+        jLabel3.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("TIERRA");
+
+        chulito2.setForeground(new java.awt.Color(255, 0, 0));
+        chulito2.setText("★");
+
+        jLabel10.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel10.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("MARTE");
+
+        chulito3.setForeground(new java.awt.Color(255, 0, 0));
+        chulito3.setText("★");
+
+        chulito4.setForeground(new java.awt.Color(255, 0, 0));
+        chulito4.setText("★");
+
+        jLabel12.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel12.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("VENUS");
+
+        jLabel13.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel13.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("PLUTÓN");
+
+        javax.swing.GroupLayout contenido5Layout = new javax.swing.GroupLayout(contenido5);
+        contenido5.setLayout(contenido5Layout);
+        contenido5Layout.setHorizontalGroup(
+            contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(instrucciones)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pista, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(solucion)
+                .addGap(219, 219, 219))
+            .addGroup(contenido5Layout.createSequentialGroup()
+                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
+                        .addComponent(boton81, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(solucion)
-                        .addGap(18, 18, 18))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(sopadeletras)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(boton81, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton82, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton83, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton84, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton85, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton86, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(boton11, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton12, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton13, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton14, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton15, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton16, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(boton21, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton22, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton23, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton24, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton25, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton26, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(boton31, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton32, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton33, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton34, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton35, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton36, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(boton61, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton62, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton63, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton64, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton65, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton66, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(boton71, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton72, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton73, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton74, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton75, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boton76, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addComponent(boton51, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(boton52, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(boton53, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(boton54, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(boton55, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(boton56, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(boton41, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(boton42, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(boton43, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(boton44, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(boton45, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(boton46, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(238, 238, 238)
-                                .addComponent(jButton2)
+                        .addComponent(boton82, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton83, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton84, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton85, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton86, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
+                        .addComponent(boton11, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton12, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton13, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton14, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton15, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton16, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
+                        .addComponent(boton21, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton22, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton23, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton24, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton25, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton26, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
+                        .addComponent(boton31, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton32, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton33, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton34, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton35, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton36, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
+                        .addComponent(boton61, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton62, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton63, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton64, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton65, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton66, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
+                        .addComponent(boton71, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton72, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton73, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton74, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton75, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton76, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
+                            .addGap(114, 114, 114)
+                            .addComponent(boton51, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(boton52, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(boton53, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(boton54, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(boton55, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(boton56, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
+                            .addComponent(boton41, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(boton42, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(boton43, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(boton44, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(boton45, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(boton46, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(contenido5Layout.createSequentialGroup()
+                        .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(contenido5Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(salir)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)))
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pista)
-                    .addComponent(solucion)
-                    .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(instrucciones))
-                .addGap(35, 35, 35)
+                                .addComponent(jButton2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(salir)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(contenido5Layout.createSequentialGroup()
+                                .addGap(44, 44, 44)
+                                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(chulito2)
+                                    .addComponent(chulito1)
+                                    .addComponent(chulito3)
+                                    .addComponent(chulito4))
+                                .addGap(18, 18, 18)
+                                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(contenido5Layout.createSequentialGroup()
+                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))))
+                        .addContainerGap(25, Short.MAX_VALUE))
+                    .addGroup(contenido5Layout.createSequentialGroup()
+                        .addGap(59, 59, 59)
+                        .addComponent(jLabel2)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(sopadeletras)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(303, 303, 303))
+        );
+        contenido5Layout.setVerticalGroup(
+            contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(contenido5Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(contenido5Layout.createSequentialGroup()
+                        .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(pista)
+                            .addComponent(solucion)
+                            .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(instrucciones))
+                        .addGap(73, 73, 73))
+                    .addComponent(sopadeletras))
+                .addGap(29, 29, 29)
+                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boton11)
                     .addComponent(boton12)
                     .addComponent(boton13)
                     .addComponent(boton14)
                     .addComponent(boton15)
-                    .addComponent(boton16))
+                    .addComponent(boton16)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boton22)
                     .addComponent(boton23)
                     .addComponent(boton24)
                     .addComponent(boton25)
                     .addComponent(boton26)
-                    .addComponent(boton21))
+                    .addComponent(boton21)
+                    .addComponent(jLabel3)
+                    .addComponent(chulito1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boton32)
                     .addComponent(boton33)
                     .addComponent(boton34)
                     .addComponent(boton35)
                     .addComponent(boton36)
-                    .addComponent(boton31))
+                    .addComponent(boton31)
+                    .addComponent(jLabel10)
+                    .addComponent(chulito2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boton42)
                     .addComponent(boton43)
                     .addComponent(boton44)
                     .addComponent(boton45)
                     .addComponent(boton46)
-                    .addComponent(boton41))
+                    .addComponent(boton41)
+                    .addComponent(jLabel12)
+                    .addComponent(chulito3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(boton56)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(boton56)
+                        .addComponent(jLabel13)
+                        .addComponent(chulito4))
+                    .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(boton51)
                         .addComponent(boton52)
                         .addComponent(boton53)
                         .addComponent(boton54)
                         .addComponent(boton55)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boton61)
                     .addComponent(boton62)
                     .addComponent(boton63)
@@ -782,7 +761,7 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
                     .addComponent(boton65)
                     .addComponent(boton66))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boton72)
                     .addComponent(boton73)
                     .addComponent(boton74)
@@ -790,39 +769,136 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
                     .addComponent(boton76)
                     .addComponent(boton71))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boton86)
                     .addComponent(boton85)
                     .addComponent(boton84)
                     .addComponent(boton83)
                     .addComponent(boton82)
-                    .addComponent(boton81))
-                .addGap(43, 43, 43)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(salir))
-                .addContainerGap(36, Short.MAX_VALUE))
-            .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(boton81)
+                    .addComponent(salir)
+                    .addComponent(jButton2))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(contenido5, javax.swing.GroupLayout.DEFAULT_SIZE, 788, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(contenido5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
+    int MARTE = 0;
+    int cont;
+    private void boton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton11ActionPerformed
+        MARTE += 1;//Si se presiona este boton que representa la letra inicial de MARTE el contador sumara 1
+        if (MARTE == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara MARTE
+            boton11.setBackground(Color.green);//Letra M
+            boton22.setBackground(Color.green);//Letra A
+            boton33.setBackground(Color.green);//Letra R
+            boton44.setBackground(Color.green);//Letra T
+            boton55.setBackground(Color.green);//Letra E
+            //Se volverá visible una estrella al lado de la palabra MARTE en la lista
+            chulito2.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/4");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/4");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/4");
+            } else if (cont == 4) {
+                palabrasencontradas.setText("4/4");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (MARTE == 2 && TIERRA == 2 && VENUS == 2 && PLUTON == 2) {
+            JOptionPane.showMessageDialog(null, "!Qué genio eres " + name + "! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
+        }
+    }//GEN-LAST:event_boton11ActionPerformed
+    int PLUTON = 0;
+    private void boton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton61ActionPerformed
+        PLUTON += 1;//Si se presiona este boton que representa la letra inicial de PLUTON el contador sumara 1
+        if (PLUTON == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara PLUTON
+            boton61.setBackground(Color.green);//Letra P
+            boton62.setBackground(Color.green);//Letra L
+            boton63.setBackground(Color.green);//Letra U
+            boton64.setBackground(Color.green);//Letra T
+            boton65.setBackground(Color.green);//Letra O
+            boton66.setBackground(Color.green);//Letra N
+            //Se volverá visible una estrella al lado de la palabra PLUTON en la lista
+            chulito4.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/4");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/4");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/4");
+            } else if (cont == 4) {
+                palabrasencontradas.setText("4/4");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (MARTE == 2 && TIERRA == 2 && VENUS == 2 && PLUTON == 2) {
+            JOptionPane.showMessageDialog(null, "!Qué genio eres " + name + "! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
+        }
+    }//GEN-LAST:event_boton61ActionPerformed
+    int TIERRA;
+    private void boton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton31ActionPerformed
+        TIERRA += 1;//Si se presiona este boton que representa la letra final de TIERRA el contador sumara 1
+        if (TIERRA == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara TIERRA
+            boton36.setBackground(Color.green);//Letra T
+            boton35.setBackground(Color.green);//Letra I
+            boton34.setBackground(Color.green);//Letra E
+            boton33.setBackground(Color.green);//Letra R
+            boton32.setBackground(Color.green);//Letra R
+            boton31.setBackground(Color.green);//Letra A
+            //Se volverá visible una estrella al lado de la palabra TIERRA en la lista
+            chulito1.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/4");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/4");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/4");
+            } else if (cont == 4) {
+                palabrasencontradas.setText("4/4");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (MARTE == 2 && TIERRA == 2 && VENUS == 2 && PLUTON == 2) {
+            JOptionPane.showMessageDialog(null, "!Qué genio eres " + name + "! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
+        }
+    }//GEN-LAST:event_boton31ActionPerformed
 
+    private void boton81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton81ActionPerformed
 
-    private void jPanel1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPanel1MouseMoved
+    }//GEN-LAST:event_boton81ActionPerformed
+
+    private void boton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton32ActionPerformed
+
+    }//GEN-LAST:event_boton32ActionPerformed
+
+    private void boton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton72ActionPerformed
+
+    }//GEN-LAST:event_boton72ActionPerformed
 
     private void boton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton53ActionPerformed
         // TODO add your handling code here:
@@ -874,7 +950,6 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
 
     private void boton84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton84ActionPerformed
 
-
     }//GEN-LAST:event_boton84ActionPerformed
 
     private void boton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton25ActionPerformed
@@ -914,7 +989,7 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
         if (MARTE == 2 && TIERRA == 2 && VENUS == 2 && PLUTON == 2) {
-            JOptionPane.showMessageDialog(null, "!Qué genio eres "+user+"! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
+            JOptionPane.showMessageDialog(null, "!Qué genio eres " + name + "! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
         }
     }//GEN-LAST:event_boton55ActionPerformed
 
@@ -933,7 +1008,7 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
     private void boton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton26ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_boton26ActionPerformed
-    int TIERRA = 0;
+
     private void boton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton36ActionPerformed
         TIERRA += 1;//Si se presiona este boton que representa la letra inicial de TIERRA el contador sumara 1
         if (TIERRA == 2) {// si vale 2:
@@ -960,10 +1035,10 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
         if (MARTE == 2 && TIERRA == 2 && VENUS == 2 && PLUTON == 2) {
-            JOptionPane.showMessageDialog(null, "!Qué genio eres "+user+"! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
+            JOptionPane.showMessageDialog(null, "!Qué genio eres " + name + "! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
         }
     }//GEN-LAST:event_boton36ActionPerformed
-
+    int VENUS = 0;
     private void boton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton46ActionPerformed
         VENUS += 1;//Si se presiona este boton que representa la letra final de VENUS el contador sumara 1
         if (VENUS == 2) {// si vale 2:
@@ -989,7 +1064,7 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
         if (MARTE == 2 && TIERRA == 2 && VENUS == 2 && PLUTON == 2) {
-            JOptionPane.showMessageDialog(null, "!Qué genio eres "+user+"! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
+            JOptionPane.showMessageDialog(null, "!Qué genio eres " + name + "! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
         }
     }//GEN-LAST:event_boton46ActionPerformed
 
@@ -1023,14 +1098,14 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
         if (MARTE == 2 && TIERRA == 2 && VENUS == 2 && PLUTON == 2) {
-            JOptionPane.showMessageDialog(null, "!Qué genio eres "+user+"! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
+            JOptionPane.showMessageDialog(null, "!Qué genio eres " + name + "! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
         }
     }//GEN-LAST:event_boton66ActionPerformed
 
     private void boton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton76ActionPerformed
 
     }//GEN-LAST:event_boton76ActionPerformed
-    int VENUS = 0;
+
     private void boton86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton86ActionPerformed
         VENUS += 1;//Si se presiona este boton que representa la letra inicial de VENUS el contador sumara 1
         if (VENUS == 2) {// si vale 2:
@@ -1056,80 +1131,65 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
         if (MARTE == 2 && TIERRA == 2 && VENUS == 2 && PLUTON == 2) {
-            JOptionPane.showMessageDialog(null, "!Qué genio eres "+user+"! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
+            JOptionPane.showMessageDialog(null, "!Qué genio eres " + name + "! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
         }
     }//GEN-LAST:event_boton86ActionPerformed
-    int cont;//contador de palabras halladas
-    int MARTE = 0;
-    private void boton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton11ActionPerformed
-        MARTE += 1;//Si se presiona este boton que representa la letra inicial de MARTE el contador sumara 1
-        if (MARTE == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara MARTE
-            boton11.setBackground(Color.green);//Letra M
-            boton22.setBackground(Color.green);//Letra A
-            boton33.setBackground(Color.green);//Letra R
-            boton44.setBackground(Color.green);//Letra T
-            boton55.setBackground(Color.green);//Letra E
-            //Se volverá visible una estrella al lado de la palabra MARTE en la lista
-            chulito2.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/4");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/4");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/4");
-            } else if (cont == 4) {
-                palabrasencontradas.setText("4/4");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (MARTE == 2 && TIERRA == 2 && VENUS == 2 && PLUTON == 2) {
-            JOptionPane.showMessageDialog(null, "!Qué genio eres "+user+"! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
-        }
-    }//GEN-LAST:event_boton11ActionPerformed
-
-    private void boton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton72ActionPerformed
-
-    }//GEN-LAST:event_boton72ActionPerformed
-
-    private void boton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton32ActionPerformed
-
-    }//GEN-LAST:event_boton32ActionPerformed
-
-    private void boton81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton81ActionPerformed
-
-    }//GEN-LAST:event_boton81ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.setVisible(false); //Se volvera invisible o se cerrara
-        JOptionPane.showMessageDialog(null, "𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐀𝐌𝐈𝐄𝐍𝐓𝐎 𝐃𝐄𝐋 𝐉𝐔𝐄𝐆𝐎:\nEste nivel está compuesto por una sopa de letras de dimensiones 8x8 donde encontrarás 6 palabras ocultas"
-                                                +"\nrelacionadas a nombres de planetas del sistema solar."
-                                                +"\nAl lado derecho de la pantalla visualizarás la lista de palabras que debes buscar."
-                                                +"\n𝐏𝐚𝐫𝐚 𝐣𝐮𝐠𝐚𝐫: "
-                                                +"\n  ⭐Busca las letras de las palabras en cualquier dirección: horizontal, vertical o diagonal, en sentido normal"
-                                                +"\n     o inverso."
-                                                + "\n  ⭐Una vez que encuentres una letra de una palabra, selecciona la letra inicial y ultima"
-                                                +"\n      para que el sistema verifique tu elección.\n"
-                                                + "  ⭐Si tu selección es correcta se cambiará el fondo de la palabra en la sopa de letras y aparecerá "
-                                                +"\n      una estrella al lado de la palabra de la lista.\n"
-                                                + "  ⭐Continúa buscando hasta que hayas encontrado todas las palabras de la lista."
-                                                + "\n\n𝐏𝐋𝐔𝐒: Tienes disponible solo 4 PISTAS o puedes revelar la solución de la sopa de letras al seleccionar dicha opción."
-                                                + "\n\n                             ¡𝗗𝗜𝗩𝗜𝗘𝗥𝗧𝗘𝗧𝗘 𝗝𝗨𝗚𝗔𝗡𝗗𝗢 𝗟𝗔 𝗦𝗢𝗣𝗔 𝗗𝗘 𝗟𝗘𝗧𝗥𝗔𝗦 𝗦𝗧𝗔𝗥: 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝗣𝗟𝗔𝗡𝗘𝗧𝗔𝗦!", "STAR GAMES: Sopa de letras STAR", JOptionPane.INFORMATION_MESSAGE);
-        sopaplanetashard hola4 = new sopaplanetashard(user);//Una instancia
-        hola4.setVisible(true);//Se abre uno nuevo
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
-        Principal3 a = new Principal3(user);
-        a.setVisible(true);
-        this.dispose();
+        /**
+         * Principal3 a = new Principal3(name); a.setVisible(true);
+         * this.dispose();
+        *
+         */
     }//GEN-LAST:event_salirActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        contenido5.removeAll();
+        JOptionPane.showMessageDialog(null, "𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐀𝐌𝐈𝐄𝐍𝐓𝐎 𝐃𝐄𝐋 𝐉𝐔𝐄𝐆𝐎:\nEste nivel está compuesto por una sopa de letras de dimensiones 8x8 donde encontrarás 6 palabras ocultas"
+                + "\nrelacionadas a nombres de planetas del sistema solar."
+                + "\nAl lado derecho de la pantalla visualizarás la lista de palabras que debes buscar."
+                + "\n𝐏𝐚𝐫𝐚 𝐣𝐮𝐠𝐚𝐫: "
+                + "\n  ⭐Busca las letras de las palabras en cualquier dirección: horizontal, vertical o diagonal, en sentido normal"
+                + "\n     o inverso."
+                + "\n  ⭐Una vez que encuentres una letra de una palabra, selecciona la letra inicial y ultima"
+                + "\n      para que el sistema verifique tu elección.\n"
+                + "  ⭐Si tu selección es correcta se cambiará el fondo de la palabra en la sopa de letras y aparecerá "
+                + "\n      una estrella al lado de la palabra de la lista.\n"
+                + "  ⭐Continúa buscando hasta que hayas encontrado todas las palabras de la lista."
+                + "\n\n𝐏𝐋𝐔𝐒: Tienes disponible solo 4 PISTAS o puedes revelar la solución de la sopa de letras al seleccionar dicha opción."
+                + "\n\n                             ¡𝗗𝗜𝗩𝗜𝗘𝗥𝗧𝗘𝗧𝗘 𝗝𝗨𝗚𝗔𝗡𝗗𝗢 𝗟𝗔 𝗦𝗢𝗣𝗔 𝗗𝗘 𝗟𝗘𝗧𝗥𝗔𝗦 𝗦𝗧𝗔𝗥: 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝗣𝗟𝗔𝗡𝗘𝗧𝗔𝗦!", "STAR GAMES: Sopa de letras STAR", JOptionPane.INFORMATION_MESSAGE);
+        hard h = new hard(name);
+        h.setSize(800, 496);
+        h.setLocation(0, 0);
+        h.setOpaque(false);
+        contenido5.add(h);
+        contenido5.revalidate();
+        contenido5.repaint();
+    }//GEN-LAST:event_jButton2ActionPerformed
+    int taux = 1, maux = 1, vaux = 1, paux = 1;
+    private void pistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pistaActionPerformed
+        //Para mostrar pistas:
+        //tengo en cuenta si ya el contador de la palabra está lleno ademas creo un auxiliar para cerciorarme de no repetir la palabra si ya la encontraron
+        //la pista consiste en crear un fondo verde en la inicial de la letra de un planeta que no haya encontrado el usuario
+        //psra la palabra urano la pista esta en las dos 2 ultimas letras
+        if (TIERRA != 2 & taux == 1) { //pista letra inicial TIERRA
+            boton36.setBackground(new Color(153, 255, 153));
+            taux = 0;
+        } else if (MARTE != 2 & maux == 1) {//pista letra inicial MARTE
+            boton11.setBackground(new Color(153, 255, 153));
+            maux = 0;
+        } else if (VENUS != 2 & vaux == 1) {//pista letra inicial VENUS
+            boton86.setBackground(new Color(153, 255, 153));
+            vaux = 0;
+        } else if (PLUTON != 2 & paux == 1) {//pista letra inicial PLUTON
+            boton61.setBackground(new Color(153, 255, 153));
+            paux = 0;
+        }
+    }//GEN-LAST:event_pistaActionPerformed
 
     private void solucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solucionActionPerformed
         //Al presionar este boton se podra visualizar la solución de la sopa de letras al ver con un fondo verde las letras de las palabras propuestas al usuario
-        //TIERRA   
+        //TIERRA
         boton36.setBackground(Color.green);//Letra T
         boton35.setBackground(Color.green);//Letra I
         boton34.setBackground(Color.green);//Letra E
@@ -1163,28 +1223,7 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
         chulito3.setVisible(true);
         chulito4.setVisible(true);
 
-
     }//GEN-LAST:event_solucionActionPerformed
-    int taux = 1, maux = 1, vaux = 1, paux = 1;
-    private void pistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pistaActionPerformed
-        //Para mostrar pistas:
-        //tengo en cuenta si ya el contador de la palabra está lleno ademas creo un auxiliar para cerciorarme de no repetir la palabra si ya la encontraron
-        //la pista consiste en crear un fondo verde en la inicial de la letra de un planeta que no haya encontrado el usuario
-        //psra la palabra urano la pista esta en las dos 2 ultimas letras
-        if (TIERRA != 2 & taux == 1) { //pista letra inicial TIERRA
-            boton36.setBackground(new Color(153, 255, 153));
-            taux = 0;
-        } else if (MARTE != 2 & maux == 1) {//pista letra inicial MARTE
-            boton11.setBackground(new Color(153, 255, 153));
-            maux = 0;
-        } else if (VENUS != 2 & vaux == 1) {//pista letra inicial VENUS
-            boton86.setBackground(new Color(153, 255, 153));
-            vaux = 0;
-        } else if (PLUTON != 2 & paux == 1) {//pista letra inicial PLUTON
-            boton61.setBackground(new Color(153, 255, 153));
-            paux = 0;
-        }
-    }//GEN-LAST:event_pistaActionPerformed
 
     private void instruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_instruccionesActionPerformed
         //Mostrar Joption pane de instrucciones
@@ -1203,115 +1242,10 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
                 + "\n\n                             ¡𝗗𝗜𝗩𝗜𝗘𝗥𝗧𝗘𝗧𝗘 𝗝𝗨𝗚𝗔𝗡𝗗𝗢 𝗟𝗔 𝗦𝗢𝗣𝗔 𝗗𝗘 𝗟𝗘𝗧𝗥𝗔𝗦 𝗦𝗧𝗔𝗥: 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝗣𝗟𝗔𝗡𝗘𝗧𝗔𝗦!", "STAR GAMES: Sopa de letras STAR", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_instruccionesActionPerformed
 
-    private void boton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton31ActionPerformed
-        TIERRA += 1;//Si se presiona este boton que representa la letra final de TIERRA el contador sumara 1
-        if (TIERRA == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara TIERRA
-            boton36.setBackground(Color.green);//Letra T
-            boton35.setBackground(Color.green);//Letra I
-            boton34.setBackground(Color.green);//Letra E
-            boton33.setBackground(Color.green);//Letra R
-            boton32.setBackground(Color.green);//Letra R
-            boton31.setBackground(Color.green);//Letra A
-            //Se volverá visible una estrella al lado de la palabra TIERRA en la lista
-            chulito1.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/4");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/4");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/4");
-            } else if (cont == 4) {
-                palabrasencontradas.setText("4/4");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (MARTE == 2 && TIERRA == 2 && VENUS == 2 && PLUTON == 2) {
-            JOptionPane.showMessageDialog(null, "!Qué genio eres "+user+"! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
-        }
-    }//GEN-LAST:event_boton31ActionPerformed
-    int PLUTON = 0;
-    private void boton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton61ActionPerformed
-        PLUTON += 1;//Si se presiona este boton que representa la letra inicial de PLUTON el contador sumara 1
-        if (PLUTON == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara PLUTON
-            boton61.setBackground(Color.green);//Letra P
-            boton62.setBackground(Color.green);//Letra L
-            boton63.setBackground(Color.green);//Letra U
-            boton64.setBackground(Color.green);//Letra T
-            boton65.setBackground(Color.green);//Letra O
-            boton66.setBackground(Color.green);//Letra N
-            //Se volverá visible una estrella al lado de la palabra PLUTON en la lista
-            chulito4.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/4");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/4");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/4");
-            } else if (cont == 4) {
-                palabrasencontradas.setText("4/4");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (MARTE == 2 && TIERRA == 2 && VENUS == 2 && PLUTON == 2) {
-            JOptionPane.showMessageDialog(null, "!Qué genio eres "+user+"! \nHas resuelto el segundo nivel\nPero.. ¿estarás listo para el siguiente?\nPresiona NEXT LEVEL para continuar");
-        }
-    }//GEN-LAST:event_boton61ActionPerformed
+    private void contenido5MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contenido5MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contenido5MouseMoved
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(sopaplanetasmedium.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(sopaplanetasmedium.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(sopaplanetasmedium.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(sopaplanetasmedium.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new sopaplanetasmedium(null).setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton boton11;
@@ -1366,7 +1300,7 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
     private javax.swing.JLabel chulito2;
     private javax.swing.JLabel chulito3;
     private javax.swing.JLabel chulito4;
-    private javax.swing.JLabel chulito6;
+    private javax.swing.JPanel contenido5;
     private javax.swing.JButton instrucciones;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel10;
@@ -1374,16 +1308,10 @@ public class sopaplanetasmedium extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel palabrasencontradas;
     private javax.swing.JButton pista;
     private javax.swing.JButton salir;
     private javax.swing.JButton solucion;
     private javax.swing.JLabel sopadeletras;
     // End of variables declaration//GEN-END:variables
-
-    private String substring(int j, int i) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }
