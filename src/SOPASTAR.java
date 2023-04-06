@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author CHAPARRO
+ * @author USUARIO
  */
 public class SOPASTAR extends javax.swing.JFrame {
 
@@ -31,6 +31,7 @@ public class SOPASTAR extends javax.swing.JFrame {
         i.setOpaque(false);
         this.add(i);
         this.setLocationRelativeTo(null);
+        
         
     }
 
@@ -106,7 +107,8 @@ public class SOPASTAR extends javax.swing.JFrame {
 
         @Override
         public void paint(Graphics g) {
-            imagen = new ImageIcon(getClass().getResource("/IMGcars/fondoespacio (1).png")).getImage();
+            imagen = new ImageIcon(getClass().getResource("\\IMGSP\\outerspace-58.gif")).getImage();
+            
             g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
 
             setOpaque(false);
