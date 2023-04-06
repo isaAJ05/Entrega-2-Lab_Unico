@@ -40,7 +40,7 @@ public class nivel extends javax.swing.JPanel {
         contenido3.setBackground(new java.awt.Color(51, 51, 255));
         contenido3.setOpaque(false);
 
-        jLabel1.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("SELECCIONE LA DIFICULTAD DE JUEGO");
 
@@ -76,30 +76,30 @@ public class nivel extends javax.swing.JPanel {
         contenido3Layout.setHorizontalGroup(
             contenido3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenido3Layout.createSequentialGroup()
-                .addContainerGap(323, Short.MAX_VALUE)
                 .addGroup(contenido3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido3Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(155, 155, 155))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido3Layout.createSequentialGroup()
+                    .addGroup(contenido3Layout.createSequentialGroup()
+                        .addGap(168, 168, 168)
+                        .addComponent(jLabel1))
+                    .addGroup(contenido3Layout.createSequentialGroup()
+                        .addGap(338, 338, 338)
                         .addGroup(contenido3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(hardplanetas, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(MEDIUM)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(hardplanetas, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(286, 286, 286))))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(206, Short.MAX_VALUE))
         );
         contenido3Layout.setVerticalGroup(
             contenido3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenido3Layout.createSequentialGroup()
-                .addGap(116, 116, 116)
+                .addGap(69, 69, 69)
                 .addComponent(jLabel1)
-                .addGap(47, 47, 47)
+                .addGap(67, 67, 67)
                 .addComponent(jButton1)
-                .addGap(27, 27, 27)
+                .addGap(67, 67, 67)
                 .addComponent(MEDIUM)
-                .addGap(26, 26, 26)
+                .addGap(73, 73, 73)
                 .addComponent(hardplanetas)
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

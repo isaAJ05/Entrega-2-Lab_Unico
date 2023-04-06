@@ -8,6 +8,7 @@ import java.awt.Color;
 import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -19,7 +20,6 @@ public class easy extends javax.swing.JPanel {
      * Creates new form easy
      */
     private String name = null;
-
     public easy(String user) {
         initComponents();
         this.name = user;
@@ -447,23 +447,6 @@ public class easy extends javax.swing.JPanel {
                 .addComponent(solucion)
                 .addGap(213, 213, 213))
             .addGroup(contenido4Layout.createSequentialGroup()
-                .addGap(514, 514, 514)
-                .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(contenido4Layout.createSequentialGroup()
-                        .addComponent(chulito3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(37, 37, 37))
-                    .addGroup(contenido4Layout.createSequentialGroup()
-                        .addComponent(chulito2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(contenido4Layout.createSequentialGroup()
-                        .addComponent(chulito1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(37, 37, 37))
-            .addGroup(contenido4Layout.createSequentialGroup()
                 .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(contenido4Layout.createSequentialGroup()
                         .addGap(132, 132, 132)
@@ -495,20 +478,6 @@ public class easy extends javax.swing.JPanel {
                         .addGap(131, 131, 131)
                         .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(contenido4Layout.createSequentialGroup()
-                                .addComponent(boton71, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton72, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton73, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton74, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton75, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(77, 77, 77)
-                                .addComponent(siguiente)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(salir))
-                            .addGroup(contenido4Layout.createSequentialGroup()
                                 .addComponent(boton11, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(boton12, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -531,16 +500,6 @@ public class easy extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(boton45, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(contenido4Layout.createSequentialGroup()
-                                .addComponent(boton51, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton52, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton53, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton54, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton55, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(contenido4Layout.createSequentialGroup()
                                 .addComponent(boton61, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(boton62, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -549,8 +508,51 @@ public class easy extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(boton64, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton65, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(boton65, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(contenido4Layout.createSequentialGroup()
+                                .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, contenido4Layout.createSequentialGroup()
+                                        .addComponent(boton51, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton52, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton53, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton54, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton55, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(contenido4Layout.createSequentialGroup()
+                                        .addComponent(boton71, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton72, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton73, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton74, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton75, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(77, 77, 77)
+                                        .addComponent(siguiente)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(salir)))))
                 .addContainerGap(110, Short.MAX_VALUE))
+            .addGroup(contenido4Layout.createSequentialGroup()
+                .addGap(514, 514, 514)
+                .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(contenido4Layout.createSequentialGroup()
+                        .addComponent(chulito3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(37, 37, 37))
+                    .addGroup(contenido4Layout.createSequentialGroup()
+                        .addComponent(chulito2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(contenido4Layout.createSequentialGroup()
+                        .addComponent(chulito1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(37, 37, 37))
         );
         contenido4Layout.setVerticalGroup(
             contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -574,6 +576,13 @@ public class easy extends javax.swing.JPanel {
                 .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(contenido4Layout.createSequentialGroup()
                         .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(boton11)
+                            .addComponent(boton12)
+                            .addComponent(boton13)
+                            .addComponent(boton14)
+                            .addComponent(boton15))
+                        .addGap(6, 6, 6)
+                        .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(boton24)
                             .addComponent(boton23)
                             .addComponent(boton22)
@@ -587,12 +596,13 @@ public class easy extends javax.swing.JPanel {
                             .addComponent(boton34)
                             .addComponent(boton35))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(boton41)
-                            .addComponent(boton43)
-                            .addComponent(boton44)
-                            .addComponent(boton45)
-                            .addComponent(boton42))
+                            .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(boton43)
+                                .addComponent(boton44)
+                                .addComponent(boton45)
+                                .addComponent(boton42)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(boton51)
@@ -609,13 +619,7 @@ public class easy extends javax.swing.JPanel {
                             .addComponent(boton65))
                         .addGap(10, 10, 10))
                     .addGroup(contenido4Layout.createSequentialGroup()
-                        .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(boton15)
-                            .addComponent(boton14)
-                            .addComponent(boton13)
-                            .addComponent(boton12)
-                            .addComponent(boton11)
-                            .addComponent(jLabel2))
+                        .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(chulito1)
@@ -653,41 +657,110 @@ public class easy extends javax.swing.JPanel {
             .addComponent(contenido4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
-    int cont;
-    int venus = 0;
-    private void boton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton11ActionPerformed
-        venus += 1;//Si se presiona este boton que representa la letra inicial de VENUS el contador sumara 1
-        if (venus == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara VENUS
-            boton11.setBackground(Color.green);//Letra V
-            boton12.setBackground(Color.green);//Letra E
-            boton13.setBackground(Color.green);//Letra N
-            boton14.setBackground(Color.green);//Letra U
-            boton15.setBackground(Color.green);//Letra S
-            //Se volverá visible una estrella al lado de la palabra VENUS en la lista
-            chulito3.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/3");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/3");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/3");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (venus == 2 && tierra == 2 && ceres == 2) {
-            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
-        }
-    }//GEN-LAST:event_boton11ActionPerformed
 
-    private void boton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton61ActionPerformed
+    private void contenido4MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contenido4MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contenido4MouseMoved
 
-    }//GEN-LAST:event_boton61ActionPerformed
-    int ceres = 0;
-    private void boton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton21ActionPerformed
-        ceres += 1;//Si se presiona este boton que representa la letra inicial de CERES el contador sumara 1
+    private void pistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pistaActionPerformed
+        //Para mostrar pistas:
+        //tengo en cuenta si ya el contador de la palabra está lleno ademas creo un auxiliar para cerciorarme de no repetir la palabra si ya la encontraron
+        //la pista consiste en crear un fondo verde en la inicial de la letra de un planeta que no haya encontrado el usuario
+        //psra la palabra urano la pista esta en las dos 2 ultimas letras
+        if (tierra != 2 & taux == 1) { //pista letra inicial TIERRA
+            boton73.setBackground(new Color(153, 255, 153));
+            taux = 0;
+        } else if (ceres != 2 & caux == 1) {//pista letra inicial CERES
+            boton21.setBackground(new Color(153, 255, 153));
+            caux = 0;
+        } else if (venus != 2 & vaux == 1) {//pista letra inicial VENUS
+            boton11.setBackground(new Color(153, 255, 153));
+            vaux = 0;
+        }
+    }//GEN-LAST:event_pistaActionPerformed
+
+    private void instruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_instruccionesActionPerformed
+        //Mostrar Joption pane de instrucciones
+        JOptionPane.showMessageDialog(null, "𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐀𝐌𝐈𝐄𝐍𝐓𝐎 𝐃𝐄𝐋 𝐉𝐔𝐄𝐆𝐎:\nEste nivel está compuesto por una sopa de letras de dimensiones 7x5 donde encontrarás 3 palabras ocultas"
+            + "\nrelacionadas a nombres de planetas del sistema solar."
+            + "\nAl lado derecho de la pantalla visualizarás la lista de palabras que debes buscar."
+            + "\n𝐏𝐚𝐫𝐚 𝐣𝐮𝐠𝐚𝐫: "
+            + "\n  ⭐Busca las letras de las palabras en cualquier dirección: horizontal, vertical o diagonal, en sentido normal"
+            + "\n     o inverso."
+            + "\n  ⭐Una vez que encuentres una letra de una palabra, selecciona la letra inicial y ultima"
+            + "\n      para que el sistema verifique tu elección.\n"
+            + "  ⭐Si tu selección es correcta se cambiará el fondo de la palabra en la sopa de letras y aparecerá "
+            + "\n      una estrella al lado de la palabra de la lista.\n"
+            + "  ⭐Continúa buscando hasta que hayas encontrado todas las palabras de la lista."
+            + "\n\n𝐏𝐋𝐔𝐒: Si lo deseas puedes pedir pistas o revelar la solución de la sopa de letras al seleccionar dichas opciones."
+            + "\n\n                             ¡𝗗𝗜𝗩𝗜𝗘𝗥𝗧𝗘𝗧𝗘 𝗝𝗨𝗚𝗔𝗡𝗗𝗢 𝗟𝗔 𝗦𝗢𝗣𝗔 𝗗𝗘 𝗟𝗘𝗧𝗥𝗔𝗦 𝗦𝗧𝗔𝗥: 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝗣𝗟𝗔𝗡𝗘𝗧𝗔𝗦!", "STAR GAMES: Sopa de letras STAR", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_instruccionesActionPerformed
+
+    private void solucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solucionActionPerformed
+        //Al presionar este boton se podra visualizar la solución de la sopa de letras al ver con un fondo verde las letras de las palabras propuestas al usuario
+        //TIERRA
+        boton73.setBackground(Color.green);//Letra T
+        boton63.setBackground(Color.green);//Letra I
+        boton53.setBackground(Color.green);//Letra E
+        boton43.setBackground(Color.green);//Letra R
+        boton33.setBackground(Color.green);//Letra R
+        boton23.setBackground(Color.green);//Letra A
+        //CERES
+        boton21.setBackground(Color.green);//Letra C
+        boton32.setBackground(Color.green);//Letra E
+        boton43.setBackground(Color.green);//Letra R
+        boton54.setBackground(Color.green);//Letra E
+        boton65.setBackground(Color.green);//Letra S
+        //VENUS
+        boton11.setBackground(Color.green);//Letra V
+        boton12.setBackground(Color.green);//Letra E
+        boton13.setBackground(Color.green);//Letra N
+        boton14.setBackground(Color.green);//Letra U
+        boton15.setBackground(Color.green);//Letra S
+
+        //MOSTRAR PALABRAS ENCONTRADAS
+        palabrasencontradas.setText("3/3");
+        //MOSTRAR ESTRELLAS (CHULITOS)
+        chulito1.setVisible(true);
+        chulito2.setVisible(true);
+        chulito3.setVisible(true);
+    }//GEN-LAST:event_solucionActionPerformed
+
+    private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
+        contenido4.removeAll();
+        JOptionPane.showMessageDialog(null, "𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐀𝐌𝐈𝐄𝐍𝐓𝐎 𝐃𝐄𝐋 𝐉𝐔𝐄𝐆𝐎:\nEste nivel está compuesto por una sopa de letras de dimensiones 8x6 donde encontrarás 4 palabras ocultas"
+            + "\nrelacionadas a nombres de planetas del sistema solar."
+            + "\nAl lado derecho de la pantalla visualizarás la lista de palabras que debes buscar."
+            + "\n𝐏𝐚𝐫𝐚 𝐣𝐮𝐠𝐚𝐫: "
+            + "\n  ⭐Busca las letras de las palabras en cualquier dirección: horizontal, vertical o diagonal, en sentido normal"
+            + "\n     o inverso."
+            + "\n  ⭐Una vez que encuentres una letra de una palabra, selecciona la letra inicial y ultima"
+            + "\n      para que el sistema verifique tu elección.\n"
+            + "  ⭐Si tu selección es correcta se cambiará el fondo de la palabra en la sopa de letras y aparecerá "
+            + "\n      una estrella al lado de la palabra de la lista.\n"
+            + "  ⭐Continúa buscando hasta que hayas encontrado todas las palabras de la lista."
+            + "\n\n𝐏𝐋𝐔𝐒: Si lo deseas puedes pedir pistas o revelar la solución de la sopa de letras al seleccionar dichas opciones."
+            + "\n\n                             ¡𝗗𝗜𝗩𝗜𝗘𝗥𝗧𝗘𝗧𝗘 𝗝𝗨𝗚𝗔𝗡𝗗𝗢 𝗟𝗔 𝗦𝗢𝗣𝗔 𝗗𝗘 𝗟𝗘𝗧𝗥𝗔𝗦 𝗦𝗧𝗔𝗥: 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝗣𝗟𝗔𝗡𝗘𝗧𝗔𝗦!", "STAR GAMES: Sopa de letras STAR", JOptionPane.INFORMATION_MESSAGE);
+        medium m = new medium(name);
+        m.setSize(800, 496);
+        m.setLocation(0, 0);
+        m.setOpaque(false);
+        contenido4.add(m);
+        contenido4.revalidate();
+        contenido4.repaint();
+    }//GEN-LAST:event_siguienteActionPerformed
+
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+        this.setVisible(false);
+
+    }//GEN-LAST:event_salirActionPerformed
+
+    private void boton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton75ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton75ActionPerformed
+
+    private void boton65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton65ActionPerformed
+        ceres += 1;//Si se presiona este boton que representa la letra final de CERES el contador sumara 1
         if (ceres == 2) {// si vale 2:
             //se obtendra un color verde en el fondo de los botones que contienen las letras de la palabra CERES
             boton21.setBackground(Color.green);//Letra C
@@ -711,32 +784,59 @@ public class easy extends javax.swing.JPanel {
         if (venus == 2 && tierra == 2 && ceres == 2) {
             JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
         }
-    }//GEN-LAST:event_boton21ActionPerformed
+    }//GEN-LAST:event_boton65ActionPerformed
 
-    private void boton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton31ActionPerformed
+    private void boton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton55ActionPerformed
 
-    }//GEN-LAST:event_boton31ActionPerformed
+    }//GEN-LAST:event_boton55ActionPerformed
 
-    private void boton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton32ActionPerformed
+    private void boton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton45ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton45ActionPerformed
 
-    }//GEN-LAST:event_boton32ActionPerformed
+    private void boton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton35ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton35ActionPerformed
 
-    private void boton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton72ActionPerformed
+    private void boton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton25ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton25ActionPerformed
 
-    }//GEN-LAST:event_boton72ActionPerformed
-    int tierra = 0;
-    private void boton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton23ActionPerformed
-        tierra += 1;//Si se presiona este boton que representa la letra final de TIERRA el contador sumara 1
-        if (tierra == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palabra TIERRA
-            boton73.setBackground(Color.green);//Letra T
-            boton63.setBackground(Color.green);//Letra I
-            boton53.setBackground(Color.green);//Letra E
-            boton43.setBackground(Color.green);//Letra R
-            boton33.setBackground(Color.green);//Letra R
-            boton23.setBackground(Color.green);//Letra A
-            //Se volverá visible una estrella al lado de la palabra TIERRA en la lista
-            chulito1.setVisible(true);
+    private void boton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton74ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton74ActionPerformed
+
+    private void boton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton64ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton64ActionPerformed
+
+    private void boton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton54ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton54ActionPerformed
+
+    private void boton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton34ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton34ActionPerformed
+
+    private void boton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton44ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton44ActionPerformed
+
+    private void boton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton24ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton24ActionPerformed
+
+    private void boton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton15ActionPerformed
+        venus += 1;//Si se presiona este boton que representa la letra final de VENUS el contador sumara 1
+        if (venus == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara VENUS
+            boton11.setBackground(Color.green);//Letra V
+            boton12.setBackground(Color.green);//Letra E
+            boton13.setBackground(Color.green);//Letra N
+            boton14.setBackground(Color.green);//Letra U
+            boton15.setBackground(Color.green);//Letra S
+            //Se volverá visible una estrella al lado de la palabra VENUS en la lista
+            chulito3.setVisible(true);
             //Para contabilizar palabras halladas y mostrarlas al usuario
             cont += 1;// cada palabra hallada se le suma 1 al contador
             if (cont == 1) {
@@ -749,13 +849,13 @@ public class easy extends javax.swing.JPanel {
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
         if (venus == 2 && tierra == 2 && ceres == 2) {
-            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
+            JOptionPane.showMessageDialog(null, "!Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
         }
-    }//GEN-LAST:event_boton23ActionPerformed
+    }//GEN-LAST:event_boton15ActionPerformed
 
-    private void boton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton53ActionPerformed
+    private void boton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton14ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_boton53ActionPerformed
+    }//GEN-LAST:event_boton14ActionPerformed
 
     private void boton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton73ActionPerformed
         tierra += 1;//Si se presiona este boton que representa la letra inicial de TIERRA el contador sumara 1
@@ -785,21 +885,22 @@ public class easy extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_boton73ActionPerformed
 
-    private void boton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton14ActionPerformed
+    private void boton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton53ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_boton14ActionPerformed
+    }//GEN-LAST:event_boton53ActionPerformed
 
-    private void boton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton15ActionPerformed
-        venus += 1;//Si se presiona este boton que representa la letra final de VENUS el contador sumara 1
-        if (venus == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara VENUS
-            boton11.setBackground(Color.green);//Letra V
-            boton12.setBackground(Color.green);//Letra E
-            boton13.setBackground(Color.green);//Letra N
-            boton14.setBackground(Color.green);//Letra U
-            boton15.setBackground(Color.green);//Letra S
-            //Se volverá visible una estrella al lado de la palabra VENUS en la lista
-            chulito3.setVisible(true);
+    private void boton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton23ActionPerformed
+        tierra += 1;//Si se presiona este boton que representa la letra final de TIERRA el contador sumara 1
+        if (tierra == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palabra TIERRA
+            boton73.setBackground(Color.green);//Letra T
+            boton63.setBackground(Color.green);//Letra I
+            boton53.setBackground(Color.green);//Letra E
+            boton43.setBackground(Color.green);//Letra R
+            boton33.setBackground(Color.green);//Letra R
+            boton23.setBackground(Color.green);//Letra A
+            //Se volverá visible una estrella al lado de la palabra TIERRA en la lista
+            chulito1.setVisible(true);
             //Para contabilizar palabras halladas y mostrarlas al usuario
             cont += 1;// cada palabra hallada se le suma 1 al contador
             if (cont == 1) {
@@ -812,52 +913,24 @@ public class easy extends javax.swing.JPanel {
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
         if (venus == 2 && tierra == 2 && ceres == 2) {
-            JOptionPane.showMessageDialog(null, "!Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
+            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
         }
-    }//GEN-LAST:event_boton15ActionPerformed
+    }//GEN-LAST:event_boton23ActionPerformed
 
-    private void boton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton24ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton24ActionPerformed
+    private void boton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton72ActionPerformed
 
-    private void boton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton44ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton44ActionPerformed
+    }//GEN-LAST:event_boton72ActionPerformed
 
-    private void boton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton34ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton34ActionPerformed
+    private void boton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton32ActionPerformed
 
-    private void boton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton54ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton54ActionPerformed
+    }//GEN-LAST:event_boton32ActionPerformed
 
-    private void boton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton64ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton64ActionPerformed
+    private void boton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton31ActionPerformed
 
-    private void boton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton74ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton74ActionPerformed
+    }//GEN-LAST:event_boton31ActionPerformed
 
-    private void boton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton25ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton25ActionPerformed
-
-    private void boton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton35ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton35ActionPerformed
-
-    private void boton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton45ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton45ActionPerformed
-
-    private void boton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton55ActionPerformed
-
-    }//GEN-LAST:event_boton55ActionPerformed
-
-    private void boton65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton65ActionPerformed
-        ceres += 1;//Si se presiona este boton que representa la letra final de CERES el contador sumara 1
+    private void boton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton21ActionPerformed
+        ceres += 1;//Si se presiona este boton que representa la letra inicial de CERES el contador sumara 1
         if (ceres == 2) {// si vale 2:
             //se obtendra un color verde en el fondo de los botones que contienen las letras de la palabra CERES
             boton21.setBackground(Color.green);//Letra C
@@ -881,110 +954,40 @@ public class easy extends javax.swing.JPanel {
         if (venus == 2 && tierra == 2 && ceres == 2) {
             JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
         }
-    }//GEN-LAST:event_boton65ActionPerformed
+    }//GEN-LAST:event_boton21ActionPerformed
 
-    private void boton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton75ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton75ActionPerformed
+    private void boton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton61ActionPerformed
 
-    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+    }//GEN-LAST:event_boton61ActionPerformed
 
-
-    }//GEN-LAST:event_salirActionPerformed
-
-    private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
-        contenido4.removeAll();
-        JOptionPane.showMessageDialog(null, "𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐀𝐌𝐈𝐄𝐍𝐓𝐎 𝐃𝐄𝐋 𝐉𝐔𝐄𝐆𝐎:\nEste nivel está compuesto por una sopa de letras de dimensiones 8x6 donde encontrarás 4 palabras ocultas"
-                + "\nrelacionadas a nombres de planetas del sistema solar."
-                + "\nAl lado derecho de la pantalla visualizarás la lista de palabras que debes buscar."
-                + "\n𝐏𝐚𝐫𝐚 𝐣𝐮𝐠𝐚𝐫: "
-                + "\n  ⭐Busca las letras de las palabras en cualquier dirección: horizontal, vertical o diagonal, en sentido normal"
-                + "\n     o inverso."
-                + "\n  ⭐Una vez que encuentres una letra de una palabra, selecciona la letra inicial y ultima"
-                + "\n      para que el sistema verifique tu elección.\n"
-                + "  ⭐Si tu selección es correcta se cambiará el fondo de la palabra en la sopa de letras y aparecerá "
-                + "\n      una estrella al lado de la palabra de la lista.\n"
-                + "  ⭐Continúa buscando hasta que hayas encontrado todas las palabras de la lista."
-                + "\n\n𝐏𝐋𝐔𝐒: Si lo deseas puedes pedir pistas o revelar la solución de la sopa de letras al seleccionar dichas opciones."
-                + "\n\n                             ¡𝗗𝗜𝗩𝗜𝗘𝗥𝗧𝗘𝗧𝗘 𝗝𝗨𝗚𝗔𝗡𝗗𝗢 𝗟𝗔 𝗦𝗢𝗣𝗔 𝗗𝗘 𝗟𝗘𝗧𝗥𝗔𝗦 𝗦𝗧𝗔𝗥: 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝗣𝗟𝗔𝗡𝗘𝗧𝗔𝗦!", "STAR GAMES: Sopa de letras STAR", JOptionPane.INFORMATION_MESSAGE);
-        medium m = new medium(name);
-        m.setSize(800, 496);
-        m.setLocation(0, 0);
-        m.setOpaque(false);
-        contenido4.add(m);
-        contenido4.revalidate();
-        contenido4.repaint();
-    }//GEN-LAST:event_siguienteActionPerformed
-    int taux = 1, caux = 1, vaux = 1;
-    private void solucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solucionActionPerformed
-        //Al presionar este boton se podra visualizar la solución de la sopa de letras al ver con un fondo verde las letras de las palabras propuestas al usuario
-        //TIERRA
-        boton73.setBackground(Color.green);//Letra T
-        boton63.setBackground(Color.green);//Letra I
-        boton53.setBackground(Color.green);//Letra E
-        boton43.setBackground(Color.green);//Letra R
-        boton33.setBackground(Color.green);//Letra R
-        boton23.setBackground(Color.green);//Letra A
-        //CERES
-        boton21.setBackground(Color.green);//Letra C
-        boton32.setBackground(Color.green);//Letra E
-        boton43.setBackground(Color.green);//Letra R
-        boton54.setBackground(Color.green);//Letra E
-        boton65.setBackground(Color.green);//Letra S
-        //VENUS
-        boton11.setBackground(Color.green);//Letra V
-        boton12.setBackground(Color.green);//Letra E
-        boton13.setBackground(Color.green);//Letra N
-        boton14.setBackground(Color.green);//Letra U
-        boton15.setBackground(Color.green);//Letra S
-
-        //MOSTRAR PALABRAS ENCONTRADAS
-        palabrasencontradas.setText("3/3");
-        //MOSTRAR ESTRELLAS (CHULITOS)
-        chulito1.setVisible(true);
-        chulito2.setVisible(true);
-        chulito3.setVisible(true);
-
-    }//GEN-LAST:event_solucionActionPerformed
-
-    private void instruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_instruccionesActionPerformed
-        //Mostrar Joption pane de instrucciones
-        JOptionPane.showMessageDialog(null, "𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐀𝐌𝐈𝐄𝐍𝐓𝐎 𝐃𝐄𝐋 𝐉𝐔𝐄𝐆𝐎:\nEste nivel está compuesto por una sopa de letras de dimensiones 7x5 donde encontrarás 3 palabras ocultas"
-                + "\nrelacionadas a nombres de planetas del sistema solar."
-                + "\nAl lado derecho de la pantalla visualizarás la lista de palabras que debes buscar."
-                + "\n𝐏𝐚𝐫𝐚 𝐣𝐮𝐠𝐚𝐫: "
-                + "\n  ⭐Busca las letras de las palabras en cualquier dirección: horizontal, vertical o diagonal, en sentido normal"
-                + "\n     o inverso."
-                + "\n  ⭐Una vez que encuentres una letra de una palabra, selecciona la letra inicial y ultima"
-                + "\n      para que el sistema verifique tu elección.\n"
-                + "  ⭐Si tu selección es correcta se cambiará el fondo de la palabra en la sopa de letras y aparecerá "
-                + "\n      una estrella al lado de la palabra de la lista.\n"
-                + "  ⭐Continúa buscando hasta que hayas encontrado todas las palabras de la lista."
-                + "\n\n𝐏𝐋𝐔𝐒: Si lo deseas puedes pedir pistas o revelar la solución de la sopa de letras al seleccionar dichas opciones."
-                + "\n\n                             ¡𝗗𝗜𝗩𝗜𝗘𝗥𝗧𝗘𝗧𝗘 𝗝𝗨𝗚𝗔𝗡𝗗𝗢 𝗟𝗔 𝗦𝗢𝗣𝗔 𝗗𝗘 𝗟𝗘𝗧𝗥𝗔𝗦 𝗦𝗧𝗔𝗥: 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝗣𝗟𝗔𝗡𝗘𝗧𝗔𝗦!", "STAR GAMES: Sopa de letras STAR", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_instruccionesActionPerformed
-
-    private void contenido4MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contenido4MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_contenido4MouseMoved
-
-    private void pistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pistaActionPerformed
-        //Para mostrar pistas:
-        //tengo en cuenta si ya el contador de la palabra está lleno ademas creo un auxiliar para cerciorarme de no repetir la palabra si ya la encontraron
-        //la pista consiste en crear un fondo verde en la inicial de la letra de un planeta que no haya encontrado el usuario
-        //psra la palabra urano la pista esta en las dos 2 ultimas letras
-        if (tierra != 2 & taux == 1) { //pista letra inicial TIERRA
-            boton73.setBackground(new Color(153, 255, 153));
-            taux = 0;
-        } else if (ceres != 2 & caux == 1) {//pista letra inicial CERES
-            boton21.setBackground(new Color(153, 255, 153));
-            caux = 0;
-        } else if (venus != 2 & vaux == 1) {//pista letra inicial VENUS
-            boton11.setBackground(new Color(153, 255, 153));
-            vaux = 0;
+    private void boton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton11ActionPerformed
+        venus += 1;//Si se presiona este boton que representa la letra inicial de VENUS el contador sumara 1
+        if (venus == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara VENUS
+            boton11.setBackground(Color.green);//Letra V
+            boton12.setBackground(Color.green);//Letra E
+            boton13.setBackground(Color.green);//Letra N
+            boton14.setBackground(Color.green);//Letra U
+            boton15.setBackground(Color.green);//Letra S
+            //Se volverá visible una estrella al lado de la palabra VENUS en la lista
+            chulito3.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/3");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/3");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/3");
+            }
         }
-    }//GEN-LAST:event_pistaActionPerformed
-
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (venus == 2 && tierra == 2 && ceres == 2) {
+            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
+        }
+    }//GEN-LAST:event_boton11ActionPerformed
+    int cont;
+    int venus = 0;    int ceres = 0;    int tierra = 0;    int taux = 1, caux = 1, vaux = 1;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton boton11;
