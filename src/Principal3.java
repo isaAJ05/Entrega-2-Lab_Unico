@@ -36,7 +36,7 @@ public class Principal3 extends javax.swing.JFrame {
         panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         red.setBackground(new java.awt.Color(255, 0, 0));
-        red.setFont(new java.awt.Font("Swis721 Blk BT", 1, 14)); // NOI18N
+        red.setFont(new java.awt.Font("Swis721 BT", 1, 14)); // NOI18N
         red.setForeground(new java.awt.Color(0, 0, 0));
         red.setIcon(new javax.swing.ImageIcon(getClass().getResource("/general/CartaBTN.png"))); // NOI18N
         red.setBorderPainted(false);
@@ -68,26 +68,45 @@ public class Principal3 extends javax.swing.JFrame {
         magenta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         magenta.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/general/CarretaBTN80.png"))); // NOI18N
         magenta.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/general/CarreraBTN95.png"))); // NOI18N
+        magenta.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        magenta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                magentaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                magentaMouseExited(evt);
+            }
+        });
         magenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 magentaActionPerformed(evt);
             }
         });
-        panel.add(magenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 110, 100));
+        panel.add(magenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, 160, 130));
 
         green.setBackground(new java.awt.Color(0, 255, 51));
         green.setIcon(new javax.swing.ImageIcon(getClass().getResource("/general/RompeCabezaBTN.png"))); // NOI18N
         green.setBorderPainted(false);
         green.setContentAreaFilled(false);
         green.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        green.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         green.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/general/Rompecabezasbtn80.png"))); // NOI18N
         green.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/general/RompecabezaBTN95.png"))); // NOI18N
+        green.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        green.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                greenMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                greenMouseExited(evt);
+            }
+        });
         green.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 greenActionPerformed(evt);
             }
         });
-        panel.add(green, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 100, 100));
+        panel.add(green, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 150, 110));
 
         blue.setBackground(new java.awt.Color(0, 0, 255));
         blue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/general/SopadeLetrasBTN.png"))); // NOI18N
@@ -96,12 +115,22 @@ public class Principal3 extends javax.swing.JFrame {
         blue.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         blue.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/general/SopadeletrasBTn80.png"))); // NOI18N
         blue.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/general/SopadeletrasBTN95.png"))); // NOI18N
+        blue.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        blue.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        blue.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                blueMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                blueMouseExited(evt);
+            }
+        });
         blue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 blueActionPerformed(evt);
             }
         });
-        panel.add(blue, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 100, 100));
+        panel.add(blue, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 160, 140));
 
         cyan.setBackground(new java.awt.Color(0, 255, 255));
         cyan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/general/SerpienteEscaleraBTN.png"))); // NOI18N
@@ -110,12 +139,21 @@ public class Principal3 extends javax.swing.JFrame {
         cyan.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cyan.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/general/sepientesecaleraBTN80.png"))); // NOI18N
         cyan.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/general/EscaleraSerpienteBTN95.png"))); // NOI18N
+        cyan.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        cyan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cyanMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                cyanMouseExited(evt);
+            }
+        });
         cyan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cyanActionPerformed(evt);
             }
         });
-        panel.add(cyan, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, 110, 100));
+        panel.add(cyan, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 160, 130));
 
         volver.setBackground(new java.awt.Color(0, 0, 102));
         volver.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
@@ -192,12 +230,44 @@ public class Principal3 extends javax.swing.JFrame {
     }//GEN-LAST:event_volverActionPerformed
 
     private void redMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_redMouseEntered
-        red.setText("Black Jack");
+        red.setText("Black Jack");// cuando entra al boton se ve el texto (nombre del botón)
     }//GEN-LAST:event_redMouseEntered
 
     private void redMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_redMouseExited
-        red.setText("");
+        red.setText(""); // Si no esta el mouse, no se ve el texto
     }//GEN-LAST:event_redMouseExited
+ // Lo mismo para el resto de los botones
+    private void magentaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_magentaMouseEntered
+        magenta.setText("Carrera de Naves");
+    }//GEN-LAST:event_magentaMouseEntered
+
+    private void magentaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_magentaMouseExited
+        magenta.setText("");
+    }//GEN-LAST:event_magentaMouseExited
+
+    private void cyanMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cyanMouseEntered
+        cyan.setText("Escaleras y Serpintes");
+    }//GEN-LAST:event_cyanMouseEntered
+
+    private void cyanMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cyanMouseExited
+        cyan.setText("");
+    }//GEN-LAST:event_cyanMouseExited
+
+    private void blueMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_blueMouseEntered
+        blue.setText("Escaleras y Serpintes");
+    }//GEN-LAST:event_blueMouseEntered
+
+    private void blueMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_blueMouseExited
+        blue.setText("");
+    }//GEN-LAST:event_blueMouseExited
+
+    private void greenMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_greenMouseEntered
+        green.setText("Escaleras y Serpintes");
+    }//GEN-LAST:event_greenMouseEntered
+
+    private void greenMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_greenMouseExited
+        green.setText("");
+    }//GEN-LAST:event_greenMouseExited
     @Override
     public void paint(Graphics g) {
         super.paint(g);
