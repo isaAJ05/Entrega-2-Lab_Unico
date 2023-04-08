@@ -19,6 +19,11 @@ public class Principal3 extends javax.swing.JFrame {
     private void initComponents() {
 
         panel = new javax.swing.JPanel();
+        LabelCarta = new javax.swing.JLabel();
+        LabelCarrera = new javax.swing.JLabel();
+        LabelSerpEscl = new javax.swing.JLabel();
+        LabelSopaLetras = new javax.swing.JLabel();
+        LabelRompecabezas = new javax.swing.JLabel();
         red = new javax.swing.JButton();
         magenta = new javax.swing.JButton();
         green = new javax.swing.JButton();
@@ -26,7 +31,7 @@ public class Principal3 extends javax.swing.JFrame {
         cyan = new javax.swing.JButton();
         volver = new javax.swing.JButton();
         stella = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 500));
@@ -34,6 +39,33 @@ public class Principal3 extends javax.swing.JFrame {
 
         panel.setBackground(new java.awt.Color(0, 0, 51));
         panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        LabelCarta.setBackground(new java.awt.Color(0, 0, 51));
+        LabelCarta.setFont(new java.awt.Font("Swis721 BlkCn BT", 0, 18)); // NOI18N
+        LabelCarta.setForeground(new java.awt.Color(204, 204, 255));
+        panel.add(LabelCarta, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 60, 120, 40));
+
+        LabelCarrera.setBackground(new java.awt.Color(0, 0, 51));
+        LabelCarrera.setFont(new java.awt.Font("Swis721 BlkCn BT", 0, 18)); // NOI18N
+        LabelCarrera.setForeground(new java.awt.Color(204, 204, 255));
+        panel.add(LabelCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 210, 200, 40));
+
+        LabelSerpEscl.setBackground(new java.awt.Color(0, 0, 51));
+        LabelSerpEscl.setFont(new java.awt.Font("Swis721 BlkCn BT", 0, 18)); // NOI18N
+        LabelSerpEscl.setForeground(new java.awt.Color(204, 204, 255));
+        panel.add(LabelSerpEscl, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 360, 160, 40));
+
+        LabelSopaLetras.setBackground(new java.awt.Color(0, 0, 51));
+        LabelSopaLetras.setFont(new java.awt.Font("Swis721 BlkCn BT", 0, 18)); // NOI18N
+        LabelSopaLetras.setForeground(new java.awt.Color(204, 204, 255));
+        LabelSopaLetras.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        panel.add(LabelSopaLetras, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 150, 50));
+
+        LabelRompecabezas.setBackground(new java.awt.Color(0, 0, 51));
+        LabelRompecabezas.setFont(new java.awt.Font("Swis721 BlkCn BT", 0, 18)); // NOI18N
+        LabelRompecabezas.setForeground(new java.awt.Color(204, 204, 255));
+        LabelRompecabezas.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        panel.add(LabelRompecabezas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 140, 40));
 
         red.setBackground(new java.awt.Color(255, 0, 0));
         red.setFont(new java.awt.Font("Swis721 BT", 1, 14)); // NOI18N
@@ -59,7 +91,7 @@ public class Principal3 extends javax.swing.JFrame {
                 redActionPerformed(evt);
             }
         });
-        panel.add(red, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 130, 140));
+        panel.add(red, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 130, 140));
 
         magenta.setBackground(new java.awt.Color(255, 51, 255));
         magenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/general/carreraBTN.png"))); // NOI18N
@@ -82,7 +114,7 @@ public class Principal3 extends javax.swing.JFrame {
                 magentaActionPerformed(evt);
             }
         });
-        panel.add(magenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, 160, 130));
+        panel.add(magenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 160, 130));
 
         green.setBackground(new java.awt.Color(0, 255, 51));
         green.setIcon(new javax.swing.ImageIcon(getClass().getResource("/general/RompeCabezaBTN.png"))); // NOI18N
@@ -106,7 +138,7 @@ public class Principal3 extends javax.swing.JFrame {
                 greenActionPerformed(evt);
             }
         });
-        panel.add(green, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 150, 110));
+        panel.add(green, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 150, 110));
 
         blue.setBackground(new java.awt.Color(0, 0, 255));
         blue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/general/SopadeLetrasBTN.png"))); // NOI18N
@@ -115,7 +147,6 @@ public class Principal3 extends javax.swing.JFrame {
         blue.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         blue.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/general/SopadeletrasBTn80.png"))); // NOI18N
         blue.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/general/SopadeletrasBTN95.png"))); // NOI18N
-        blue.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         blue.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         blue.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -130,7 +161,7 @@ public class Principal3 extends javax.swing.JFrame {
                 blueActionPerformed(evt);
             }
         });
-        panel.add(blue, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 160, 140));
+        panel.add(blue, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, 160, 140));
 
         cyan.setBackground(new java.awt.Color(0, 255, 255));
         cyan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/general/SerpienteEscaleraBTN.png"))); // NOI18N
@@ -153,7 +184,7 @@ public class Principal3 extends javax.swing.JFrame {
                 cyanActionPerformed(evt);
             }
         });
-        panel.add(cyan, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 160, 130));
+        panel.add(cyan, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, 160, 130));
 
         volver.setBackground(new java.awt.Color(0, 0, 102));
         volver.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
@@ -169,8 +200,8 @@ public class Principal3 extends javax.swing.JFrame {
         stella.setIcon(new javax.swing.ImageIcon(getClass().getResource("/general/stella (5).png"))); // NOI18N
         panel.add(stella, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/general/fondoespacio (1) (1).png"))); // NOI18N
-        panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 510));
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/general/fondoespacio (1) (1).png"))); // NOI18N
+        panel.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 510));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -230,43 +261,44 @@ public class Principal3 extends javax.swing.JFrame {
     }//GEN-LAST:event_volverActionPerformed
 
     private void redMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_redMouseEntered
-        red.setText("Black Jack");// cuando entra al boton se ve el texto (nombre del botón)
+       // red.setText("Black Jack");// cuando entra al boton se ve el texto (nombre del botón)
+       LabelCarta.setText("Black Jack");
     }//GEN-LAST:event_redMouseEntered
 
     private void redMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_redMouseExited
-        red.setText(""); // Si no esta el mouse, no se ve el texto
+       LabelCarta.setText(""); // Si no esta el mouse, no se ve el texto
     }//GEN-LAST:event_redMouseExited
  // Lo mismo para el resto de los botones
     private void magentaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_magentaMouseEntered
-        magenta.setText("Carrera de Naves");
+        LabelCarrera.setText("Carrera de Naves");
     }//GEN-LAST:event_magentaMouseEntered
 
     private void magentaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_magentaMouseExited
-        magenta.setText("");
+        LabelCarrera.setText("");
     }//GEN-LAST:event_magentaMouseExited
 
     private void cyanMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cyanMouseEntered
-        cyan.setText("Escaleras y Serpintes");
+        LabelSerpEscl.setText("Escaleras y Serpintes");
     }//GEN-LAST:event_cyanMouseEntered
 
     private void cyanMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cyanMouseExited
-        cyan.setText("");
+        LabelSerpEscl.setText("");
     }//GEN-LAST:event_cyanMouseExited
 
     private void blueMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_blueMouseEntered
-        blue.setText("Escaleras y Serpintes");
+        LabelSopaLetras.setText("Sopa de letras");
     }//GEN-LAST:event_blueMouseEntered
 
     private void blueMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_blueMouseExited
-        blue.setText("");
+        LabelSopaLetras.setText("");
     }//GEN-LAST:event_blueMouseExited
 
     private void greenMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_greenMouseEntered
-        green.setText("Escaleras y Serpintes");
+        LabelRompecabezas.setText("Rompecabezas");
     }//GEN-LAST:event_greenMouseEntered
 
     private void greenMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_greenMouseExited
-        green.setText("");
+        LabelRompecabezas.setText("");
     }//GEN-LAST:event_greenMouseExited
     @Override
     public void paint(Graphics g) {
@@ -376,10 +408,15 @@ public class Principal3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LabelCarrera;
+    private javax.swing.JLabel LabelCarta;
+    private javax.swing.JLabel LabelRompecabezas;
+    private javax.swing.JLabel LabelSerpEscl;
+    private javax.swing.JLabel LabelSopaLetras;
     private javax.swing.JButton blue;
     private javax.swing.JButton cyan;
+    private javax.swing.JLabel fondo;
     private javax.swing.JButton green;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton magenta;
     private javax.swing.JPanel panel;
     private javax.swing.JButton red;
