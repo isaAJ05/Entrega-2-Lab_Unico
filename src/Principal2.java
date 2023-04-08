@@ -26,6 +26,11 @@ public class Principal2 extends javax.swing.JFrame {
 
         panel.setBackground(new java.awt.Color(0, 0, 51));
         panel.setPreferredSize(new java.awt.Dimension(800, 500));
+        panel.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                panelKeyPressed(evt);
+            }
+        });
 
         nombre.setBackground(new java.awt.Color(102, 102, 255));
         nombre.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
@@ -139,6 +144,10 @@ public class Principal2 extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_nombreKeyTyped
+
+    private void panelKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_panelKeyPressed
+       
+    }//GEN-LAST:event_panelKeyPressed
     @Override
     public void paint(Graphics g) {
         super.paint(g);
