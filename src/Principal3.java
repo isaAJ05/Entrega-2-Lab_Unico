@@ -43,7 +43,7 @@ public class Principal3 extends javax.swing.JFrame {
         LabelCarta.setBackground(new java.awt.Color(0, 0, 51));
         LabelCarta.setFont(new java.awt.Font("Swis721 BlkCn BT", 0, 18)); // NOI18N
         LabelCarta.setForeground(new java.awt.Color(204, 204, 255));
-        panel.add(LabelCarta, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 60, 120, 40));
+        panel.add(LabelCarta, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 120, 40));
 
         LabelCarrera.setBackground(new java.awt.Color(0, 0, 51));
         LabelCarrera.setFont(new java.awt.Font("Swis721 BlkCn BT", 0, 18)); // NOI18N
@@ -248,7 +248,7 @@ public class Principal3 extends javax.swing.JFrame {
 
     private void cyanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cyanActionPerformed
        // SERPIENTES Y ESCALERAS
-        mant a = new mant(name);
+        SerpienteGAME a = new SerpienteGAME(name);
         a.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_cyanActionPerformed
@@ -356,10 +356,10 @@ public class Principal3 extends javax.swing.JFrame {
 //        g.fillOval(141, 217, 35, 20);
 //        gr.setColor(Color.yellow);
 //        gr.fillRect(133, 185, 35, 9);
-//
-//        gr.setColor(Color.white);
-//        Font f2 = new Font("Monospaced", Font.PLAIN, 15);
-//        gr.setFont(f2);
+
+        gr.setColor(Color.white);
+        Font f2 = new Font("Monospaced", Font.PLAIN, 18);
+        gr.setFont(f2);
 //        gr.drawString("En STAR GAMES puedes disfrutar", 280, 140);
 //        gr.drawString("de 5 juegos distintos:", 280, 160);
 //
@@ -369,8 +369,8 @@ public class Principal3 extends javax.swing.JFrame {
 //        gr.drawString("  AZUL: Sopa de letras", 320, 250);
 //        gr.drawString("  VERDE: Rompecabezas", 320, 270);
 //
-//        gr.drawString(name + ", puedes seleccionar tu juego presionando el botón", 100, 305);
-//        gr.drawString("del color correspondiente en cada punta de Stella", 100, 325);
+        gr.drawString("Hola "+name + " !", 500, 65);
+        gr.drawString("¿Que deseas Jugar?", 500, 80);
 
     }
 
