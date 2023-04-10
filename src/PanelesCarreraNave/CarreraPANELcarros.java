@@ -58,9 +58,12 @@ public class CarreraPANELcarros extends javax.swing.JPanel {
         return Fin;
     }
     
-    private int fila = 0, columna = 0; //Contadores
-    private final int limiteF = 20, limiteC = 14; //Limites de la matriz
-    private int casilla=50;//Lo que medira nuestras casillas imaginarias de la matriz
+    private int fila , columna ; //Contadores
+    private final int limiteF = 17, limiteC = 34; //Limites de la matriz
+    private int casilla=20;//Lo que medira nuestras casillas imaginarias de la matriz
+    
+    //El numero de columanas y filas multiplicado por el valor de la casilla debe dar valores 
+    //cercanos o aproximas (segun el gusto) a las dimensiones del panel (Ancho, alto )
 
     private int[][] espaciopista;
     //Creacion de la matriz de la pista
@@ -68,7 +71,7 @@ public class CarreraPANELcarros extends javax.swing.JPanel {
 
     public int[][] Hacerespaciopista() {
         int F = 0, C = 0;
-        int espaciopista[][] = new int[100][100];
+        int espaciopista[][] = new int[800][500];
         for (F = 0; F < limiteF; F++) {
             for (C = 0; C < limiteC; C++) {
                 if (F == limiteF - 1 || F == 0 || C == limiteC - 1 || C == 0) {
@@ -142,36 +145,46 @@ public class CarreraPANELcarros extends javax.swing.JPanel {
         NARANJAc.setLocation(0, NARANJAc.getLocation().y);
         VERDEc.setLocation(0, VERDEc.getLocation().y);
         
+        espaciopista=Hacerespaciopista(); //llamar al metodo que crea la matriz
         AZULc.requestFocus(); //CENTRAR EL MOVIMIENTO CON TECLAS A LA NAVE DEL USUARIO
     }//GEN-LAST:event_InicioBTNActionPerformed
 
 
     private void AZULcKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AZULcKeyPressed
         int x = AZULc.getX(), y = AZULc.getY();
-        int[][]espaciopista = null;
+       
         switch (evt.getKeyCode()) {
             case KeyEvent.VK_RIGHT: //DERECHA
                 Mensajito.setText("");
-                if(espaciopista[y/20][(x/20)+1]!=1){
-                     AZULc.setLocation(x + 20, y);
+                if(x<(limiteC-1)*casilla & espaciopista[y/casilla][(x/casilla)+1]!=1){
+                     AZULc.setLocation(x + casilla, y);
+                    
                 }
                 break;
             case KeyEvent.VK_UP: //ARRIBA
                 Mensajito.setText("");
-                AZULc.setLocation(x, y - 20);
+               if(y>0 & espaciopista[(y/casilla)-1][x/casilla]!=1){
+                AZULc.setLocation(x, y - casilla);
+                
+               }
                 break;
             case KeyEvent.VK_DOWN: //ABAJO
                 Mensajito.setText("");
-                if(espaciopista[1+(y/20)][x/20]!=1){
-                    AZULc.setLocation(x, y + 20);
-                }
+                if(y<(limiteF-1)*casilla & espaciopista[(y/casilla)+1][x/casilla]!=1){
+                    AZULc.setLocation(x, y + casilla);
+                    
+               }
                 break;
             case KeyEvent.VK_LEFT: //Izquierda
                 Mensajito.setText(" No puedes retroceder !");
                 break;
-
+                
+                
         }
-
+        System.out.println(" x= "+x+" , y= "+y); //Valor Coorenada Usuario
+        
+        //valor de casilla en la matriz
+        System.out.println("espacio[y/20][(x/20)+1] = "+espaciopista[y/20][(x/20)+1] );
 
     }//GEN-LAST:event_AZULcKeyPressed
 
