@@ -35,8 +35,8 @@ public class InfoPanel extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Swis721 BlkEx BT", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 153, 255));
-        jLabel1.setText("Instrucciones");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, -1, -1));
+        jLabel1.setText("Instrucciones de Uso ");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(86, 67, 127));
 
