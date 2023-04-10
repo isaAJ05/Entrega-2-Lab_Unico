@@ -68,6 +68,7 @@ public class GamePanel1 extends javax.swing.JPanel {
         dado = ran.nextInt(6) + 1;
         NumDado.setText(Integer.toString(dado));
 
+      
         int[][] Tablero = matriz.Hacerespaciopista();
 
 
