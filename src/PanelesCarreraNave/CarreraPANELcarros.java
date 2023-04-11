@@ -62,14 +62,13 @@ public class CarreraPANELcarros extends javax.swing.JPanel {
     public JLabel getLineaMeta() {
         return Fin;
     }
-    
+
     Random ran = new Random();
     private final int limiteF = 17, limiteC = 34; //Limites de la matriz
-    private int casilla=20;//Lo que medira nuestras casillas imaginarias de la matriz
-    
+    private int casilla = 20;//Lo que medira nuestras casillas imaginarias de la matriz
+
     //El numero de columanas y filas multiplicado por el valor de la casilla debe dar valores 
     //cercanos o aproximas (segun el gusto) a las dimensiones del panel (Ancho, alto )
-
     private int[][] espaciopista;
     //Creacion de la matriz de la pista
     //Pista donde los carros se moveran de 19x12, se rellenara con ceros y unos
@@ -117,7 +116,7 @@ public class CarreraPANELcarros extends javax.swing.JPanel {
                 InicioBTNActionPerformed(evt);
             }
         });
-        add(InicioBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, -1, 50));
+        add(InicioBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 120, 70));
 
         Mensajito.setFont(new java.awt.Font("Swis721 Blk BT", 0, 14)); // NOI18N
         Mensajito.setForeground(new java.awt.Color(204, 204, 255));
@@ -142,8 +141,7 @@ public class CarreraPANELcarros extends javax.swing.JPanel {
         add(pistafondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 780, 390));
     }// </editor-fold>//GEN-END:initComponents
 
-    
-    
+
     private void InicioBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InicioBTNActionPerformed
         InicioBTN.setVisible(false);
 
@@ -151,14 +149,14 @@ public class CarreraPANELcarros extends javax.swing.JPanel {
         AZULc.setLocation(0, AZULc.getLocation().y);
         NARANJAc.setLocation(0, NARANJAc.getLocation().y);
         VERDEc.setLocation(0, VERDEc.getLocation().y);
-        
-        espaciopista=Hacerespaciopista(); //llamar al que crea la matriz
+
+        espaciopista = Hacerespaciopista(); //llamar al que crea la matriz
         AZULc.requestFocus(); //CENTRAR EL MOVIMIENTO CON TECLAS A LA NAVE DEL USUARIO
-        
+
         timer.start(); //Iniciar el timer para las otras dos naves competidores
     }//GEN-LAST:event_InicioBTNActionPerformed
 
- // auto del usuario
+    // auto del usuario
     private void AZULcKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AZULcKeyPressed
         int x = AZULc.getX(), y = AZULc.getY();
         //En la matriz si es 0 el auto se movera, si no, no avanzara en esa casilla. 
@@ -167,79 +165,102 @@ public class CarreraPANELcarros extends javax.swing.JPanel {
                 Mensajito.setText("");
                 //(que no cruce el limite de la matriz) Y (verificar el valor dentro de la matriz sea valido (!=1))
                 //Si cumple las condiciones, podra moverse
-                if(x<(limiteC-1)*casilla & espaciopista[y/casilla][(x/casilla)+1]!=1){
-                     AZULc.setLocation(x + casilla, y);
+                if (x < (limiteC - 1) * casilla & espaciopista[y / casilla][(x / casilla) + 1] != 1) {
+                    AZULc.setLocation(x + casilla, y);
                 }
                 break;
             case KeyEvent.VK_UP: //ARRIBA
                 Mensajito.setText("");
-               if(y>0 & espaciopista[(y/casilla)-1][x/casilla]!=1){
-                AZULc.setLocation(x, y - casilla);
-                
-               }
+                if (y > 0 & espaciopista[(y / casilla) - 1][x / casilla] != 1) {
+                    AZULc.setLocation(x, y - casilla);
+
+                }
                 break;
             case KeyEvent.VK_DOWN: //ABAJO
                 Mensajito.setText("");
-                if(y<(limiteF-1)*casilla & espaciopista[(y/casilla)+1][x/casilla]!=1){
+                if (y < (limiteF - 1) * casilla & espaciopista[(y / casilla) + 1][x / casilla] != 1) {
                     AZULc.setLocation(x, y + casilla);
-                    
-               }
+
+                }
                 break;
             case KeyEvent.VK_LEFT: //Izquierda No PODRA retroceder, si lo hace empieza desde el inicio XD
                 Mensajito.setText(" No puedes retroceder !");
                 break;
-                
-                
+
         }
-        System.out.println("\n USUARIO x= "+x+" , y= "+y); //Valor Coorenada Usuario
-        
+        System.out.println("\n USUARIO x= " + x + " , y= " + y); //Valor Coorenada Usuario
+
         //valor de casilla en la matriz
-        System.out.println("Casilla de la derecha = "+espaciopista[y/casilla][(x/casilla)+1] );
-        System.out.println("Casilla de la UP = "+espaciopista[(y/casilla)-1][x/casilla] );
-        System.out.println("Casilla de la Abajo = "+espaciopista[(y/casilla)+1][x/casilla] );
+        System.out.println("Casilla de la derecha = " + espaciopista[y / casilla][(x / casilla) + 1]);
+        System.out.println("Casilla de la UP = " + espaciopista[(y / casilla) - 1][x / casilla]);
+        System.out.println("Casilla de la Abajo = " + espaciopista[(y / casilla) + 1][x / casilla]);
     }//GEN-LAST:event_AZULcKeyPressed
 
     //Naves Competidoras
-   
-   int Pos[]={1,-1};
-   
-   
-    Timer timer=new Timer(500,new ActionListener(){
+    int Pos[] = {1, -1};
+    int Vel[] = {0, 1, 2, 3};
+
+    Timer timer = new Timer(500, new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            //Fin.getLocation().x - 40 )
-             if ((AZULc.getLocation().x < (limiteC-1)*casilla )&& (NARANJAc.getLocation().x < (limiteC-1)*casilla)
-                        && (VERDEc.getLocation().x< (limiteC-1)*casilla)) {
-                   
-                    int NX = NARANJAc.getX(), NY=NARANJAc.getY();
-            //Variacion de la velocidad (Movimiento horizontal)
-            
-            NX=casilla+NX;
-            
-            int j=ran.nextInt(2);
-            NY=NY+casilla*Pos[j];
-            //Variacion de posicion( Movimiento vertical ) 
-            NARANJAc.setLocation(NX,NY);
-           
-            //Limites
-            
-            int VerdeX=VERDEc.getX(),VerdeY=VERDEc.getY();
-            
-            
-                   
 
-                 System.out.println("\n NARANJA NX= "+NX+" , y= "+NY+" PosAletoriaY= "+j); //Valor Coorenada Usuario
-           
-                } 
-           }
-        
+            if ((AZULc.getLocation().x < (limiteC - 1) * casilla) && (NARANJAc.getLocation().x < (limiteC - 1) * casilla)
+                    && (VERDEc.getLocation().x < (limiteC - 1) * casilla)) {
+                /* Condicianl para que se muevan si aun no ha 
+                llegado a la linea de meta( o al final de la matriz */
+
+                //Nave Naranja ---------------------
+                int NX = NARANJAc.getX(), NY = NARANJAc.getY();//Obtener Componentes de las coordenadas
+
+                //(Movimiento horizontal)
+                int i = ran.nextInt(4);
+                NX = NX + casilla * Vel[i];//Actualizar Coordenada X
+
+                //( Movimiento vertical )
+                int j = ran.nextInt(2);
+                if (espaciopista[(NY / casilla) - 1][NX / casilla] != 0) {
+                    j = 0;
+                }
+                if (espaciopista[(NY / casilla) + 1][NY / casilla] != 0) {
+                    j = 1;
+                }
+                NY = NY + casilla * Pos[j]; //Actualizar Coordenada Y
+
+                NARANJAc.setLocation(NX, NY);//Actualizar Ubicacion
+
+                //Nave Verde ---------------------
+                int VX = VERDEc.getX(), VY = VERDEc.getY(); //Obtener Componentes de las coordenadas
+                //(Movimiento horizontal)
+                int l = ran.nextInt(4);
+                VX = VX + casilla * Vel[l];//Actualizar Coordenada X
+
+                //( Movimiento vertical )
+                int k = ran.nextInt(2);
+                if (espaciopista[(VY / casilla) - 1][VX / casilla] != 0) {
+                    k = 0;
+                }
+                if (espaciopista[(VY / casilla) + 1][VY / casilla] != 0) {
+                    k = 1;
+                }
+                VY = VY + casilla * Pos[k]; //Actualizar Coordenada Y
+
+                VERDEc.setLocation(VX, VY);//Actualizar Ubicacion
+
+                System.out.println("\n NARANJA NX= " + NX + " , y= " + NY); //Valor Coorenada NARANJA
+                System.out.println("\n VERDE VX= " + VX + " , y= " + VY); //Valor Coorenada VERDE
+            }
+            if((AZULc.getLocation().x >= (limiteC - 1) * casilla)|
+               (VERDEc.getLocation().x >= (limiteC - 1) * casilla)|
+               (NARANJAc.getLocation().x >= (limiteC - 1) * casilla)){
+                
+            }
+        }
+
     });
-     
+
     //Obstaculos y bonus 
     /*Exisitiran unos obtaculos y premios que aumentaran o disminuiran la velocidad de TODAS las naves
     si pasan por cierta sona de la pista*/
-    int Velocidad[]={0,1,2,3};
-     int i=ran.nextInt(3);
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AZULc;
@@ -251,4 +272,28 @@ public class CarreraPANELcarros extends javax.swing.JPanel {
     private javax.swing.JLabel pistafondo;
     // End of variables declaration//GEN-END:variables
 
+//    public int movimientoenX(int X){
+//        
+//                //(Movimiento horizontal)
+//                int ranX = ran.nextInt(4);
+//                X = X+casilla*Vel[ranX];//Actualizar Coordenada X
+//                
+//               
+//                return X;
+//    }
+//    public int movimientoenY(int Y, int X){
+//         //( Movimiento vertical )
+//                int ranY = ran.nextInt(2);
+//
+//                if (espaciopista[(Y / casilla) - 1][X / casilla] != 0) {
+//                    ranY=0;
+//                }
+//                if(espaciopista[(Y / casilla) + 1][Y/ casilla] != 0){
+//                    ranY=1;
+//                }
+//                Y = Y + casilla * Pos[ranY]; //Actualizar Coordenada Y
+//                
+//        return Y;
+//    }
+    //Nota: las acciones dentro del timer se repiten -> probar creando un metodo
 }
