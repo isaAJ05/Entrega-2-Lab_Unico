@@ -2,10 +2,13 @@
 
 import java.awt.Dimension;
 
-public class rompecabezas extends javax.swing.JFrame {
+import rompecabezas.*;
 
-     private String user;
-    public rompecabezas() {
+
+public class rompecabezas extends javax.swing.JFrame {
+  private String user;
+    public rompecabezas(String name) {
+        this.user = name;
         setPreferredSize(new Dimension(800, 500));
         this.setResizable(false);
         this.setTitle("ROMPECABEZAS");
@@ -14,10 +17,7 @@ public class rompecabezas extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         
-    }
 
-    rompecabezas(String name) {
-         this.user = name;
     }
 
     @SuppressWarnings("unchecked")
@@ -48,7 +48,7 @@ public class rompecabezas extends javax.swing.JFrame {
         getContentPane().add(volver);
         volver.setBounds(30, 20, 110, 26);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMGrompecabezas/stellap.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellap.png"))); // NOI18N
         jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,9 +56,9 @@ public class rompecabezas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(80, 170, 290, 220);
+        jButton3.setBounds(60, 180, 304, 236);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMGrompecabezas/puzzle2.jpg"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/puzzle2.jpg"))); // NOI18N
         jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,7 +66,7 @@ public class rompecabezas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(440, 170, 304, 220);
+        jButton2.setBounds(420, 120, 304, 304);
 
         rompecabezas.setFont(new java.awt.Font("Elephant", 1, 48)); // NOI18N
         rompecabezas.setForeground(new java.awt.Color(51, 51, 255));
@@ -78,7 +78,7 @@ public class rompecabezas extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("FÁCIL");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(180, 410, 40, 20);
+        jLabel2.setBounds(200, 430, 40, 20);
 
         jLabel3.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -90,15 +90,15 @@ public class rompecabezas extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("DIFÍCIL");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(550, 410, 56, 20);
+        jLabel1.setBounds(550, 430, 56, 20);
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMGrompecabezas/fondoespacio (1).png"))); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoespacio (1).png"))); // NOI18N
         fondo.setMaximumSize(new java.awt.Dimension(800, 500));
         fondo.setMinimumSize(new java.awt.Dimension(800, 500));
         fondo.setOpaque(true);
         fondo.setPreferredSize(new java.awt.Dimension(800, 500));
         getContentPane().add(fondo);
-        fondo.setBounds(0, 0, 800, 500);
+        fondo.setBounds(0, 0, 790, 490);
 
         panelpuzzle.setOpaque(false);
 
@@ -120,23 +120,24 @@ public class rompecabezas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
-    Principal3 a = new Principal3(user);
+       Principal3 a = new Principal3(user);
         a.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_volverActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        rompecabezas01 a = new rompecabezas01();
+        rompecabezas01 a = new rompecabezas01(user);
         a.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        rompecabezas02 a = new rompecabezas02();
+        rompecabezas02 a = new rompecabezas02(user);
         a.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -163,11 +164,15 @@ public class rompecabezas extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new rompecabezas().setVisible(true);
+                new rompecabezas(null).setVisible(true);
             }
         });
     }

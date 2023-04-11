@@ -1,8 +1,8 @@
-
-import java.awt.Color;
+//GEN-FIRST:event_magentaActionPerformed
+import java.awt.Color;//GEN-LAST:event_magentaActionPerformed
 import java.awt.Font;
 import java.awt.Graphics;
-import rompecabezas.rompecabezas;
+import rompecabezas.rompecabezasMALO;
 
 public class Principal3 extends javax.swing.JFrame {
 
@@ -16,7 +16,7 @@ public class Principal3 extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         panel = new javax.swing.JPanel();
@@ -216,91 +216,91 @@ public class Principal3 extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void redActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redActionPerformed
+    private void redActionPerformed(java.awt.event.ActionEvent evt) {                                    
         // BLACKJACK
         Mesa1 a = new Mesa1(name);
         a.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_redActionPerformed
+    }                                   
 
-    private void magentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_magentaActionPerformed
+    private void magentaActionPerformed(java.awt.event.ActionEvent evt) {                                        
         // CARRERAS
         Pista a = new Pista(name);
         a.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_magentaActionPerformed
+    }                                       
 
-    private void greenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_greenActionPerformed
+    private void greenActionPerformed(java.awt.event.ActionEvent evt) {                                      
         // ROMPECABEZAS
       rompecabezas a=new rompecabezas(name);
       a.setVisible(true);
         this.dispose();
         
-    }//GEN-LAST:event_greenActionPerformed
+    }                                     
 
-    private void blueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blueActionPerformed
+    private void blueActionPerformed(java.awt.event.ActionEvent evt) {                                     
         // SOPA DE LETRAS
-     SOPASTAR a=new SOPASTAR(name);
+     ASOPAstar a=new ASOPAstar(name);
       a.setVisible(true);
       this.dispose();
-    }//GEN-LAST:event_blueActionPerformed
+    }                                    
 
-    private void cyanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cyanActionPerformed
+    private void cyanActionPerformed(java.awt.event.ActionEvent evt) {                                     
        // SERPIENTES Y ESCALERAS
         SerpienteGAME a = new SerpienteGAME(name);
         a.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_cyanActionPerformed
+    }                                    
 
-    private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
+    private void volverActionPerformed(java.awt.event.ActionEvent evt) {                                       
 
         Principal2 a = new Principal2();
         a.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_volverActionPerformed
+    }                                      
 
-    private void redMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_redMouseEntered
+    private void redMouseEntered(java.awt.event.MouseEvent evt) {                                 
        // red.setText("Black Jack");// cuando entra al boton se ve el texto (nombre del botón)
        LabelCarta.setText("Black Jack");
-    }//GEN-LAST:event_redMouseEntered
+    }                                
 
-    private void redMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_redMouseExited
+    private void redMouseExited(java.awt.event.MouseEvent evt) {                                
        LabelCarta.setText(""); // Si no esta el mouse, no se ve el texto
-    }//GEN-LAST:event_redMouseExited
+    }                               
  // Lo mismo para el resto de los botones
-    private void magentaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_magentaMouseEntered
+    private void magentaMouseEntered(java.awt.event.MouseEvent evt) {                                     
         LabelCarrera.setText("Carrera de Naves");
-    }//GEN-LAST:event_magentaMouseEntered
+    }                                    
 
-    private void magentaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_magentaMouseExited
+    private void magentaMouseExited(java.awt.event.MouseEvent evt) {                                    
         LabelCarrera.setText("");
-    }//GEN-LAST:event_magentaMouseExited
+    }                                   
 
-    private void cyanMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cyanMouseEntered
+    private void cyanMouseEntered(java.awt.event.MouseEvent evt) {                                  
         LabelSerpEscl.setText("Escaleras y Serpintes");
-    }//GEN-LAST:event_cyanMouseEntered
+    }                                 
 
-    private void cyanMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cyanMouseExited
+    private void cyanMouseExited(java.awt.event.MouseEvent evt) {                                 
         LabelSerpEscl.setText("");
-    }//GEN-LAST:event_cyanMouseExited
+    }                                
 
-    private void blueMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_blueMouseEntered
+    private void blueMouseEntered(java.awt.event.MouseEvent evt) {                                  
         LabelSopaLetras.setText("Sopa de letras");
-    }//GEN-LAST:event_blueMouseEntered
+    }                                 
 
-    private void blueMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_blueMouseExited
+    private void blueMouseExited(java.awt.event.MouseEvent evt) {                                 
         LabelSopaLetras.setText("");
-    }//GEN-LAST:event_blueMouseExited
+    }                                
 
-    private void greenMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_greenMouseEntered
+    private void greenMouseEntered(java.awt.event.MouseEvent evt) {                                   
         LabelRompecabezas.setText("Rompecabezas");
-    }//GEN-LAST:event_greenMouseEntered
+    }                                  
 
-    private void greenMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_greenMouseExited
+    private void greenMouseExited(java.awt.event.MouseEvent evt) {                                  
         LabelRompecabezas.setText("");
-    }//GEN-LAST:event_greenMouseExited
+    }                                 
     @Override
     public void paint(Graphics g) {
         super.paint(g);
@@ -408,7 +408,7 @@ public class Principal3 extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JLabel LabelCarrera;
     private javax.swing.JLabel LabelCarta;
     private javax.swing.JLabel LabelRompecabezas;
@@ -423,6 +423,6 @@ public class Principal3 extends javax.swing.JFrame {
     private javax.swing.JButton red;
     private javax.swing.JLabel stella;
     private javax.swing.JButton volver;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 
 }
