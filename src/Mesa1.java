@@ -71,6 +71,8 @@ private String user;
         C2US = new javax.swing.JLabel();
         SumCartasDE = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        AjustesBlackJack = new javax.swing.JButton();
+        AjustesBlackJack1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         Repartir = new javax.swing.JButton();
         Pedir1Carta = new javax.swing.JButton();
@@ -78,15 +80,12 @@ private String user;
         Parar = new javax.swing.JButton();
         Doble = new javax.swing.JButton();
         Slipt = new javax.swing.JButton();
-        AjustesBlackJack = new javax.swing.JButton();
         valdRepartir = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        AjustesBlackJack1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(36, 39, 38));
         setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        setPreferredSize(new java.awt.Dimension(800, 500));
         setResizable(false);
         setSize(new java.awt.Dimension(800, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -115,6 +114,26 @@ private String user;
 
         jPanel2.setBackground(new java.awt.Color(107, 138, 91));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        AjustesBlackJack.setBackground(new java.awt.Color(102, 255, 153));
+        AjustesBlackJack.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        AjustesBlackJack.setText("Ajustes");
+        AjustesBlackJack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AjustesBlackJackActionPerformed(evt);
+            }
+        });
+        jPanel2.add(AjustesBlackJack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, -1));
+
+        AjustesBlackJack1.setBackground(new java.awt.Color(102, 255, 153));
+        AjustesBlackJack1.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        AjustesBlackJack1.setText("Volver ←");
+        AjustesBlackJack1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AjustesBlackJack1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(AjustesBlackJack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Engravers MT", 0, 14)); // NOI18N
         jLabel2.setText("Cartas");
@@ -170,16 +189,6 @@ private String user;
         });
         jPanel2.add(Slipt, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 120, 34));
 
-        AjustesBlackJack.setBackground(new java.awt.Color(102, 255, 153));
-        AjustesBlackJack.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
-        AjustesBlackJack.setText("Ajustes");
-        AjustesBlackJack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AjustesBlackJackActionPerformed(evt);
-            }
-        });
-        jPanel2.add(AjustesBlackJack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, -1));
-
         valdRepartir.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         jPanel2.add(valdRepartir, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 54, 260, 21));
 
@@ -187,16 +196,6 @@ private String user;
         jLabel4.setForeground(new java.awt.Color(255, 204, 0));
         jLabel4.setText("STAR GAMES");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 220, -1));
-
-        AjustesBlackJack1.setBackground(new java.awt.Color(102, 255, 153));
-        AjustesBlackJack1.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
-        AjustesBlackJack1.setText("Volver ←");
-        AjustesBlackJack1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AjustesBlackJack1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(AjustesBlackJack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, -1, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 260, 500));
 
