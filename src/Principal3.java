@@ -2,6 +2,7 @@
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
+import rompecabezas.rompecabezas;
 
 public class Principal3 extends javax.swing.JFrame {
 
@@ -233,8 +234,8 @@ public class Principal3 extends javax.swing.JFrame {
 
     private void greenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_greenActionPerformed
         // ROMPECABEZAS
-        mant a = new mant(name);
-        a.setVisible(true);
+      rompecabezas a=new rompecabezas(name);
+      a.setVisible(true);
         this.dispose();
         
     }//GEN-LAST:event_greenActionPerformed
