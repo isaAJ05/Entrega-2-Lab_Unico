@@ -88,7 +88,7 @@ public class SeleccionNavePanel extends javax.swing.JPanel {
 
         jLabel4.setForeground(new java.awt.Color(204, 204, 255));
         jLabel4.setText("En proceso la habilitacion para poder seleccionar nave. Por favor siga con la carrera.");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 470, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 470, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private Image imagen;
