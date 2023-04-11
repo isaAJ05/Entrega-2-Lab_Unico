@@ -1,39 +1,51 @@
 
 import PanelesSP.inicio;
 import java.awt.BorderLayout;
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 public class ASOPAstar extends javax.swing.JFrame {
 
+    FondoPanel fondo = new FondoPanel();
     private String user;
 
     public ASOPAstar(String name) {
         initComponents();
         this.user = name;
         this.setLocationRelativeTo(null);//centrar ventana
-        this.setTitle(" Carrera de Autos Espaciales"); //Titulo 
-
-        inicio ini = new inicio();
-        ShowPanel(ini);
+        this.setTitle("Sopa de Letras"); //Titulo 
+        this.setContentPane(fondo);
+      
+        this.setLocationRelativeTo(null);
+        inicio i = new inicio(user);
+        i.setSize(800, 496);
+        i.setLocation(0, 0);
+        i.setOpaque(false);
+        this.add(i);
+        
+//        inicio ini = new inicio();
+//        ShowPanel(ini);
 
     }
-
-    private void ShowPanel(JPanel p) { //Cambio de paneles metodo
-        p.setSize(780, 370);
-        p.setLocation(0, 0);
-        Visible.removeAll();
-        Visible.add(p, BorderLayout.CENTER);
-        Visible.revalidate();
-        Visible.repaint();
-    }
+//
+//    private void ShowPanel(JPanel p) { //Cambio de paneles metodo
+//        p.setSize(800, 500);
+//        p.setLocation(0, 0);
+//
+//        contenido.removeAll();
+//        contenido.add(p, BorderLayout.CENTER);
+//        contenido.revalidate();
+//        contenido.repaint();
+//    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         btnVolver = new javax.swing.JButton();
-        Visible = new javax.swing.JPanel();
-        fondo = new javax.swing.JLabel();
+        contenido = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -50,23 +62,20 @@ public class ASOPAstar extends javax.swing.JFrame {
         });
         getContentPane().add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
-        Visible.setOpaque(false);
+        contenido.setOpaque(false);
 
-        javax.swing.GroupLayout VisibleLayout = new javax.swing.GroupLayout(Visible);
-        Visible.setLayout(VisibleLayout);
-        VisibleLayout.setHorizontalGroup(
-            VisibleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout contenidoLayout = new javax.swing.GroupLayout(contenido);
+        contenido.setLayout(contenidoLayout);
+        contenidoLayout.setHorizontalGroup(
+            contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 800, Short.MAX_VALUE)
         );
-        VisibleLayout.setVerticalGroup(
-            VisibleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        contenidoLayout.setVerticalGroup(
+            contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 500, Short.MAX_VALUE)
         );
 
-        getContentPane().add(Visible, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 500));
-
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/general/fondoespacio (1) (1).png"))); // NOI18N
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 500));
+        getContentPane().add(contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -110,8 +119,22 @@ public class ASOPAstar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Visible;
     private javax.swing.JButton btnVolver;
-    private javax.swing.JLabel fondo;
+    private javax.swing.JPanel contenido;
     // End of variables declaration//GEN-END:variables
+ class FondoPanel extends JPanel {
+
+        private Image imagen;
+
+        @Override
+        public void paint(Graphics g) {
+            imagen = new ImageIcon(getClass().getResource("\\IMGcars\\fondoespacio(3) (1).png")).getImage();
+
+            g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+
+            setOpaque(false);
+
+            super.paint(g);
+        }
+    }
 }
