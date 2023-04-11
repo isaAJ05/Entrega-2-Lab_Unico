@@ -1,5 +1,6 @@
 
 
+import rompecabezas.*;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,21 +19,22 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
     JButton[][] piezas;
     ImageIcon[][] imagenes;
     ClassLoader CL = getClass().getClassLoader();
-    ImageIcon pp1 = new ImageIcon(CL.getResource("IMGrompecabezas/r1.png"));
-    ImageIcon pp2 = new ImageIcon(CL.getResource("IMGrompecabezas/r2.png"));
-    ImageIcon pp3 = new ImageIcon(CL.getResource("IMGrompecabezas/r3.png"));
-    ImageIcon pp4 = new ImageIcon(CL.getResource("IMGrompecabezas/r4.png"));
-    ImageIcon pp5 = new ImageIcon(CL.getResource("IMGrompecabezas/r5.png"));
-    ImageIcon pp6 = new ImageIcon(CL.getResource("IMGrompecabezas/r6.png"));
-    ImageIcon pp7 = new ImageIcon(CL.getResource("IMGrompecabezas/r7.png"));
-    ImageIcon pp8 = new ImageIcon(CL.getResource("IMGrompecabezas/r8.png"));
-    ImageIcon pp9 = new ImageIcon(CL.getResource("IMGrompecabezas/r9.png"));
+    ImageIcon pp1 = new ImageIcon(CL.getResource("imagenes/r1.png"));
+    ImageIcon pp2 = new ImageIcon(CL.getResource("imagenes/r2.png"));
+    ImageIcon pp3 = new ImageIcon(CL.getResource("imagenes/r3.png"));
+    ImageIcon pp4 = new ImageIcon(CL.getResource("imagenes/r4.png"));
+    ImageIcon pp5 = new ImageIcon(CL.getResource("imagenes/r5.png"));
+    ImageIcon pp6 = new ImageIcon(CL.getResource("imagenes/r6.png"));
+    ImageIcon pp7 = new ImageIcon(CL.getResource("imagenes/r7.png"));
+    ImageIcon pp8 = new ImageIcon(CL.getResource("imagenes/r8.png"));
+    ImageIcon pp9 = new ImageIcon(CL.getResource("imagenes/r9.png"));
+ 
+    private String user;
 
-
-    public rompecabezas01() {
-
+    public rompecabezas01(String name) {
+        this.user=name;
         initComponents();
-        this.setSize(800, 490);
+        this.setSize(800, 500);
         this.setVisible(true);
 
         imagenes = new ImageIcon[][]{{pp1, pp2, pp3}, {pp4, pp5, pp6}, {pp7, pp8, pp9}};
@@ -99,7 +101,7 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
             }
             UIManager.put("OptionPane.messageFont", new Font("Monospaced", Font.BOLD, 20));
             if (k) {
-                ImageIcon ganaste = new ImageIcon(CL.getResource("IMGrompecabezas/happy.gif"));
+                ImageIcon ganaste = new ImageIcon(CL.getResource("imagenes/happy.gif"));
                 JOptionPane.showMessageDialog(null, "¡FELICIDADES!\nEres todo un ganador.", "ROMPECABEZAS", JOptionPane.PLAIN_MESSAGE, ganaste);
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
@@ -109,7 +111,7 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
                 }
             }
             } else {
-                ImageIcon perdiste = new ImageIcon(CL.getResource("IMGrompecabezas/sad.gif"));
+                ImageIcon perdiste = new ImageIcon(CL.getResource("imagenes/sad.gif"));
                 JOptionPane.showMessageDialog(null, "GAME OVER\nPerdiste esta vez,\nsuerte para la próxima.", "ROMPECABEZAS", JOptionPane.PLAIN_MESSAGE, perdiste);
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
@@ -163,7 +165,6 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
         rompecabezas.setBounds(210, 30, 506, 60);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 51));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         volver.setBackground(new java.awt.Color(0, 0, 153));
         volver.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
@@ -173,7 +174,6 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
                 volverActionPerformed(evt);
             }
         });
-        jPanel1.add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 27, 110, -1));
 
         PIEZAS.setBackground(new java.awt.Color(0, 0, 51));
         PIEZAS.setPreferredSize(new java.awt.Dimension(300, 231));
@@ -274,8 +274,6 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
         });
         PIEZAS.add(p9);
 
-        jPanel1.add(PIEZAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 114, -1, -1));
-
         ROMPECABEZAS.setBackground(new java.awt.Color(0, 0, 51));
         ROMPECABEZAS.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         ROMPECABEZAS.setPreferredSize(new java.awt.Dimension(300, 231));
@@ -290,12 +288,9 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
         ROMPECABEZAS.add(pieza8);
         ROMPECABEZAS.add(pieza9);
 
-        jPanel1.add(ROMPECABEZAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(454, 114, -1, -1));
-
         jLabel3.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Haga click en las piezas en el orden que considere correcto.");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 379, 490, 30));
 
         limpiar.setBackground(new java.awt.Color(0, 0, 153));
         limpiar.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
@@ -305,23 +300,67 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
                 limpiarActionPerformed(evt);
             }
         });
-        jPanel1.add(limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(641, 379, 111, -1));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMGrompecabezas/fondoespacio (1).png"))); // NOI18N
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoespacio (1).png"))); // NOI18N
         fondo.setMaximumSize(new java.awt.Dimension(800, 500));
         fondo.setMinimumSize(new java.awt.Dimension(800, 500));
         fondo.setOpaque(true);
         fondo.setPreferredSize(new java.awt.Dimension(800, 500));
-        jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 490));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(110, 110, 110)
+                .addComponent(limpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(48, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(volver, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(PIEZAS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(64, 64, 64)
+                        .addComponent(ROMPECABEZAS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(58, 58, 58))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(volver)
+                .addGap(61, 61, 61)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ROMPECABEZAS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PIEZAS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(limpiar))
+                .addContainerGap(73, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 800, 500);
+        jPanel1.setBounds(0, 0, 800, 490);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
-        rompecabezas a = new rompecabezas();
+        rompecabezas a = new rompecabezas(user);
         a.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_volverActionPerformed
@@ -376,9 +415,7 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
 
     }//GEN-LAST:event_p9ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -402,11 +439,12 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
             java.util.logging.Logger.getLogger(rompecabezas01.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new rompecabezas01().setVisible(true);
+                new rompecabezas01(null).setVisible(true);
             }
         });
     }
