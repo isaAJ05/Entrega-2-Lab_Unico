@@ -31,10 +31,10 @@ public class GamePanel1 extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         TirarDados = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         NumDado = new javax.swing.JLabel();
         AlienU = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(0, 0, 51));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -52,6 +52,14 @@ public class GamePanel1 extends javax.swing.JPanel {
         });
         add(TirarDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 134, -1, -1));
 
+        jButton1.setText("Reiniciar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 350, -1, -1));
+
         NumDado.setFont(new java.awt.Font("Swis721 Ex BT", 1, 18)); // NOI18N
         NumDado.setForeground(new java.awt.Color(204, 204, 255));
         NumDado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -67,16 +75,8 @@ public class GamePanel1 extends javax.swing.JPanel {
         });
         add(AlienU, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 90, 90));
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMGescaleraSerp/fondo serp 1.png"))); // NOI18N
-        add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        jButton1.setText("Reiniciar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 350, -1, -1));
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMGescaleraSerp/tablero serp 1.png"))); // NOI18N
+        add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 400));
     }// </editor-fold>//GEN-END:initComponents
   
     Random ran = new Random();

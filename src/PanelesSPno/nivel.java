@@ -2,15 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package PanelesSP;
+package PanelesSPno;
 
-import java.awt.BorderLayout;
-import static java.awt.BorderLayout.CENTER;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -48,36 +41,30 @@ public class nivel extends javax.swing.JPanel {
         contenido3.setOpaque(false);
 
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 153, 255));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("SELECCIONE LA DIFICULTAD DE JUEGO");
 
-        jButton1.setBackground(new java.awt.Color(255, 153, 255));
         jButton1.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 51));
+        jButton1.setForeground(new java.awt.Color(255, 153, 255));
         jButton1.setText("Easy");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        MEDIUM.setBackground(new java.awt.Color(255, 153, 255));
         MEDIUM.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        MEDIUM.setForeground(new java.awt.Color(0, 0, 51));
+        MEDIUM.setForeground(new java.awt.Color(255, 153, 255));
         MEDIUM.setText("Medium");
-        MEDIUM.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MEDIUM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MEDIUMActionPerformed(evt);
             }
         });
 
-        hardplanetas.setBackground(new java.awt.Color(255, 153, 255));
         hardplanetas.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        hardplanetas.setForeground(new java.awt.Color(0, 0, 51));
+        hardplanetas.setForeground(new java.awt.Color(255, 153, 255));
         hardplanetas.setText("Hard");
-        hardplanetas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         hardplanetas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hardplanetasActionPerformed(evt);
@@ -129,11 +116,24 @@ public class nivel extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         contenido3.removeAll();
-        instruccionesep i = new instruccionesep(user);
-        i.setSize(800, 496);
-        i.setLocation(0, 0);
-        i.setOpaque(false);
-        contenido3.add(i);
+        JOptionPane.showMessageDialog(null, "𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐀𝐌𝐈𝐄𝐍𝐓𝐎 𝐃𝐄𝐋 𝐉𝐔𝐄𝐆𝐎:\nEste nivel está compuesto por una sopa de letras de dimensiones 7x5 donde encontrarás 3 palabras ocultas"
+                + "\nrelacionadas a nombres de planetas del sistema solar."
+                + "\nAl lado derecho de la pantalla visualizarás la lista de palabras que debes buscar."
+                + "\n𝐏𝐚𝐫𝐚 𝐣𝐮𝐠𝐚𝐫: "
+                + "\n  ⭐Busca las letras de las palabras en cualquier dirección: horizontal, vertical o diagonal, en sentido normal"
+                + "\n     o inverso."
+                + "\n  ⭐Una vez que encuentres una letra de una palabra, selecciona la letra inicial y ultima"
+                + "\n      para que el sistema verifique tu elección.\n"
+                + "  ⭐Si tu selección es correcta se cambiará el fondo de la palabra en la sopa de letras y aparecerá "
+                + "\n      una estrella al lado de la palabra de la lista.\n"
+                + "  ⭐Continúa buscando hasta que hayas encontrado todas las palabras de la lista."
+                + "\n\n𝐏𝐋𝐔𝐒: Si lo deseas puedes pedir pistas o revelar la solución de la sopa de letras al seleccionar dichas opciones."
+                + "\n\n                             ¡𝗗𝗜𝗩𝗜𝗘𝗥𝗧𝗘𝗧𝗘 𝗝𝗨𝗚𝗔𝗡𝗗𝗢 𝗟𝗔 𝗦𝗢𝗣𝗔 𝗗𝗘 𝗟𝗘𝗧𝗥𝗔𝗦 𝗦𝗧𝗔𝗥: 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝗣𝗟𝗔𝗡𝗘𝗧𝗔𝗦!", "STAR GAMES: Sopa de letras STAR", JOptionPane.INFORMATION_MESSAGE);
+        easy e = new easy(user);//Una instancia
+        e.setSize(800, 496);
+        e.setLocation(0, 0);
+        e.setOpaque(false);
+        contenido3.add(e);
         contenido3.revalidate();
         contenido3.repaint();
     }//GEN-LAST:event_jButton1ActionPerformed

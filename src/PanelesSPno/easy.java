@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package PanelesSP;
+package PanelesSPno;
 
 import java.awt.Color;
 import java.util.Random;
@@ -136,6 +136,7 @@ public class easy extends javax.swing.JPanel {
         boton65 = new javax.swing.JButton();
         boton75 = new javax.swing.JButton();
         sopadeletras = new javax.swing.JLabel();
+        salir = new javax.swing.JButton();
         siguiente = new javax.swing.JButton();
         solucion = new javax.swing.JButton();
         palabrasencontradas = new javax.swing.JLabel();
@@ -148,7 +149,6 @@ public class easy extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         chulito3 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        siguiente1 = new javax.swing.JButton();
 
         contenido4.setBackground(new java.awt.Color(0, 0, 204));
         contenido4.setName("STAR GAMES: Sopa de letras Planetas"); // NOI18N
@@ -350,22 +350,30 @@ public class easy extends javax.swing.JPanel {
         sopadeletras.setForeground(new java.awt.Color(255, 255, 255));
         sopadeletras.setText("SOPA DE LETRAS STAR ");
 
-        siguiente.setBackground(new java.awt.Color(255, 153, 255));
+        salir.setBackground(new java.awt.Color(255, 253, 253));
+        salir.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        salir.setForeground(new java.awt.Color(255, 153, 204));
+        salir.setText("VOLVER");
+        salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirActionPerformed(evt);
+            }
+        });
+
+        siguiente.setBackground(new java.awt.Color(250, 250, 250));
         siguiente.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        siguiente.setForeground(new java.awt.Color(0, 0, 51));
+        siguiente.setForeground(new java.awt.Color(255, 153, 255));
         siguiente.setText("NEXT LEVEL");
-        siguiente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         siguiente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 siguienteActionPerformed(evt);
             }
         });
 
-        solucion.setBackground(new java.awt.Color(255, 153, 255));
+        solucion.setBackground(new java.awt.Color(249, 249, 249));
         solucion.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        solucion.setForeground(new java.awt.Color(0, 0, 51));
+        solucion.setForeground(new java.awt.Color(255, 153, 255));
         solucion.setText("Ver solución");
-        solucion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         solucion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 solucionActionPerformed(evt);
@@ -376,22 +384,20 @@ public class easy extends javax.swing.JPanel {
         palabrasencontradas.setForeground(new java.awt.Color(255, 255, 255));
         palabrasencontradas.setText("0/3");
 
-        instrucciones.setBackground(new java.awt.Color(255, 153, 255));
+        instrucciones.setBackground(new java.awt.Color(247, 243, 243));
         instrucciones.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        instrucciones.setForeground(new java.awt.Color(0, 0, 51));
+        instrucciones.setForeground(new java.awt.Color(255, 153, 255));
         instrucciones.setText("Instrucciones");
-        instrucciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         instrucciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 instruccionesActionPerformed(evt);
             }
         });
 
-        pista.setBackground(new java.awt.Color(255, 153, 255));
+        pista.setBackground(new java.awt.Color(249, 248, 248));
         pista.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        pista.setForeground(new java.awt.Color(0, 0, 51));
+        pista.setForeground(new java.awt.Color(255, 153, 255));
         pista.setText("Pista");
-        pista.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pista.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pistaActionPerformed(evt);
@@ -426,21 +432,20 @@ public class easy extends javax.swing.JPanel {
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("VENUS");
 
-        siguiente1.setBackground(new java.awt.Color(255, 153, 255));
-        siguiente1.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        siguiente1.setForeground(new java.awt.Color(0, 0, 51));
-        siguiente1.setText("REGRESAR AL MENÚ");
-        siguiente1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        siguiente1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                siguiente1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout contenido4Layout = new javax.swing.GroupLayout(contenido4);
         contenido4.setLayout(contenido4Layout);
         contenido4Layout.setHorizontalGroup(
             contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido4Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(instrucciones)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pista, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(solucion)
+                .addGap(213, 213, 213))
             .addGroup(contenido4Layout.createSequentialGroup()
                 .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(contenido4Layout.createSequentialGroup()
@@ -505,26 +510,32 @@ public class easy extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(boton65, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(contenido4Layout.createSequentialGroup()
-                                .addComponent(boton71, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, contenido4Layout.createSequentialGroup()
+                                        .addComponent(boton51, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton52, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton53, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton54, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton55, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(contenido4Layout.createSequentialGroup()
+                                        .addComponent(boton71, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton72, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton73, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton74, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(boton75, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(77, 77, 77)
+                                        .addComponent(siguiente)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton72, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton73, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton74, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton75, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(contenido4Layout.createSequentialGroup()
-                                .addComponent(boton51, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton52, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton53, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton54, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton55, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(182, Short.MAX_VALUE))
+                                .addComponent(salir)))))
+                .addContainerGap(110, Short.MAX_VALUE))
             .addGroup(contenido4Layout.createSequentialGroup()
                 .addGap(514, 514, 514)
                 .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -542,37 +553,23 @@ public class easy extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(37, 37, 37))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido4Layout.createSequentialGroup()
-                        .addComponent(instrucciones)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(pista, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(solucion)
-                        .addGap(78, 78, 78)
-                        .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(83, 83, 83))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido4Layout.createSequentialGroup()
-                        .addComponent(siguiente)
-                        .addGap(18, 18, 18)
-                        .addComponent(siguiente1)
-                        .addGap(87, 87, 87))))
         );
         contenido4Layout.setVerticalGroup(
             contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenido4Layout.createSequentialGroup()
                 .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido4Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(solucion)
-                            .addComponent(pista)
-                            .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(contenido4Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(instrucciones)))
+                        .addGap(16, 16, 16)
+                        .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido4Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(solucion)
+                                .addComponent(pista)))
+                        .addGroup(contenido4Layout.createSequentialGroup()
+                            .addGap(27, 27, 27)
+                            .addComponent(instrucciones))))
                 .addGap(35, 35, 35)
                 .addComponent(sopadeletras)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
@@ -637,16 +634,14 @@ public class easy extends javax.swing.JPanel {
                             .addComponent(jLabel12))
                         .addGap(87, 87, 87)))
                 .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(siguiente)
+                    .addComponent(salir)
                     .addComponent(boton75)
                     .addComponent(boton74)
                     .addComponent(boton73)
                     .addComponent(boton72)
                     .addComponent(boton71))
-                .addGap(18, 18, 18)
-                .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(siguiente)
-                    .addComponent(siguiente1))
-                .addGap(53, 53, 53))
+                .addGap(94, 94, 94))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -733,7 +728,19 @@ public class easy extends javax.swing.JPanel {
 
     private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
         contenido4.removeAll();
-        
+        JOptionPane.showMessageDialog(null, "𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐀𝐌𝐈𝐄𝐍𝐓𝐎 𝐃𝐄𝐋 𝐉𝐔𝐄𝐆𝐎:\nEste nivel está compuesto por una sopa de letras de dimensiones 8x6 donde encontrarás 4 palabras ocultas"
+            + "\nrelacionadas a nombres de planetas del sistema solar."
+            + "\nAl lado derecho de la pantalla visualizarás la lista de palabras que debes buscar."
+            + "\n𝐏𝐚𝐫𝐚 𝐣𝐮𝐠𝐚𝐫: "
+            + "\n  ⭐Busca las letras de las palabras en cualquier dirección: horizontal, vertical o diagonal, en sentido normal"
+            + "\n     o inverso."
+            + "\n  ⭐Una vez que encuentres una letra de una palabra, selecciona la letra inicial y ultima"
+            + "\n      para que el sistema verifique tu elección.\n"
+            + "  ⭐Si tu selección es correcta se cambiará el fondo de la palabra en la sopa de letras y aparecerá "
+            + "\n      una estrella al lado de la palabra de la lista.\n"
+            + "  ⭐Continúa buscando hasta que hayas encontrado todas las palabras de la lista."
+            + "\n\n𝐏𝐋𝐔𝐒: Si lo deseas puedes pedir pistas o revelar la solución de la sopa de letras al seleccionar dichas opciones."
+            + "\n\n                             ¡𝗗𝗜𝗩𝗜𝗘𝗥𝗧𝗘𝗧𝗘 𝗝𝗨𝗚𝗔𝗡𝗗𝗢 𝗟𝗔 𝗦𝗢𝗣𝗔 𝗗𝗘 𝗟𝗘𝗧𝗥𝗔𝗦 𝗦𝗧𝗔𝗥: 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝗣𝗟𝗔𝗡𝗘𝗧𝗔𝗦!", "STAR GAMES: Sopa de letras STAR", JOptionPane.INFORMATION_MESSAGE);
         medium m = new medium(name);
         m.setSize(800, 496);
         m.setLocation(0, 0);
@@ -742,6 +749,11 @@ public class easy extends javax.swing.JPanel {
         contenido4.revalidate();
         contenido4.repaint();
     }//GEN-LAST:event_siguienteActionPerformed
+
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+        this.setVisible(false);
+
+    }//GEN-LAST:event_salirActionPerformed
 
     private void boton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton75ActionPerformed
         // TODO add your handling code here:
@@ -974,17 +986,6 @@ public class easy extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
         }
     }//GEN-LAST:event_boton11ActionPerformed
-
-    private void siguiente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguiente1ActionPerformed
-        contenido4.removeAll();
-        tema m = new tema(name);
-        m.setSize(800, 496);
-        m.setLocation(0, 0);
-        m.setOpaque(false);
-        contenido4.add(m);
-        contenido4.revalidate();
-        contenido4.repaint();
-    }//GEN-LAST:event_siguiente1ActionPerformed
     int cont;
     int venus = 0;    int ceres = 0;    int tierra = 0;    int taux = 1, caux = 1, vaux = 1;
 
@@ -1035,8 +1036,8 @@ public class easy extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel palabrasencontradas;
     private javax.swing.JButton pista;
+    private javax.swing.JButton salir;
     private javax.swing.JButton siguiente;
-    private javax.swing.JButton siguiente1;
     private javax.swing.JButton solucion;
     private javax.swing.JLabel sopadeletras;
     // End of variables declaration//GEN-END:variables

@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package PanelesSP;
 
 import java.awt.Color;
@@ -9,33 +6,30 @@ import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author USUARIO
- */
-public class hard extends javax.swing.JPanel {
+
+public class hardanime extends javax.swing.JPanel {
 
     /**
      * Creates new form hard
      */
     private String name = null;
 
-    public hard(String user) {
+    public hardanime(String user) {
         initComponents();
         this.name = user;
-        int i, j, auxm = 4, auxm2 = 5, auxu = 4, auxu2 = 5, auxv = 4, auxv2 = 5;
+        int i, j, auxs = 1, auxs2 = 0, auxa2 = 3, auxa = 4, auxd = 1, auxd2 = 0, auxh = 5, auxh2 = 6;
         //Matriz de botones [8][8]
-        JButton botones[][] = {{boton11, boton21, boton31, boton41, boton51, boton61, boton71, boton81},
-        {boton12, boton22, boton32, boton42, boton52, boton62, boton72, boton82},
-        {boton13, boton23, boton33, boton43, boton53, boton63, boton73, boton83},
-        {boton14, boton24, boton34, boton44, boton54, boton64, boton74, boton84},
-        {boton15, boton25, boton35, boton45, boton55, boton65, boton75, boton85},
-        {boton16, boton26, boton36, boton46, boton56, boton66, boton76, boton86},
-        {boton17, boton27, boton37, boton47, boton57, boton67, boton77, boton87},
-        {boton18, boton28, boton38, boton48, boton58, boton68, boton78, boton88}};//matriz de botones
+        JButton botones[][] = {{boton11, boton12, boton13, boton14, boton15, boton16, boton17, boton18},
+        {boton21, boton22, boton23, boton24, boton25, boton26, boton27, boton28},
+        {boton31, boton32, boton33, boton34, boton35, boton36, boton37, boton38},
+        {boton41, boton42, boton43, boton44, boton45, boton46, boton47, boton48},
+        {boton51, boton52, boton53, boton54, boton55, boton56, boton57, boton58},
+        {boton61, boton62, boton63, boton64, boton65, boton66, boton67, boton68},
+        {boton71, boton72, boton73, boton74, boton75, boton76, boton77, boton78},
+        {boton81, boton82, boton83, boton84, boton85, boton86, boton87, boton88}};//matriz de botones
 
-        //Vector de planetas [8] pero solo se usan 5 espacios
-        String[] planetas = {"TIERRA", "SATURNO", "MARTE", "URANO", "VENUS", "JUPITER", "", ""};
+        //Vector de animes [8] pero solo se usan 6 espacios
+        String[] animes = {"SHINZO", "ANYA", "DAZAI", "HANAKO", "MIYAMURA", "MIRKO", "", ""};
 
         //Asignacion de letras a texto de la matriz de botones
         for (i = 0; i < 8; i++) {
@@ -49,57 +43,54 @@ public class hard extends javax.swing.JPanel {
 
                 //ORGANIZAR LETRAS DE PALABRAS SEGUN LA POSICIÓN DESEADA
                 //De acuerdo a mi matriz planteada:
-                //j representará mis filas
-                //i representará mis columnas
-                // TIERRA 
-                if (j == 0 && i < 6) { // Posición Horizontal: Fila 0, columnas de 0 - 5
-                    String caracter = planetas[0].substring(i, i + 1);//extraer caracteres de la palabra TIERRA
+                //i representará mis filas
+                //j representará mis columnas
+                // SHINZO
+                if (i == 1 && j >= 1 && j <= 6) { // Posición Horizontal: Fila 1, columnas de 1 - 6
+                    String caracter = animes[0].substring(auxs2, auxs);//extraer caracteres de la palabra SHINZO
+                    auxs2 = auxs;
+                    auxs = auxs + 1;
                     botones[i][j].setText(caracter);//se le asignan las letras correspondientes
-                    //SATURNO
-                } else if (j < 7 && i == 7) { //Posición Vertical: fila de 0-6, columnas 7
-                    String caracter2 = planetas[1].substring(j, j + 1);
+                    //ANYA
+                } else if (i >= 4 && i <= 7 && j == 7) { //Posición Vertical inversa: fila de 4-7, columnas 7
+                    String caracter2 = animes[1].substring(auxa2, auxa);
+                    auxa = auxa2;
+                    auxa2 = auxa2 - 1;
                     botones[i][j].setText(caracter2);
-                    //MARTE
-                } else if (i == 5 && j >= 2 && j < 7) { //Posición Vertical inversa: fila de 2-6, columna 5
-                    String caracter2 = planetas[2].substring(auxm, auxm2);// uso de auxiliares para obtener valores deseados para una correcta extracción de caracteres
-                    auxm2 = auxm;
-                    auxm = auxm - 1;
+                    //DAZAI
+                } else if (j == 5 && i >= 3 && j <= 7) { //Posición Vertical : fila de 3-7, columna 5
+                    String caracter2 = animes[2].substring(auxd2, auxd);// uso de auxiliares para obtener valores deseados para una correcta extracción de caracteres
+                    auxd2 = auxd;
+                    auxd = auxd + 1;
                     botones[i][j].setText(caracter2);
-                    //URANO
-                } else if (i == 1 && j >= 2 && j < 7) { //Posición Vertical inversa: fila de 2-6, columna 1
-                    String caracter3 = planetas[3].substring(auxu, auxu2);
-                    auxu2 = auxu;
-                    auxu = auxu - 1;
+                    //HANAKO
+                } else if (j == 1 && i >= 2 && i <= 7) { //Posición Vertical inversa: fila de 2-7, columna 1
+                    String caracter3 = animes[3].substring(auxh, auxh2);
+                    auxh2 = auxh;
+                    auxh = auxh - 1;
                     botones[i][j].setText(caracter3);
-                    // VENUS 
-                } else if (j == 7 && i >= 3 && i < 8) {// Posición Horizontal inversa: Fila 7, columnas de 3 - 7
-                    String caracter4 = planetas[4].substring(auxv, auxv2);
-                    auxv2 = auxv;
-                    auxv = auxv - 1;
+                    // MIYAMURA
+                } else if (j == 3 && i >= 0 && i <= 7) {// Posición vertical: Fila 0-7, columna 3 
+                    String caracter4 = animes[4].substring(i, i + 1);
+
                     botones[i][j].setText(caracter4);
-                    // JUPITER
-                } else if (j >= 1 && j < 8 && i < 7) {// Posición Diagonal: Fila de 7-1, columnas de 0- 6
-                    if (j == 7 && i == 0) {
-                        String caracter5 = planetas[5].substring(i, i + 1);//extracción de caracter personalizado 
-                        botones[i][j].setText(caracter5);//LETRA J
-                    } else if (j == 6 && i == 1) {
-                        String caracter51 = planetas[5].substring(i, i + 1);
-                        botones[i][j].setText(caracter51);//LETRA U
-                    } else if (j == 5 && i == 2) {
-                        String caracter52 = planetas[5].substring(i, i + 1);
-                        botones[i][j].setText(caracter52);//LETRA P
-                    } else if (j == 4 && i == 3) {
-                        String caracter53 = planetas[5].substring(i, i + 1);
-                        botones[i][j].setText(caracter53);//LETRA I
-                    } else if (j == 3 && i == 4) {
-                        String caracter54 = planetas[5].substring(i, i + 1);
-                        botones[i][j].setText(caracter54);//LETRA T
-                    } else if (j == 2 && i == 5) {
-                        String caracter55 = planetas[5].substring(i, i + 1);
-                        botones[i][j].setText(caracter55);//LETRA E
-                    } else if (j == 1 && i == 6) {
-                        String caracter56 = planetas[5].substring(i, i + 1);
-                        botones[i][j].setText(caracter56);//LETRA R
+                    // MIRKO
+                } else if (j >= 0 && j <= 6 && i >= 0 && i <= 4) {// Posición Diagonal inversa: Fila de 0-4, columnas de 0- 4
+                    if (i == 0 && j == 4) {
+                        String caracter5 = animes[5].substring(i, i + 1);//extracción de caracter personalizado 
+                        botones[i][j].setText(caracter5);//LETRA M
+                    } else if (i == 1 && j == 3) {
+                        String caracter51 = animes[5].substring(i, i + 1);
+                        botones[i][j].setText(caracter51);//LETRA I
+                    } else if (i == 2 && j == 2) {
+                        String caracter52 = animes[5].substring(i, i + 1);
+                        botones[i][j].setText(caracter52);//LETRA R
+                    } else if (i == 3 && j == 1) {
+                        String caracter53 = animes[5].substring(i, i + 1);
+                        botones[i][j].setText(caracter53);//LETRA K
+                    } else if (i == 4 && j == 0) {
+                        String caracter54 = animes[5].substring(i, i + 1);
+                        botones[i][j].setText(caracter54);//LETRA O
                     }
                 }
 
@@ -113,7 +104,7 @@ public class hard extends javax.swing.JPanel {
         chulito3.setVisible(false);
         chulito4.setVisible(false);
         chulito5.setVisible(false);
-        chulito7.setVisible(false);
+        chulito6.setVisible(false);
     }
 
     /**
@@ -206,8 +197,8 @@ public class hard extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
         chulito5 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        chulito7 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        chulito6 = new javax.swing.JLabel();
+        FD = new javax.swing.JLabel();
         siguiente1 = new javax.swing.JButton();
 
         contenido6.setBackground(new java.awt.Color(0, 0, 204));
@@ -231,6 +222,11 @@ public class hard extends javax.swing.JPanel {
         boton41.setText("jButton2");
 
         boton51.setText("jButton2");
+        boton51.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton51ActionPerformed(evt);
+            }
+        });
 
         boton21.setText("jButton2");
 
@@ -246,8 +242,18 @@ public class hard extends javax.swing.JPanel {
         boton71.setText("jButton2");
 
         boton12.setText("jButton2");
+        boton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton12ActionPerformed(evt);
+            }
+        });
 
         boton22.setText("jButton2");
+        boton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton22ActionPerformed(evt);
+            }
+        });
 
         boton32.setText("jButton2");
         boton32.addActionListener(new java.awt.event.ActionListener() {
@@ -263,6 +269,11 @@ public class hard extends javax.swing.JPanel {
         boton62.setText("jButton2");
 
         boton82.setText("jButton2");
+        boton82.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton82ActionPerformed(evt);
+            }
+        });
 
         boton72.setText("jButton2");
         boton72.addActionListener(new java.awt.event.ActionListener() {
@@ -272,6 +283,11 @@ public class hard extends javax.swing.JPanel {
         });
 
         boton13.setText("jButton2");
+        boton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton13ActionPerformed(evt);
+            }
+        });
 
         boton23.setText("jButton2");
 
@@ -625,7 +641,7 @@ public class hard extends javax.swing.JPanel {
 
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("PLANETAS");
+        jLabel2.setText("PERSONAJES DE ANIME");
 
         chulito1.setForeground(new java.awt.Color(255, 0, 0));
         chulito1.setText("★");
@@ -633,7 +649,7 @@ public class hard extends javax.swing.JPanel {
         jLabel3.setBackground(new java.awt.Color(153, 204, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("TIERRA");
+        jLabel3.setText("SHINZO");
 
         chulito2.setForeground(new java.awt.Color(255, 0, 0));
         chulito2.setText("★");
@@ -641,7 +657,7 @@ public class hard extends javax.swing.JPanel {
         jLabel9.setBackground(new java.awt.Color(153, 204, 255));
         jLabel9.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("SATURNO");
+        jLabel9.setText("ANYA");
 
         chulito3.setForeground(new java.awt.Color(255, 0, 0));
         chulito3.setText("★");
@@ -649,7 +665,7 @@ public class hard extends javax.swing.JPanel {
         jLabel10.setBackground(new java.awt.Color(153, 204, 255));
         jLabel10.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("MARTE");
+        jLabel10.setText("DAZAI");
 
         chulito4.setForeground(new java.awt.Color(255, 0, 0));
         chulito4.setText("★");
@@ -657,7 +673,7 @@ public class hard extends javax.swing.JPanel {
         jLabel11.setBackground(new java.awt.Color(153, 204, 255));
         jLabel11.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("URANO");
+        jLabel11.setText("HANAKO");
 
         chulito5.setForeground(new java.awt.Color(255, 0, 0));
         chulito5.setText("★");
@@ -665,20 +681,20 @@ public class hard extends javax.swing.JPanel {
         jLabel12.setBackground(new java.awt.Color(153, 204, 255));
         jLabel12.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("VENUS");
+        jLabel12.setText("MIYAMURA");
 
-        chulito7.setForeground(new java.awt.Color(255, 0, 0));
-        chulito7.setText("★");
+        chulito6.setForeground(new java.awt.Color(255, 0, 0));
+        chulito6.setText("★");
 
-        jLabel13.setBackground(new java.awt.Color(153, 204, 255));
-        jLabel13.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("JUPITER");
+        FD.setBackground(new java.awt.Color(153, 204, 255));
+        FD.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
+        FD.setForeground(new java.awt.Color(255, 255, 255));
+        FD.setText("MIRKO");
 
         siguiente1.setBackground(new java.awt.Color(255, 153, 255));
         siguiente1.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
         siguiente1.setForeground(new java.awt.Color(0, 0, 51));
-        siguiente1.setText("REGRESAR AL MENÚ");
+        siguiente1.setText("REGRESAR AL MENU");
         siguiente1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         siguiente1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -705,7 +721,22 @@ public class hard extends javax.swing.JPanel {
                 .addGroup(contenido6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(contenido6Layout.createSequentialGroup()
                         .addGroup(contenido6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(contenido6Layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, contenido6Layout.createSequentialGroup()
+                                .addComponent(boton82, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(boton83, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(boton84, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(boton85, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(boton86, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(boton87, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(boton88, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, contenido6Layout.createSequentialGroup()
                                 .addGroup(contenido6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(contenido6Layout.createSequentialGroup()
                                         .addComponent(boton12, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -812,41 +843,18 @@ public class hard extends javax.swing.JPanel {
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(contenido6Layout.createSequentialGroup()
-                                        .addComponent(chulito7)
+                                        .addComponent(chulito6)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(FD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(contenido6Layout.createSequentialGroup()
                                         .addComponent(chulito1)
                                         .addGap(18, 18, 18)
-                                        .addGroup(contenido6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(contenido6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addGroup(contenido6Layout.createSequentialGroup()
-                                                .addComponent(jLabel2)
-                                                .addGap(0, 0, Short.MAX_VALUE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido6Layout.createSequentialGroup()
-                                                .addGroup(contenido6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addGroup(contenido6Layout.createSequentialGroup()
-                                                        .addGap(0, 0, Short.MAX_VALUE)
-                                                        .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                                .addGap(4, 4, 4))))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, contenido6Layout.createSequentialGroup()
-                                .addComponent(boton82, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton83, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton84, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton85, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton86, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton87, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boton88, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(contenido6Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(siguiente1)))
+                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGap(4, 4, 4)))))
                         .addGap(189, 189, 189))
                     .addGroup(contenido6Layout.createSequentialGroup()
                         .addComponent(boton72, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -863,10 +871,6 @@ public class hard extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(boton78, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(contenido6Layout.createSequentialGroup()
-                .addGap(83, 83, 83)
-                .addComponent(sopadeletras)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido6Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(instrucciones)
@@ -875,6 +879,14 @@ public class hard extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(solucion)
                 .addGap(305, 305, 305))
+            .addGroup(contenido6Layout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(sopadeletras)
+                .addGap(51, 51, 51)
+                .addGroup(contenido6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(siguiente1)
+                    .addComponent(jLabel2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         contenido6Layout.setVerticalGroup(
             contenido6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -885,11 +897,14 @@ public class hard extends javax.swing.JPanel {
                     .addComponent(pista)
                     .addComponent(solucion)
                     .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
                 .addGroup(contenido6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(sopadeletras))
-                .addGap(18, 18, 18)
+                    .addGroup(contenido6Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(sopadeletras))
+                    .addGroup(contenido6Layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(contenido6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boton11)
                     .addComponent(boton12)
@@ -964,8 +979,8 @@ public class hard extends javax.swing.JPanel {
                     .addComponent(boton66)
                     .addComponent(boton67)
                     .addComponent(boton68)
-                    .addComponent(chulito7)
-                    .addComponent(jLabel13))
+                    .addComponent(chulito6)
+                    .addComponent(FD))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(contenido6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(contenido6Layout.createSequentialGroup()
@@ -988,9 +1003,9 @@ public class hard extends javax.swing.JPanel {
                         .addComponent(boton86)
                         .addComponent(boton87)
                         .addComponent(boton88)))
-                .addGap(8, 8, 8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(siguiente1)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -1004,89 +1019,27 @@ public class hard extends javax.swing.JPanel {
             .addComponent(contenido6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-    int tierra = 0;
+
     int cont;
     private void boton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton11ActionPerformed
-        tierra += 1;//Si se presiona este boton que representa la letra inicial de TIERRA el contador sumara 1
-        if (tierra == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara TIERRA
-            boton11.setBackground(Color.green);//Letra T
-            boton12.setBackground(Color.green);//Letra I
-            boton13.setBackground(Color.green);//Letra E
-            boton14.setBackground(Color.green);//Letra R
-            boton15.setBackground(Color.green);//Letra R
-            boton16.setBackground(Color.green);//Letra A
-            //Se volverá visible una estrella al lado de la palabra TIERRA en la lista
-            chulito1.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/6");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/6");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/6");
-            } else if (cont == 4) {
-                palabrasencontradas.setText("4/6");
-            } else if (cont == 5) {
-                palabrasencontradas.setText("5/6");
-            } else if (cont == 6) {
-                palabrasencontradas.setText("6/6");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (tierra >= 2 && marte >= 2 && saturno >= 2 && jupiter >= 2 && venus >= 2 && urano >= 2) {
-            JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
-            JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
-        }
+
     }//GEN-LAST:event_boton11ActionPerformed
-    int jupiter;
+
     private void boton81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton81ActionPerformed
-        jupiter += 1;//Si se presiona este boton que representa la letra inicial de URANO el contador sumara 1
-        if (jupiter == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara JUPITER
-            boton81.setBackground(Color.green);//Letra R
-            boton72.setBackground(Color.green);//Letra E
-            boton63.setBackground(Color.green);//Letra T
-            boton54.setBackground(Color.green);//Letra I
-            boton45.setBackground(Color.green);//Letra P
-            boton36.setBackground(Color.green);//Letra U
-            boton27.setBackground(Color.green);//Letra J
-            //Se volverá visible una estrella al lado de la palabra JUPITER en la lista
-            chulito7.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/6");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/6");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/6");
-            } else if (cont == 4) {
-                palabrasencontradas.setText("4/6");
-            } else if (cont == 5) {
-                palabrasencontradas.setText("5/6");
-            } else if (cont == 6) {
-                palabrasencontradas.setText("6/6");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (tierra >= 2 && marte >= 2 && saturno >= 2 && jupiter >= 2 && venus >= 2 && urano >= 2) {
-            JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
-            JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
-        }
+
     }//GEN-LAST:event_boton81ActionPerformed
-    int urano;
+    int HANAKO = 0;
     private void boton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton32ActionPerformed
-        urano += 1;//Si se presiona este boton que representa la letra final de URANO el contador sumara 1
-        if (urano == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara URANO
-            boton72.setBackground(Color.green);//Letra U
-            boton62.setBackground(Color.green);//Letra R
+        HANAKO += 1;//Si se presiona este boton que representa la letra inicial de HANAKO el contador sumara 1
+        if (HANAKO == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara HANAKO
+            boton82.setBackground(Color.green);//Letra H
+            boton72.setBackground(Color.green);//Letra A
+            boton62.setBackground(Color.green);//Letra N
             boton52.setBackground(Color.green);//Letra A
-            boton42.setBackground(Color.green);//Letra N
+            boton42.setBackground(Color.green);//Letra K
             boton32.setBackground(Color.green);//Letra O
-            //Se volverá visible una estrella al lado de la palabra TIERRA en la lista
+            //Se volverá visible una estrella al lado de la palabra HANAKO en la lista
             chulito4.setVisible(true);
             //Para contabilizar palabras halladas y mostrarlas al usuario
             cont += 1;// cada palabra hallada se le suma 1 al contador
@@ -1105,44 +1058,14 @@ public class hard extends javax.swing.JPanel {
             }
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (tierra >= 2 && marte >= 2 && saturno >= 2 && jupiter >= 2 && venus >= 2 && urano >= 2) {
+        if (SHINZO >= 2 && ANYA >= 2 && DAZAI >= 2 && HANAKO >= 2 && MIYAMURA >= 2 && MIRKO >= 2) {
             JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
             JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
         }
     }//GEN-LAST:event_boton32ActionPerformed
 
     private void boton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton72ActionPerformed
-        urano += 1;//Si se presiona este boton que representa la letra inicial de URANO el contador sumara 1
-        if (urano == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara URANO
-            boton72.setBackground(Color.green);//Letra U
-            boton62.setBackground(Color.green);//Letra R
-            boton52.setBackground(Color.green);//Letra A
-            boton42.setBackground(Color.green);//Letra N
-            boton32.setBackground(Color.green);//Letra O
-            //Se volverá visible una estrella al lado de la palabra TIERRA en la lista
-            chulito4.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/6");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/6");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/6");
-            } else if (cont == 4) {
-                palabrasencontradas.setText("4/6");
-            } else if (cont == 5) {
-                palabrasencontradas.setText("5/6");
-            } else if (cont == 6) {
-                palabrasencontradas.setText("6/6");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (tierra >= 2 && marte >= 2 && saturno >= 2 && jupiter >= 2 && venus >= 2 && urano >= 2) {
-            JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
-            JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
-        }
+
     }//GEN-LAST:event_boton72ActionPerformed
 
     private void boton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton53ActionPerformed
@@ -1156,27 +1079,21 @@ public class hard extends javax.swing.JPanel {
     private void boton83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton83ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_boton83ActionPerformed
-
+    int MIYAMURA = 0;
     private void boton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton14ActionPerformed
-
-    private void boton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton15ActionPerformed
-
-    private void boton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton16ActionPerformed
-        tierra += 1;//Si se presiona este boton que representa la letra final de TIERRA el contador sumara 1
-        if (tierra == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara TIERRA
-            boton11.setBackground(Color.green);//Letra T
-            boton12.setBackground(Color.green);//Letra I
-            boton13.setBackground(Color.green);//Letra E
-            boton14.setBackground(Color.green);//Letra R
-            boton15.setBackground(Color.green);//Letra R
-            boton16.setBackground(Color.green);//Letra A
-            //Se volverá visible una estrella al lado de la palabra TIERRA en la lista
-            chulito1.setVisible(true);
+        MIYAMURA += 1;//Si se presiona este boton que representa la letra inicial de MIYAMURA el contador sumara 1
+        if (MIYAMURA == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara MIYAMURA
+            boton14.setBackground(Color.green);//Letra M
+            boton24.setBackground(Color.green);//Letra I
+            boton34.setBackground(Color.green);//Letra Y
+            boton44.setBackground(Color.green);//Letra A
+            boton54.setBackground(Color.green);//Letra M
+            boton64.setBackground(Color.green);//Letra U
+            boton74.setBackground(Color.green);//Letra R
+            boton84.setBackground(Color.green);//Letra A
+            //Se volverá visible una estrella al lado de la palabra MIYAMURA en la lista
+            chulito5.setVisible(true);
             //Para contabilizar palabras halladas y mostrarlas al usuario
             cont += 1;// cada palabra hallada se le suma 1 al contador
             if (cont == 1) {
@@ -1194,51 +1111,56 @@ public class hard extends javax.swing.JPanel {
             }
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (tierra >= 2 && marte >= 2 && saturno >= 2 && jupiter >= 2 && venus >= 2 && urano >= 2) {
+        if (SHINZO >= 2 && ANYA >= 2 && DAZAI >= 2 && HANAKO >= 2 && MIYAMURA >= 2 && MIRKO >= 2) {
             JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
             JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
-
         }
+    }//GEN-LAST:event_boton14ActionPerformed
+    int MIRKO = 0;
+    private void boton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton15ActionPerformed
+        MIRKO += 1;//Si se presiona este boton que representa la letra inicial de MIRKO el contador sumara 1
+        if (MIRKO == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara MIRKO
+            boton15.setBackground(Color.green);//Letra M
+            boton24.setBackground(Color.green);//Letra I
+            boton33.setBackground(Color.green);//Letra R
+            boton42.setBackground(Color.green);//Letra K
+            boton51.setBackground(Color.green);//Letra O
+            //Se volverá visible una estrella al lado de la palabra MIRKO en la lista
+            chulito6.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/6");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/6");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/6");
+            } else if (cont == 4) {
+                palabrasencontradas.setText("4/6");
+            } else if (cont == 5) {
+                palabrasencontradas.setText("5/6");
+            } else if (cont == 6) {
+                palabrasencontradas.setText("6/6");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (SHINZO >= 2 && ANYA >= 2 && DAZAI >= 2 && HANAKO >= 2 && MIYAMURA >= 2 && MIRKO >= 2) {
+            JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
+            JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
+        }
+    }//GEN-LAST:event_boton15ActionPerformed
+
+    private void boton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton16ActionPerformed
+
     }//GEN-LAST:event_boton16ActionPerformed
 
     private void boton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton17ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_boton17ActionPerformed
-    int saturno;
+
     private void boton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton18ActionPerformed
-        saturno += 1;//Si se presiona este boton que representa la letra inicial de SATURNO el contador sumara 1
-        if (saturno == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara SATURNO
-            boton18.setBackground(Color.green);//Letra S
-            boton28.setBackground(Color.green);//Letra A
-            boton38.setBackground(Color.green);//Letra T
-            boton48.setBackground(Color.green);//Letra U
-            boton58.setBackground(Color.green);//Letra R
-            boton68.setBackground(Color.green);//Letra N
-            boton78.setBackground(Color.green);//Letra O
-            //Se volverá visible una estrella al lado de la palabra SATURNO en la lista
-            chulito2.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/6");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/6");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/6");
-            } else if (cont == 4) {
-                palabrasencontradas.setText("4/6");
-            } else if (cont == 5) {
-                palabrasencontradas.setText("5/6");
-            } else if (cont == 6) {
-                palabrasencontradas.setText("6/6");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (tierra >= 2 && marte >= 2 && saturno >= 2 && jupiter >= 2 && venus >= 2 && urano >= 2) {
-            JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
-            JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
-        }
+
     }//GEN-LAST:event_boton18ActionPerformed
 
     private void boton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton24ActionPerformed
@@ -1264,17 +1186,20 @@ public class hard extends javax.swing.JPanel {
     private void boton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton74ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_boton74ActionPerformed
-    int venus;
+
     private void boton84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton84ActionPerformed
-        venus += 1;//Si se presiona este boton que representa la letra final de VENUS el contador sumara 1
-        if (venus == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara VENUS
-            boton88.setBackground(Color.green);//Letra V
-            boton87.setBackground(Color.green);//Letra E
-            boton86.setBackground(Color.green);//Letra N
-            boton85.setBackground(Color.green);//Letra U
-            boton84.setBackground(Color.green);//Letra S
-            //Se volverá visible una estrella al lado de la palabra VENUS en la lista
+        MIYAMURA += 1;//Si se presiona este boton que representa la letra inicial de MIYAMURA el contador sumara 1
+        if (MIYAMURA == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara MIYAMURA
+            boton14.setBackground(Color.green);//Letra M
+            boton24.setBackground(Color.green);//Letra I
+            boton34.setBackground(Color.green);//Letra Y
+            boton44.setBackground(Color.green);//Letra A
+            boton54.setBackground(Color.green);//Letra M
+            boton64.setBackground(Color.green);//Letra U
+            boton74.setBackground(Color.green);//Letra R
+            boton84.setBackground(Color.green);//Letra A
+            //Se volverá visible una estrella al lado de la palabra MIYAMURA en la lista
             chulito5.setVisible(true);
             //Para contabilizar palabras halladas y mostrarlas al usuario
             cont += 1;// cada palabra hallada se le suma 1 al contador
@@ -1293,7 +1218,7 @@ public class hard extends javax.swing.JPanel {
             }
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (tierra >= 2 && marte >= 2 && saturno >= 2 && jupiter >= 2 && venus >= 2 && urano >= 2) {
+        if (SHINZO >= 2 && ANYA >= 2 && DAZAI >= 2 && HANAKO >= 2 && MIYAMURA >= 2 && MIRKO >= 2) {
             JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
             JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
         }
@@ -1330,17 +1255,21 @@ public class hard extends javax.swing.JPanel {
     private void boton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton26ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_boton26ActionPerformed
-    int marte;
+
     private void boton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton36ActionPerformed
-        marte += 1;//Si se presiona este boton que representa la letra final de MARTE el contador sumara 1
-        if (marte == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara MARTE
-            boton76.setBackground(Color.green);//Letra M
-            boton66.setBackground(Color.green);//Letra A
-            boton56.setBackground(Color.green);//Letra R
-            boton46.setBackground(Color.green);//Letra T
-            boton36.setBackground(Color.green);//Letra E
-            //Se volverá visible una estrella al lado de la palabra MARTE en la lista
+
+    }//GEN-LAST:event_boton36ActionPerformed
+    int DAZAI = 0;
+    private void boton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton46ActionPerformed
+        DAZAI += 1;//Si se presiona este boton que representa la letra inicial de DAZAI el contador sumara 1
+        if (DAZAI == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara DAZAI
+            boton46.setBackground(Color.green);//Letra D
+            boton56.setBackground(Color.green);//Letra A
+            boton66.setBackground(Color.green);//Letra Z
+            boton76.setBackground(Color.green);//Letra A
+            boton86.setBackground(Color.green);//Letra A
+            //Se volverá visible una estrella al lado de la palabra DAZAI en la lista
             chulito3.setVisible(true);
             //Para contabilizar palabras halladas y mostrarlas al usuario
             cont += 1;// cada palabra hallada se le suma 1 al contador
@@ -1359,14 +1288,10 @@ public class hard extends javax.swing.JPanel {
             }
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (tierra >= 2 && marte >= 2 && saturno >= 2 && jupiter >= 2 && venus >= 2 && urano >= 2) {
+        if (SHINZO >= 2 && ANYA >= 2 && DAZAI >= 2 && HANAKO >= 2 && MIYAMURA >= 2 && MIRKO >= 2) {
             JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
             JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
         }
-    }//GEN-LAST:event_boton36ActionPerformed
-
-    private void boton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton46ActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_boton46ActionPerformed
 
     private void boton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton56ActionPerformed
@@ -1378,15 +1303,19 @@ public class hard extends javax.swing.JPanel {
     }//GEN-LAST:event_boton66ActionPerformed
 
     private void boton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton76ActionPerformed
-        marte += 1;//Si se presiona este boton que representa la letra inicial de MARTE el contador sumara 1
-        if (marte == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara MARTE
-            boton76.setBackground(Color.green);//Letra M
-            boton66.setBackground(Color.green);//Letra A
-            boton56.setBackground(Color.green);//Letra R
-            boton46.setBackground(Color.green);//Letra T
-            boton36.setBackground(Color.green);//Letra E
-            //Se volverá visible una estrella al lado de la palabra MARTE en la lista
+
+    }//GEN-LAST:event_boton76ActionPerformed
+
+    private void boton86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton86ActionPerformed
+        DAZAI += 1;//Si se presiona este boton que representa la letra inicial de DAZAI el contador sumara 1
+        if (DAZAI == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara DAZAI
+            boton46.setBackground(Color.green);//Letra D
+            boton56.setBackground(Color.green);//Letra A
+            boton66.setBackground(Color.green);//Letra Z
+            boton76.setBackground(Color.green);//Letra A
+            boton86.setBackground(Color.green);//Letra A
+            //Se volverá visible una estrella al lado de la palabra DAZAI en la lista
             chulito3.setVisible(true);
             //Para contabilizar palabras halladas y mostrarlas al usuario
             cont += 1;// cada palabra hallada se le suma 1 al contador
@@ -1405,29 +1334,24 @@ public class hard extends javax.swing.JPanel {
             }
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (tierra >= 2 && marte >= 2 && saturno >= 2 && jupiter >= 2 && venus >= 2 && urano >= 2) {
+        if (SHINZO >= 2 && ANYA >= 2 && DAZAI >= 2 && HANAKO >= 2 && MIYAMURA >= 2 && MIRKO >= 2) {
             JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
             JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
         }
-    }//GEN-LAST:event_boton76ActionPerformed
-
-    private void boton86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton86ActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_boton86ActionPerformed
 
     private void boton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton27ActionPerformed
-        jupiter += 1;//Si se presiona este boton que representa la letra final de JUPITER el contador sumara 1
-        if (jupiter == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara JUPITER
-            boton81.setBackground(Color.green);//Letra R
-            boton72.setBackground(Color.green);//Letra E
-            boton63.setBackground(Color.green);//Letra T
-            boton54.setBackground(Color.green);//Letra I
-            boton45.setBackground(Color.green);//Letra P
-            boton36.setBackground(Color.green);//Letra U
-            boton27.setBackground(Color.green);//Letra J
-            //Se volverá visible una estrella al lado de la palabra JUPITER en la lista
-            chulito7.setVisible(true);
+        SHINZO += 1;//Si se presiona este boton que representa la letra inicial de SHINZO el contador sumara 1
+        if (SHINZO == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara SHINZO
+            boton22.setBackground(Color.green);//Letra S
+            boton23.setBackground(Color.green);//Letra H
+            boton24.setBackground(Color.green);//Letra I
+            boton25.setBackground(Color.green);//Letra N
+            boton26.setBackground(Color.green);//Letra Z
+            boton27.setBackground(Color.green);//Letra O 
+            //Se volverá visible una estrella al lado de la palabra SHINZO en la lista
+            chulito1.setVisible(true);
             //Para contabilizar palabras halladas y mostrarlas al usuario
             cont += 1;// cada palabra hallada se le suma 1 al contador
             if (cont == 1) {
@@ -1445,7 +1369,7 @@ public class hard extends javax.swing.JPanel {
             }
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (tierra >= 2 && marte >= 2 && saturno >= 2 && jupiter >= 2 && venus >= 2 && urano >= 2) {
+        if (SHINZO >= 2 && ANYA >= 2 && DAZAI >= 2 && HANAKO >= 2 && MIYAMURA >= 2 && MIRKO >= 2) {
             JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
             JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
         }
@@ -1488,25 +1412,14 @@ public class hard extends javax.swing.JPanel {
     }//GEN-LAST:event_boton48ActionPerformed
 
     private void boton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton58ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton58ActionPerformed
-
-    private void boton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton68ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton68ActionPerformed
-
-    private void boton78ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton78ActionPerformed
-        saturno += 1;//Si se presiona este boton que representa la letra final de SATURNO el contador sumara 1
-        if (saturno == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara SATURNO
-            boton18.setBackground(Color.green);//Letra S
-            boton28.setBackground(Color.green);//Letra A
-            boton38.setBackground(Color.green);//Letra T
-            boton48.setBackground(Color.green);//Letra U
-            boton58.setBackground(Color.green);//Letra R
+        ANYA += 1;//Si se presiona este boton que representa la letra inicial de ANYA el contador sumara 1
+        if (ANYA == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara ANYA
+            boton58.setBackground(Color.green);//Letra A
             boton68.setBackground(Color.green);//Letra N
-            boton78.setBackground(Color.green);//Letra O
-            //Se volverá visible una estrella al lado de la palabra SATURNO en la lista
+            boton78.setBackground(Color.green);//Letra Y
+            boton88.setBackground(Color.green);//Letra A
+            //Se volverá visible una estrella al lado de la palabra ANYA en la lista
             chulito2.setVisible(true);
             //Para contabilizar palabras halladas y mostrarlas al usuario
             cont += 1;// cada palabra hallada se le suma 1 al contador
@@ -1525,23 +1438,30 @@ public class hard extends javax.swing.JPanel {
             }
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (tierra >= 2 && marte >= 2 && saturno >= 2 && jupiter >= 2 && venus >= 2 && urano >= 2) {
+        if (SHINZO >= 2 && ANYA >= 2 && DAZAI >= 2 && HANAKO >= 2 && MIYAMURA >= 2 && MIRKO >= 2) {
             JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
             JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
         }
-    }//GEN-LAST:event_boton78ActionPerformed
+    }//GEN-LAST:event_boton58ActionPerformed
 
+    private void boton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton68ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton68ActionPerformed
+
+    private void boton78ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton78ActionPerformed
+
+    }//GEN-LAST:event_boton78ActionPerformed
+    int ANYA = 0;
     private void boton88ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton88ActionPerformed
-        venus += 1;//Si se presiona este boton que representa la letra inicial de VENUS el contador sumara 1
-        if (venus == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara VENUS
-            boton88.setBackground(Color.green);//Letra V
-            boton87.setBackground(Color.green);//Letra E
-            boton86.setBackground(Color.green);//Letra N
-            boton85.setBackground(Color.green);//Letra U
-            boton84.setBackground(Color.green);//Letra S
-            //Se volverá visible una estrella al lado de la palabra VENUS en la lista
-            chulito5.setVisible(true);
+        ANYA += 1;//Si se presiona este boton que representa la letra inicial de ANYA el contador sumara 1
+        if (ANYA == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara ANYA
+            boton58.setBackground(Color.green);//Letra A
+            boton68.setBackground(Color.green);//Letra N
+            boton78.setBackground(Color.green);//Letra Y
+            boton88.setBackground(Color.green);//Letra A
+            //Se volverá visible una estrella al lado de la palabra ANYA en la lista
+            chulito2.setVisible(true);
             //Para contabilizar palabras halladas y mostrarlas al usuario
             cont += 1;// cada palabra hallada se le suma 1 al contador
             if (cont == 1) {
@@ -1559,35 +1479,36 @@ public class hard extends javax.swing.JPanel {
             }
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (tierra >= 2 && marte >= 2 && saturno >= 2 && jupiter >= 2 && venus >= 2 && urano >= 2) {
+        if (SHINZO >= 2 && ANYA >= 2 && DAZAI >= 2 && HANAKO >= 2 && MIYAMURA >= 2 && MIRKO >= 2) {
             JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
             JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
         }
     }//GEN-LAST:event_boton88ActionPerformed
-    int contp = 0, maux = 1, jaux = 1, vaux = 1, uaux = 1,taux=1,saux=1;
+    int contp = 0,maux=1, aaux=1, haux = 1, saux = 1, miaux = 1, daux = 1;
     private void pistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pistaActionPerformed
         //Para mostrar pistas:
         //tengo en cuenta si ya el contador de la palabra está lleno ademas creo un auxiliar para cerciorarme de no repetir la palabra si ya la encontraron
         //la pista consiste en crear un fondo verde en la inicial o final de la letra de un planeta que no haya encontrado el usuario
-        //psra la palabra urano la pista esta en las dos 2 ultimas letras
-        if (marte < 2 & maux == 1) {//pista letra inicial MARTE
-            boton76.setBackground(new Color(153, 255, 153));
+        //psra la palabra HANAKO la pista esta en las ultima letra
+        if (SHINZO < 2 & saux == 1) {//pista letra inicial SHINZO
+            boton22.setBackground(new Color(153, 255, 153));
+            saux = 0;
+        } else if (MIYAMURA < 2 & miaux == 1) {//pista letra inicial MIYAMURA
+            boton14.setBackground(new Color(153, 255, 153));
+            miaux = 0;
+        } else if (DAZAI < 2 & daux == 1) {//pista letra inicisl DAZAI
+            boton46.setBackground(new Color(153, 255, 153));
+            daux = 0;
+        } else if (HANAKO < 2 & haux == 1) {//pista letra final HANAKO
+            boton82.setBackground(new Color(153, 255, 153));
+            haux = 0;
+        }else if (ANYA < 2 & aaux == 1) {//pista letra final ANYA
+            boton57.setBackground(new Color(153, 255, 153));
+            aaux = 0;
+        }else if (MIRKO < 2 & maux == 1) {//pista letra final MIRKO
+            boton51.setBackground(new Color(153, 255, 153));
             maux = 0;
-        } else if (jupiter <2 & jaux == 1) {//pista letra inicial JUPITER
-            boton81.setBackground(new Color(153, 255, 153));
-            jaux = 0;
-        } else if (venus <2 & vaux == 1) {//pista letra final VENUS
-            boton84.setBackground(new Color(153, 255, 153));
-            vaux = 0;
-        } else if (urano <2 & uaux == 1) {//pista letra final URANO
-            boton32.setBackground(new Color(153, 255, 153));
-            uaux = 0;
-        }else if (tierra <2 & taux == 1) {//pista letra final tierra
-            boton16.setBackground(new Color(153, 255, 153));
-            taux = 0;}
-        else if (saturno <2 & saux == 1) {//pista letra final saturno
-            boton78.setBackground(new Color(153, 255, 153));
-            saux = 0;}
+        }
         contp += 1;
         if (contp > 4) {
             JOptionPane.showMessageDialog(null, "\nLo sentimos " + name + ":(..\nHas usado el número máximo de pistas");
@@ -1596,47 +1517,46 @@ public class hard extends javax.swing.JPanel {
 
     private void solucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solucionActionPerformed
         //Al presionar este boton se podra visualizar la solución de la sopa de letras al ver con un fondo verde las letras de las palabras propuestas al usuario
-        //TIERRA
-        boton11.setBackground(Color.green);
-        boton12.setBackground(Color.green);
-        boton13.setBackground(Color.green);
-        boton14.setBackground(Color.green);
-        boton15.setBackground(Color.green);
-        boton16.setBackground(Color.green);
-        //SATURNO
-        boton18.setBackground(Color.green);
-        boton28.setBackground(Color.green);
-        boton38.setBackground(Color.green);
-        boton48.setBackground(Color.green);
-        boton58.setBackground(Color.green);
-        boton68.setBackground(Color.green);
-        boton78.setBackground(Color.green);
-        //MARTE
-        boton76.setBackground(Color.green);
-        boton66.setBackground(Color.green);
-        boton56.setBackground(Color.green);
-        boton46.setBackground(Color.green);
-        boton36.setBackground(Color.green);
-        //JUPITER
-        boton81.setBackground(Color.green);
-        boton72.setBackground(Color.green);
-        boton63.setBackground(Color.green);
-        boton54.setBackground(Color.green);
-        boton45.setBackground(Color.green);
-        boton36.setBackground(Color.green);
-        boton27.setBackground(Color.green);
-        //VENUS
-        boton88.setBackground(Color.green);
-        boton87.setBackground(Color.green);
-        boton86.setBackground(Color.green);
-        boton85.setBackground(Color.green);
-        boton84.setBackground(Color.green);
-        //URANO
-        boton72.setBackground(Color.green);
-        boton62.setBackground(Color.green);
-        boton52.setBackground(Color.green);
-        boton42.setBackground(Color.green);
-        boton32.setBackground(Color.green);
+        //SHINZO
+        boton22.setBackground(Color.green);//Letra S
+        boton23.setBackground(Color.green);//Letra H
+        boton24.setBackground(Color.green);//Letra I
+        boton25.setBackground(Color.green);//Letra N
+        boton26.setBackground(Color.green);//Letra Z
+        boton27.setBackground(Color.green);//Letra O 
+        //ANYA
+        boton58.setBackground(Color.green);//Letra A
+        boton68.setBackground(Color.green);//Letra N
+        boton78.setBackground(Color.green);//Letra Y
+        boton88.setBackground(Color.green);//Letra A
+        //DAZAI
+        boton46.setBackground(Color.green);//Letra D
+        boton56.setBackground(Color.green);//Letra A
+        boton66.setBackground(Color.green);//Letra Z
+        boton76.setBackground(Color.green);//Letra A
+        boton86.setBackground(Color.green);//Letra A
+        //HANAKO
+        boton82.setBackground(Color.green);//Letra H
+        boton72.setBackground(Color.green);//Letra A
+        boton62.setBackground(Color.green);//Letra N
+        boton52.setBackground(Color.green);//Letra A
+        boton42.setBackground(Color.green);//Letra K
+        boton32.setBackground(Color.green);//Letra O
+        //MIYAMURA
+        boton14.setBackground(Color.green);//Letra M
+        boton24.setBackground(Color.green);//Letra I
+        boton34.setBackground(Color.green);//Letra Y
+        boton44.setBackground(Color.green);//Letra A
+        boton54.setBackground(Color.green);//Letra M
+        boton64.setBackground(Color.green);//Letra U
+        boton74.setBackground(Color.green);//Letra R
+        boton84.setBackground(Color.green);//Letra A
+        //MIRKO
+        boton15.setBackground(Color.green);//Letra M
+        boton24.setBackground(Color.green);//Letra I
+        boton33.setBackground(Color.green);//Letra R
+        boton42.setBackground(Color.green);//Letra K
+        boton51.setBackground(Color.green);//Letra O
         //MOSTRAR PALABRAS ENCONTRADAS
         palabrasencontradas.setText("6/6");
         //MOSTRAR ESTRELLAS (CHULITOS)
@@ -1645,7 +1565,7 @@ public class hard extends javax.swing.JPanel {
         chulito3.setVisible(true);
         chulito4.setVisible(true);
         chulito5.setVisible(true);
-        chulito7.setVisible(true);
+        chulito6.setVisible(true);
 
     }//GEN-LAST:event_solucionActionPerformed
 
@@ -1680,9 +1600,122 @@ public class hard extends javax.swing.JPanel {
         contenido6.revalidate();
         contenido6.repaint();
     }//GEN-LAST:event_siguiente1ActionPerformed
+    int SHINZO = 0;
+    private void boton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton22ActionPerformed
+        SHINZO += 1;//Si se presiona este boton que representa la letra inicial de SHINZO el contador sumara 1
+        if (SHINZO == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara SHINZO
+            boton22.setBackground(Color.green);//Letra S
+            boton23.setBackground(Color.green);//Letra H
+            boton24.setBackground(Color.green);//Letra I
+            boton25.setBackground(Color.green);//Letra N
+            boton26.setBackground(Color.green);//Letra Z
+            boton27.setBackground(Color.green);//Letra O 
+            //Se volverá visible una estrella al lado de la palabra SHINZO en la lista
+            chulito1.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/6");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/6");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/6");
+            } else if (cont == 4) {
+                palabrasencontradas.setText("4/6");
+            } else if (cont == 5) {
+                palabrasencontradas.setText("5/6");
+            } else if (cont == 6) {
+                palabrasencontradas.setText("6/6");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (SHINZO >= 2 && ANYA >= 2 && DAZAI >= 2 && HANAKO >= 2 && MIYAMURA >= 2 && MIRKO >= 2) {
+            JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
+            JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
+        }
+    }//GEN-LAST:event_boton22ActionPerformed
+
+    private void boton82ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton82ActionPerformed
+        HANAKO += 1;//Si se presiona este boton que representa la letra inicial de HANAKO el contador sumara 1
+        if (HANAKO == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara HANAKO
+            boton82.setBackground(Color.green);//Letra H
+            boton72.setBackground(Color.green);//Letra A
+            boton62.setBackground(Color.green);//Letra N
+            boton52.setBackground(Color.green);//Letra A
+            boton42.setBackground(Color.green);//Letra K
+            boton32.setBackground(Color.green);//Letra O
+            //Se volverá visible una estrella al lado de la palabra HANAKO en la lista
+            chulito4.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/6");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/6");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/6");
+            } else if (cont == 4) {
+                palabrasencontradas.setText("4/6");
+            } else if (cont == 5) {
+                palabrasencontradas.setText("5/6");
+            } else if (cont == 6) {
+                palabrasencontradas.setText("6/6");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (SHINZO >= 2 && ANYA >= 2 && DAZAI >= 2 && HANAKO >= 2 && MIYAMURA >= 2 && MIRKO >= 2) {
+            JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
+            JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
+        }
+    }//GEN-LAST:event_boton82ActionPerformed
+
+    private void boton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton51ActionPerformed
+        MIRKO += 1;//Si se presiona este boton que representa la letra inicial de MIRKO el contador sumara 1
+        if (MIRKO == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara MIRKO
+            boton15.setBackground(Color.green);//Letra M
+            boton24.setBackground(Color.green);//Letra I
+            boton33.setBackground(Color.green);//Letra R
+            boton42.setBackground(Color.green);//Letra K
+            boton51.setBackground(Color.green);//Letra O
+            //Se volverá visible una estrella al lado de la palabra MIRKO en la lista
+            chulito6.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/6");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/6");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/6");
+            } else if (cont == 4) {
+                palabrasencontradas.setText("4/6");
+            } else if (cont == 5) {
+                palabrasencontradas.setText("5/6");
+            } else if (cont == 6) {
+                palabrasencontradas.setText("6/6");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (SHINZO >= 2 && ANYA >= 2 && DAZAI >= 2 && HANAKO >= 2 && MIYAMURA >= 2 && MIRKO >= 2) {
+            JOptionPane.showMessageDialog(null, "!FELICIDADES " + name + "! \nHas resuelto el nivel hard\nSin duda eres un maestro de la Sopa de letras STAR :D");
+            JOptionPane.showMessageDialog(null, "Presiona REGRESAR AL MENU para ir al principio del juego \n o SALIR para ir al Menu principal de STAR GAMES");
+        }
+    }//GEN-LAST:event_boton51ActionPerformed
+
+    private void boton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton12ActionPerformed
+
+    private void boton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton13ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel FD;
     private javax.swing.JButton boton11;
     private javax.swing.JButton boton12;
     private javax.swing.JButton boton13;
@@ -1752,13 +1785,12 @@ public class hard extends javax.swing.JPanel {
     private javax.swing.JLabel chulito3;
     private javax.swing.JLabel chulito4;
     private javax.swing.JLabel chulito5;
-    private javax.swing.JLabel chulito7;
+    private javax.swing.JLabel chulito6;
     private javax.swing.JPanel contenido6;
     private javax.swing.JButton instrucciones;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel9;
