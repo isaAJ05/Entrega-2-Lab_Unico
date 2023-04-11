@@ -60,10 +60,11 @@ public class inicio extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(255, 153, 255));
         jLabel1.setText("!BIENVENIDX AL JUEGO DE SOPA DE LETRAS MÁS GENIAL DE LA GALAXIA!");
 
-        botoncomenzar.setBackground(new java.awt.Color(246, 242, 242));
+        botoncomenzar.setBackground(new java.awt.Color(255, 153, 255));
         botoncomenzar.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
-        botoncomenzar.setForeground(new java.awt.Color(255, 153, 255));
+        botoncomenzar.setForeground(new java.awt.Color(0, 0, 51));
         botoncomenzar.setText("¡COMENCEMOS!");
+        botoncomenzar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botoncomenzar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botoncomenzarActionPerformed(evt);
@@ -115,7 +116,7 @@ public class inicio extends javax.swing.JPanel {
                 .addComponent(jLabel3)
                 .addGap(62, 62, 62)
                 .addComponent(botoncomenzar)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -127,7 +128,7 @@ public class inicio extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(contenido, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE)
+                .addComponent(contenido, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
