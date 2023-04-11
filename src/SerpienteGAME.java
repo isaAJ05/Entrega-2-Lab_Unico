@@ -38,9 +38,9 @@ public class SerpienteGAME extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        Volver = new javax.swing.JButton();
+        JugarBTN = new javax.swing.JButton();
         visible = new javax.swing.JPanel();
-        PlayBTN = new javax.swing.JButton();
         InfoBTN = new javax.swing.JButton();
         BTNAvatar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -49,13 +49,21 @@ public class SerpienteGAME extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Volver");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Volver.setText("Volver");
+        Volver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                VolverActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 15, -1, -1));
+        getContentPane().add(Volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 15, -1, -1));
+
+        JugarBTN.setText("Jugar!");
+        JugarBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JugarBTNActionPerformed(evt);
+            }
+        });
+        getContentPane().add(JugarBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, -1));
 
         visible.setOpaque(false);
 
@@ -71,14 +79,6 @@ public class SerpienteGAME extends javax.swing.JFrame {
         );
 
         getContentPane().add(visible, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
-
-        PlayBTN.setText("Jugar !");
-        PlayBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PlayBTNActionPerformed(evt);
-            }
-        });
-        getContentPane().add(PlayBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, -1));
 
         InfoBTN.setText("Info");
         InfoBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -107,21 +107,21 @@ public class SerpienteGAME extends javax.swing.JFrame {
         ShowPanel(InfoP); 
     }//GEN-LAST:event_InfoBTNActionPerformed
 
-    private void PlayBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayBTNActionPerformed
-        GamePanel1 Tablero1=new GamePanel1();
-        ShowPanel(Tablero1);  
-    }//GEN-LAST:event_PlayBTNActionPerformed
-
     private void BTNAvatarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNAvatarActionPerformed
         AvataresPanel AvatarP=new AvataresPanel();
         ShowPanel(AvatarP);
     }//GEN-LAST:event_BTNAvatarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void VolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverActionPerformed
         Principal3 a = new Principal3(user);
         a.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_VolverActionPerformed
+
+    private void JugarBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JugarBTNActionPerformed
+        GamePanel1 Game=new GamePanel1();
+        ShowPanel(Game);
+    }//GEN-LAST:event_JugarBTNActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -158,8 +158,8 @@ public class SerpienteGAME extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BTNAvatar;
     private javax.swing.JButton InfoBTN;
-    private javax.swing.JButton PlayBTN;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton JugarBTN;
+    private javax.swing.JButton Volver;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel visible;
     // End of variables declaration//GEN-END:variables
