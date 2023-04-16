@@ -43,8 +43,8 @@ public class nivel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         MEDIUM = new javax.swing.JButton();
         hardplanetas = new javax.swing.JButton();
-        btnVolver2 = new javax.swing.JButton();
         labelvolver = new javax.swing.JLabel();
+        btnVolver3 = new javax.swing.JButton();
 
         contenido3.setBackground(new java.awt.Color(51, 51, 255));
         contenido3.setOpaque(false);
@@ -86,34 +86,34 @@ public class nivel extends javax.swing.JPanel {
             }
         });
 
-        btnVolver2.setBackground(new java.awt.Color(0, 0, 0));
-        btnVolver2.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnVolver2.setForeground(new java.awt.Color(255, 255, 255));
-        btnVolver2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atras.png"))); // NOI18N
-        btnVolver2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnVolver2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnVolver2.setMaximumSize(new java.awt.Dimension(50, 39));
-        btnVolver2.setMinimumSize(new java.awt.Dimension(50, 39));
-        btnVolver2.setOpaque(true);
-        btnVolver2.setPreferredSize(new java.awt.Dimension(58, 47));
-        btnVolver2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atrasr.png"))); // NOI18N
-        btnVolver2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atrasr.png"))); // NOI18N
-        btnVolver2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnVolver2MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnVolver2MouseExited(evt);
-            }
-        });
-        btnVolver2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVolver2ActionPerformed(evt);
-            }
-        });
-
         labelvolver.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         labelvolver.setForeground(new java.awt.Color(255, 255, 255));
+
+        btnVolver3.setBackground(new java.awt.Color(0, 0, 0));
+        btnVolver3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnVolver3.setForeground(new java.awt.Color(255, 255, 255));
+        btnVolver3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atras.png"))); // NOI18N
+        btnVolver3.setContentAreaFilled(false);
+        btnVolver3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVolver3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnVolver3.setMaximumSize(new java.awt.Dimension(50, 39));
+        btnVolver3.setMinimumSize(new java.awt.Dimension(50, 39));
+        btnVolver3.setPreferredSize(new java.awt.Dimension(58, 47));
+        btnVolver3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atrasr.png"))); // NOI18N
+        btnVolver3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atrasr.png"))); // NOI18N
+        btnVolver3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnVolver3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnVolver3MouseExited(evt);
+            }
+        });
+        btnVolver3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolver3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout contenido3Layout = new javax.swing.GroupLayout(contenido3);
         contenido3.setLayout(contenido3Layout);
@@ -128,14 +128,13 @@ public class nivel extends javax.swing.JPanel {
                             .addComponent(MEDIUM)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(contenido3Layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(labelvolver, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(46, 46, 46)
-                        .addComponent(jLabel1))
-                    .addGroup(contenido3Layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(btnVolver2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(183, Short.MAX_VALUE))
+                        .addGap(49, 49, 49)
+                        .addGroup(contenido3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(labelvolver, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnVolver3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(156, 156, 156)
+                        .addComponent(jLabel1)))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         contenido3Layout.setVerticalGroup(
             contenido3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -143,7 +142,7 @@ public class nivel extends javax.swing.JPanel {
                 .addGroup(contenido3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(contenido3Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnVolver2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnVolver3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(8, 8, 8)
                         .addComponent(labelvolver, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(77, 77, 77)
@@ -232,16 +231,16 @@ public class nivel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_hardplanetasActionPerformed
 
-    private void btnVolver2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver2MouseEntered
+    private void btnVolver3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver3MouseEntered
         labelvolver.setText(" Menú");
-    }//GEN-LAST:event_btnVolver2MouseEntered
+    }//GEN-LAST:event_btnVolver3MouseEntered
 
-    private void btnVolver2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver2MouseExited
+    private void btnVolver3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver3MouseExited
         labelvolver.setText("");
-    }//GEN-LAST:event_btnVolver2MouseExited
+    }//GEN-LAST:event_btnVolver3MouseExited
 
-    private void btnVolver2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver2ActionPerformed
-       contenido3.removeAll();
+    private void btnVolver3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver3ActionPerformed
+        contenido3.removeAll();
         tema h = new tema(user);//Una instancia
         h.setSize(800, 496);
         h.setLocation(0, 0);
@@ -250,12 +249,12 @@ public class nivel extends javax.swing.JPanel {
         contenido3.add(h);
         contenido3.revalidate();
         contenido3.repaint();
-    }//GEN-LAST:event_btnVolver2ActionPerformed
+    }//GEN-LAST:event_btnVolver3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton MEDIUM;
-    private javax.swing.JButton btnVolver2;
+    private javax.swing.JButton btnVolver3;
     private javax.swing.JPanel contenido3;
     private javax.swing.JButton hardplanetas;
     private javax.swing.JButton jButton1;

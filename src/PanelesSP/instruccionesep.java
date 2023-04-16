@@ -420,11 +420,11 @@ public class instruccionesep extends javax.swing.JPanel {
         btnVolver2.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnVolver2.setForeground(new java.awt.Color(255, 255, 255));
         btnVolver2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atras.png"))); // NOI18N
+        btnVolver2.setContentAreaFilled(false);
         btnVolver2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVolver2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnVolver2.setMaximumSize(new java.awt.Dimension(50, 39));
         btnVolver2.setMinimumSize(new java.awt.Dimension(50, 39));
-        btnVolver2.setOpaque(true);
         btnVolver2.setPreferredSize(new java.awt.Dimension(58, 47));
         btnVolver2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atrasr.png"))); // NOI18N
         btnVolver2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atrasr.png"))); // NOI18N
@@ -487,26 +487,22 @@ public class instruccionesep extends javax.swing.JPanel {
                         .addComponent(jLabel4)
                         .addGap(85, 85, 85))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelitoLayout.createSequentialGroup()
-                .addGap(9, 65, Short.MAX_VALUE)
+                .addGap(15, 48, Short.MAX_VALUE)
                 .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelitoLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(labelvolver, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelitoLayout.createSequentialGroup()
-                            .addComponent(jLabel6)
-                            .addGap(61, 61, 61))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelitoLayout.createSequentialGroup()
-                            .addComponent(btnVolver2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(panelitoLayout.createSequentialGroup()
-                                    .addGap(192, 192, 192)
-                                    .addComponent(jLabel1)
-                                    .addGap(293, 293, 293))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelitoLayout.createSequentialGroup()
-                                    .addGap(38, 38, 38)
-                                    .addComponent(jLabel3)
-                                    .addGap(37, 37, 37)))))))
+                    .addComponent(labelvolver, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelitoLayout.createSequentialGroup()
+                        .addComponent(btnVolver2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelitoLayout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(293, 293, 293))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelitoLayout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(37, 37, 37))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelitoLayout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(61, 61, 61))))
         );
         panelitoLayout.setVerticalGroup(
             panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

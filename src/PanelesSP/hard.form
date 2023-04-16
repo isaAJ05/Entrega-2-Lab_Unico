@@ -60,8 +60,8 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="btnVolver2" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelvolver" min="-2" pref="57" max="-2" attributes="0"/>
+                              <Component id="btnVolver2" alignment="1" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="labelvolver" alignment="1" min="-2" pref="57" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       </Group>
@@ -280,15 +280,20 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="instrucciones" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="pista" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="solucion" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="palabrasencontradas" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="instrucciones" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="pista" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="solucion" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="palabrasencontradas" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <Component id="btnVolver2" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnVolver2" min="-2" pref="47" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="labelvolver" min="-2" pref="17" max="-2" attributes="0"/>
@@ -1137,6 +1142,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/imagenes/atras.png"/>
             </Property>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
             </Property>
@@ -1147,7 +1153,6 @@
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[50, 39]"/>
             </Property>
-            <Property name="opaque" type="boolean" value="true"/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[58, 47]"/>
             </Property>
