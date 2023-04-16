@@ -14,6 +14,7 @@ public class tema extends javax.swing.JPanel {
     public tema(String name) {
         initComponents();
         this.user = name;
+       
         //ICONOS : 
         //PLANETAS
 //    Image icono = new ImageIcon(getClass().getResource("\\IMGSP\\solar.gif")).getImage();

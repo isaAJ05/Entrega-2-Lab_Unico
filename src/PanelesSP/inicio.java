@@ -64,12 +64,14 @@ public class inicio extends javax.swing.JPanel {
         contenido.setLayout(contenidoLayout);
         contenidoLayout.setHorizontalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGroup(contenidoLayout.createSequentialGroup()
+                .addGap(267, 267, 267)
+                .addComponent(jLabel2)
+                .addContainerGap(273, Short.MAX_VALUE))
             .addGroup(contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(contenidoLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addGroup(contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel2)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 652, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(contenidoLayout.createSequentialGroup()
                             .addGap(12, 12, 12)
@@ -87,12 +89,13 @@ public class inicio extends javax.swing.JPanel {
         );
         contenidoLayout.setVerticalGroup(
             contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(contenidoLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel2)
+                .addContainerGap(404, Short.MAX_VALUE))
             .addGroup(contenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(contenidoLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel2)
-                    .addGap(24, 24, 24)
+                    .addGap(0, 141, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(13, 13, 13)
                     .addComponent(jLabel4)
@@ -102,7 +105,7 @@ public class inicio extends javax.swing.JPanel {
                     .addComponent(jLabel3)
                     .addGap(62, 62, 62)
                     .addComponent(botoncomenzar)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 28, Short.MAX_VALUE)))
         );
 
         add(contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 0, 800, 500));
