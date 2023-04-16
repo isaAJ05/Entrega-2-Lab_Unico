@@ -27,7 +27,6 @@ public class SOPASTAR extends javax.swing.JFrame {
         i.setLocation(0, 0);
         i.setOpaque(false);
         this.add(i);
-
     }
 
     /**
@@ -48,7 +47,12 @@ public class SOPASTAR extends javax.swing.JFrame {
         btnVolver1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnVolver1.setForeground(new java.awt.Color(0, 0, 51));
         btnVolver1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar.png"))); // NOI18N
+        btnVolver1.setBorder(null);
+        btnVolver1.setBorderPainted(false);
+        btnVolver1.setContentAreaFilled(false);
         btnVolver1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVolver1.setFocusPainted(false);
+        btnVolver1.setFocusable(false);
         btnVolver1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnVolver1.setMaximumSize(new java.awt.Dimension(50, 39));
         btnVolver1.setMinimumSize(new java.awt.Dimension(50, 39));
