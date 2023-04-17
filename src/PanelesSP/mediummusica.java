@@ -181,7 +181,8 @@ public class mediummusica extends javax.swing.JPanel {
         chulito4 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        siguiente1 = new javax.swing.JButton();
+        btnVolver3 = new javax.swing.JButton();
+        labelvolver = new javax.swing.JLabel();
 
         contenido5.setBackground(new java.awt.Color(0, 0, 204));
         contenido5.setName("STAR GAMES: Sopa de letras Planetas"); // NOI18N
@@ -562,16 +563,34 @@ public class mediummusica extends javax.swing.JPanel {
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("SABRINA");
 
-        siguiente1.setBackground(new java.awt.Color(255, 153, 255));
-        siguiente1.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        siguiente1.setForeground(new java.awt.Color(0, 0, 51));
-        siguiente1.setText("REGRESAR AL MENÚ");
-        siguiente1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        siguiente1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                siguiente1ActionPerformed(evt);
+        btnVolver3.setBackground(new java.awt.Color(0, 0, 0));
+        btnVolver3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnVolver3.setForeground(new java.awt.Color(255, 255, 255));
+        btnVolver3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atras.png"))); // NOI18N
+        btnVolver3.setContentAreaFilled(false);
+        btnVolver3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVolver3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnVolver3.setMaximumSize(new java.awt.Dimension(50, 39));
+        btnVolver3.setMinimumSize(new java.awt.Dimension(50, 39));
+        btnVolver3.setPreferredSize(new java.awt.Dimension(58, 47));
+        btnVolver3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atrasr.png"))); // NOI18N
+        btnVolver3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atrasr.png"))); // NOI18N
+        btnVolver3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnVolver3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnVolver3MouseExited(evt);
             }
         });
+        btnVolver3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolver3ActionPerformed(evt);
+            }
+        });
+
+        labelvolver.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        labelvolver.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout contenido5Layout = new javax.swing.GroupLayout(contenido5);
         contenido5.setLayout(contenido5Layout);
@@ -701,39 +720,50 @@ public class mediummusica extends javax.swing.JPanel {
                                 .addComponent(jLabel2))
                             .addGroup(contenido5Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(siguiente1)))
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
-                        .addComponent(instrucciones)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(pista, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(solucion)
-                        .addGap(46, 46, 46)
-                        .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(121, 121, 121))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
-                        .addComponent(sopadeletras)
-                        .addGap(303, 303, 303))))
+                .addContainerGap(61, Short.MAX_VALUE)
+                .addComponent(labelvolver, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sopadeletras)
+                .addGap(303, 303, 303))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(btnVolver3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(instrucciones)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pista, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(solucion)
+                .addGap(46, 46, 46)
+                .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(121, 121, 121))
         );
         contenido5Layout.setVerticalGroup(
             contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenido5Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(contenido5Layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
                         .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(pista)
                             .addComponent(solucion)
                             .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(instrucciones))
                         .addGap(73, 73, 73))
-                    .addComponent(sopadeletras))
+                    .addGroup(contenido5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnVolver3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(contenido5Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(sopadeletras))
+                            .addGroup(contenido5Layout.createSequentialGroup()
+                                .addComponent(labelvolver, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGap(29, 29, 29)
                 .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boton11)
@@ -811,12 +841,10 @@ public class mediummusica extends javax.swing.JPanel {
                             .addComponent(boton83)
                             .addComponent(boton82)
                             .addComponent(boton81))
-                        .addContainerGap(104, Short.MAX_VALUE))
+                        .addContainerGap(126, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                        .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2)
-                            .addComponent(siguiente1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                        .addComponent(jButton2)
                         .addGap(85, 85, 85))))
         );
 
@@ -1219,7 +1247,7 @@ int haux = 1, baux = 1, caux = 1, saux = 1;
     private void instruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_instruccionesActionPerformed
         //Mostrar Joption pane de instrucciones
         JOptionPane.showMessageDialog(null, "𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐀𝐌𝐈𝐄𝐍𝐓𝐎 𝐃𝐄𝐋 𝐉𝐔𝐄𝐆𝐎:\nEste nivel está compuesto por una sopa de letras de dimensiones 8x6 donde encontrarás 4 palabras ocultas"
-            + "\nrelacionadas a nombres de planetas del sistema solar."
+            + "\nrelacionadas a nombres de cantantes reconocidos."
             + "\nAl lado derecho de la pantalla visualizarás la lista de palabras que debes buscar."
             + "\n𝐏𝐚𝐫𝐚 𝐣𝐮𝐠𝐚𝐫: "
             + "\n  ⭐Busca las letras de las palabras en cualquier dirección: horizontal, vertical o diagonal, en sentido normal"
@@ -1230,19 +1258,8 @@ int haux = 1, baux = 1, caux = 1, saux = 1;
             + "\n      una estrella al lado de la palabra de la lista.\n"
             + "  ⭐Continúa buscando hasta que hayas encontrado todas las palabras de la lista."
             + "\n\n𝐏𝐋𝐔𝐒: Si lo deseas puedes pedir pistas o revelar la solución de la sopa de letras al seleccionar dichas opciones."
-            + "\n\n                             ¡𝗗𝗜𝗩𝗜𝗘𝗥𝗧𝗘𝗧𝗘 𝗝𝗨𝗚𝗔𝗡𝗗𝗢 𝗟𝗔 𝗦𝗢𝗣𝗔 𝗗𝗘 𝗟𝗘𝗧𝗥𝗔𝗦 𝗦𝗧𝗔𝗥: 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝗣𝗟𝗔𝗡𝗘𝗧𝗔𝗦!", "STAR GAMES: Sopa de letras STAR", JOptionPane.INFORMATION_MESSAGE);
+            + "\n\n                             ¡𝗗𝗜𝗩𝗜𝗘𝗥𝗧𝗘𝗧𝗘 𝗝𝗨𝗚𝗔𝗡𝗗𝗢 𝗟𝗔 𝗦𝗢𝗣𝗔 𝗗𝗘 𝗟𝗘𝗧𝗥𝗔𝗦 𝗦𝗧𝗔𝗥: 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝐌𝗨𝗦𝗜𝐂𝗔!", "STAR GAMES: Sopa de letras STAR", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_instruccionesActionPerformed
-
-    private void siguiente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguiente1ActionPerformed
-        contenido5.removeAll();
-        tema m = new tema(name);
-        m.setSize(800, 496);
-        m.setLocation(0, 0);
-        m.setOpaque(false);
-        contenido5.add(m);
-        contenido5.revalidate();
-        contenido5.repaint();
-    }//GEN-LAST:event_siguiente1ActionPerformed
 
     private void contenido5MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contenido5MouseMoved
         // TODO add your handling code here:
@@ -1275,6 +1292,26 @@ int haux = 1, baux = 1, caux = 1, saux = 1;
             JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
         }
     }//GEN-LAST:event_boton82ActionPerformed
+
+    private void btnVolver3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver3MouseEntered
+        labelvolver.setText(" Menú");
+    }//GEN-LAST:event_btnVolver3MouseEntered
+
+    private void btnVolver3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver3MouseExited
+        labelvolver.setText("");
+    }//GEN-LAST:event_btnVolver3MouseExited
+
+    private void btnVolver3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver3ActionPerformed
+        contenido5.removeAll();
+        tema h = new tema(name);//Una instancia
+        h.setSize(800, 496);
+        h.setLocation(0, 0);
+        h.setOpaque(false);
+
+        contenido5.add(h);
+        contenido5.revalidate();
+        contenido5.repaint();
+    }//GEN-LAST:event_btnVolver3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1326,6 +1363,7 @@ int haux = 1, baux = 1, caux = 1, saux = 1;
     private javax.swing.JButton boton84;
     private javax.swing.JButton boton85;
     private javax.swing.JButton boton86;
+    private javax.swing.JButton btnVolver3;
     private javax.swing.JLabel chulito1;
     private javax.swing.JLabel chulito2;
     private javax.swing.JLabel chulito3;
@@ -1338,9 +1376,9 @@ int haux = 1, baux = 1, caux = 1, saux = 1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel labelvolver;
     private javax.swing.JLabel palabrasencontradas;
     private javax.swing.JButton pista;
-    private javax.swing.JButton siguiente1;
     private javax.swing.JButton solucion;
     private javax.swing.JLabel sopadeletras;
     // End of variables declaration//GEN-END:variables

@@ -14,12 +14,12 @@ import javax.swing.JFrame;
  *
  * @author USUARIO
  */
-public class instruccionesep extends javax.swing.JPanel {
+public class instruccionesem extends javax.swing.JPanel {
     /**
      * Creates new form instruccionesep
      */
     private String name = null;
-    public instruccionesep(String user) {
+    public instruccionesem(String user) {
         initComponents();
         this.name = user;
         
@@ -338,7 +338,7 @@ public class instruccionesep extends javax.swing.JPanel {
 
         jLabel4.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("3 palabras ocultas relacionadas a nombres de planetas del sistema solar.");
+        jLabel4.setText("3 palabras ocultas relacionadas a nombres de cantantes reconocidos.");
 
         jLabel6.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -378,7 +378,7 @@ public class instruccionesep extends javax.swing.JPanel {
 
         jLabel2.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 153, 255));
-        jLabel2.setText("¡DIVIERTETE JUGANDO LA SOPA DE LETRAS STAR: VERSIÓN PLANETAS!");
+        jLabel2.setText("¡DIVIERTETE JUGANDO LA SOPA DE LETRAS STAR: VERSIÓN MÚSICA!");
 
         jLabel15.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 153, 255));
@@ -468,7 +468,7 @@ public class instruccionesep extends javax.swing.JPanel {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelitoLayout.createSequentialGroup()
                                 .addGap(51, 51, 51)
                                 .addComponent(jLabel2)
-                                .addGap(33, 33, 33)
+                                .addGap(46, 46, 46)
                                 .addComponent(botonok, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelitoLayout.createSequentialGroup()
                                 .addGap(24, 24, 24)
@@ -503,7 +503,7 @@ public class instruccionesep extends javax.swing.JPanel {
                                 .addComponent(jLabel1)
                                 .addGap(293, 293, 293))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelitoLayout.createSequentialGroup()
-                                .addGap(34, 34, 34)
+                                .addGap(42, 42, 42)
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(labelvolver, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -589,7 +589,7 @@ public class instruccionesep extends javax.swing.JPanel {
 
     private void botonokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonokActionPerformed
         panelito.removeAll();
-        easy e = new easy(name);//Una instancia
+        easymusica e = new easymusica(name);//Una instancia
         e.setSize(800, 496);
         e.setLocation(0, 0);
         e.setOpaque(false);

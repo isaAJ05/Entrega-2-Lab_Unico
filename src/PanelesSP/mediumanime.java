@@ -174,7 +174,8 @@ public class mediumanime extends javax.swing.JPanel {
         chulito4 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        siguiente1 = new javax.swing.JButton();
+        btnVolver3 = new javax.swing.JButton();
+        labelvolver = new javax.swing.JLabel();
 
         contenido5.setBackground(new java.awt.Color(0, 0, 204));
         contenido5.setName("STAR GAMES: Sopa de letras Planetas"); // NOI18N
@@ -550,16 +551,34 @@ public class mediumanime extends javax.swing.JPanel {
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("ITACHI");
 
-        siguiente1.setBackground(new java.awt.Color(255, 153, 255));
-        siguiente1.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        siguiente1.setForeground(new java.awt.Color(0, 0, 51));
-        siguiente1.setText("REGRESAR AL MENÚ");
-        siguiente1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        siguiente1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                siguiente1ActionPerformed(evt);
+        btnVolver3.setBackground(new java.awt.Color(0, 0, 0));
+        btnVolver3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnVolver3.setForeground(new java.awt.Color(255, 255, 255));
+        btnVolver3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atras.png"))); // NOI18N
+        btnVolver3.setContentAreaFilled(false);
+        btnVolver3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVolver3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnVolver3.setMaximumSize(new java.awt.Dimension(50, 39));
+        btnVolver3.setMinimumSize(new java.awt.Dimension(50, 39));
+        btnVolver3.setPreferredSize(new java.awt.Dimension(58, 47));
+        btnVolver3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atrasr.png"))); // NOI18N
+        btnVolver3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atrasr.png"))); // NOI18N
+        btnVolver3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnVolver3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnVolver3MouseExited(evt);
             }
         });
+        btnVolver3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolver3ActionPerformed(evt);
+            }
+        });
+
+        labelvolver.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        labelvolver.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout contenido5Layout = new javax.swing.GroupLayout(contenido5);
         contenido5.setLayout(contenido5Layout);
@@ -675,53 +694,64 @@ public class mediumanime extends javax.swing.JPanel {
                             .addComponent(chulito4))
                         .addGap(18, 18, 18)
                         .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
                             .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(contenido5Layout.createSequentialGroup()
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap(36, Short.MAX_VALUE))
+                        .addContainerGap(39, Short.MAX_VALUE))
                     .addGroup(contenido5Layout.createSequentialGroup()
-                        .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(contenido5Layout.createSequentialGroup()
-                                .addGap(59, 59, 59)
-                                .addComponent(jLabel2))
-                            .addGroup(contenido5Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(siguiente1)))
+                        .addGap(59, 59, 59)
+                        .addComponent(jLabel2)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(btnVolver3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(instrucciones)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pista, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(solucion)
+                .addGap(46, 46, 46)
+                .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(121, 121, 121))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
-                        .addComponent(instrucciones)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(pista, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelvolver, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(solucion)
-                        .addGap(46, 46, 46)
-                        .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(121, 121, 121))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
                         .addComponent(sopadeletras)
-                        .addGap(303, 303, 303))))
+                        .addGap(303, 303, 303))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(147, 147, 147))))
         );
         contenido5Layout.setVerticalGroup(
             contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenido5Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(contenido5Layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
                         .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(pista)
                             .addComponent(solucion)
                             .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(instrucciones))
                         .addGap(73, 73, 73))
-                    .addComponent(sopadeletras))
+                    .addGroup(contenido5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnVolver3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(contenido5Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(sopadeletras))
+                            .addGroup(contenido5Layout.createSequentialGroup()
+                                .addComponent(labelvolver, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGap(29, 29, 29)
                 .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boton11)
@@ -789,23 +819,17 @@ public class mediumanime extends javax.swing.JPanel {
                     .addComponent(boton75)
                     .addComponent(boton76)
                     .addComponent(boton71))
-                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(contenido5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(boton86)
-                            .addComponent(boton85)
-                            .addComponent(boton84)
-                            .addComponent(boton83)
-                            .addComponent(boton82)
-                            .addComponent(boton81))
-                        .addContainerGap(104, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                        .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2)
-                            .addComponent(siguiente1))
-                        .addGap(85, 85, 85))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(contenido5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(boton86)
+                    .addComponent(boton85)
+                    .addComponent(boton84)
+                    .addComponent(boton83)
+                    .addComponent(boton82)
+                    .addComponent(boton81))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(84, 84, 84))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -822,373 +846,46 @@ public class mediumanime extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void boton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton11ActionPerformed
-
-    }//GEN-LAST:event_boton11ActionPerformed
-
-    private void boton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton61ActionPerformed
-
-    }//GEN-LAST:event_boton61ActionPerformed
-
-    private void boton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton31ActionPerformed
-
-    }//GEN-LAST:event_boton31ActionPerformed
-int ITACHI = 0;
-    private void boton81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton81ActionPerformed
-        ITACHI += 1;//Si se presiona este boton que representa la letra inicial de SASUKE el contador sumara 1
-        if (ITACHI == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara SASUKE
-            boton81.setBackground(Color.green);//Letra S
-            boton82.setBackground(Color.green);//Letra A
-            boton83.setBackground(Color.green);//Letra S
-            boton84.setBackground(Color.green);//Letra U
-            boton85.setBackground(Color.green);//Letra K
-            boton86.setBackground(Color.green);//Letra E
-
-            //Se volverá visible una estrella al lado de la palabra SASUKE en la lista
-            chulito4.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/3");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/3");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/3");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
-            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
-        }
-    }//GEN-LAST:event_boton81ActionPerformed
- int KIRITO = 0;
-    private void boton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton71ActionPerformed
-        KIRITO += 1;//Si se presiona este boton que representa la letra inicial de KIRITO el contador sumara 1
-        if (KIRITO == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara KIRITO
-            boton71.setBackground(Color.green);//Letra K
-            boton62.setBackground(Color.green);//Letra I
-            boton53.setBackground(Color.green);//Letra R
-            boton44.setBackground(Color.green);//Letra I
-            boton35.setBackground(Color.green);//Letra T
-            boton26.setBackground(Color.green);//Letra O
-
-            //Se volverá visible una estrella al lado de la palabra KIRITO en la lista
-            chulito2.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/3");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/3");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/3");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
-            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
-        }
-    }//GEN-LAST:event_boton71ActionPerformed
-int EREN = 0;
-    int cont;
-    private void boton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton12ActionPerformed
-        EREN += 1;//Si se presiona este boton que representa la letra inicial de EREN el contador sumara 1
-        if (EREN == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara EREN
-            boton12.setBackground(Color.green);//Letra E
-            boton22.setBackground(Color.green);//Letra R
-            boton32.setBackground(Color.green);//Letra E
-            boton42.setBackground(Color.green);//Letra N
-
-            //Se volverá visible una estrella al lado de la palabra EREN en la lista
-            chulito3.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/3");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/3");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/3");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
-            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
-        }
-    }//GEN-LAST:event_boton12ActionPerformed
-
-    private void boton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton32ActionPerformed
-
-    }//GEN-LAST:event_boton32ActionPerformed
-
-    private void boton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton42ActionPerformed
-        EREN += 1;//Si se presiona este boton que representa la letra inicial de EREN el contador sumara 1
-        if (EREN == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara EREN
-            boton12.setBackground(Color.green);//Letra E
-            boton22.setBackground(Color.green);//Letra R
-            boton32.setBackground(Color.green);//Letra E
-            boton42.setBackground(Color.green);//Letra N
-
-            //Se volverá visible una estrella al lado de la palabra EREN en la lista
-            chulito3.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/3");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/3");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/3");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
-            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
-        }
-    }//GEN-LAST:event_boton42ActionPerformed
-
-    private void boton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton72ActionPerformed
-
-    }//GEN-LAST:event_boton72ActionPerformed
-
-    private void boton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton53ActionPerformed
+    private void contenido5MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contenido5MouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_boton53ActionPerformed
- int DEKU = 0;
-    private void boton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton73ActionPerformed
-        DEKU += 1;//Si se presiona este boton que representa la letra inicial de DEKU el contador sumara 1
-        if (DEKU == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara DEKU
-            boton73.setBackground(Color.green);//Letra D
-            boton74.setBackground(Color.green);//Letra E
-            boton75.setBackground(Color.green);//Letra K
-            boton76.setBackground(Color.green);//Letra U
+    }//GEN-LAST:event_contenido5MouseMoved
 
-            //Se volverá visible una estrella al lado de la palabra KIRITO en la lista
-            chulito1.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/3");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/3");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/3");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
-            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
-        }
-    }//GEN-LAST:event_boton73ActionPerformed
-
-    private void boton83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton83ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton83ActionPerformed
-
-    private void boton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton14ActionPerformed
-
-    private void boton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton15ActionPerformed
-
-    private void boton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton16ActionPerformed
-
-    }//GEN-LAST:event_boton16ActionPerformed
-
-    private void boton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton24ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton24ActionPerformed
-
-    private void boton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton44ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton44ActionPerformed
-
-    private void boton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton34ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton34ActionPerformed
-
-    private void boton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton54ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton54ActionPerformed
-
-    private void boton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton64ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton64ActionPerformed
-
-    private void boton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton74ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton74ActionPerformed
-
-    private void boton84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton84ActionPerformed
-
-    }//GEN-LAST:event_boton84ActionPerformed
-
-    private void boton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton25ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton25ActionPerformed
-
-    private void boton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton35ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton35ActionPerformed
-
-    private void boton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton45ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton45ActionPerformed
-
-    private void boton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton55ActionPerformed
-
-    }//GEN-LAST:event_boton55ActionPerformed
-
-    private void boton65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton65ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton65ActionPerformed
-
-    private void boton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton75ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton75ActionPerformed
-
-    private void boton85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton85ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton85ActionPerformed
-
-    private void boton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton26ActionPerformed
-        KIRITO += 1;//Si se presiona este boton que representa la letra inicial de KIRITO el contador sumara 1
-        if (KIRITO == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara KIRITO
-            boton71.setBackground(Color.green);//Letra K
-            boton62.setBackground(Color.green);//Letra I
-            boton53.setBackground(Color.green);//Letra R
-            boton44.setBackground(Color.green);//Letra I
-            boton35.setBackground(Color.green);//Letra T
-            boton26.setBackground(Color.green);//Letra O
-
-            //Se volverá visible una estrella al lado de la palabra KIRITO en la lista
-            chulito2.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/3");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/3");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/3");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
-            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
-        }
-    }//GEN-LAST:event_boton26ActionPerformed
-
-    private void boton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton36ActionPerformed
-
-    }//GEN-LAST:event_boton36ActionPerformed
-
-    private void boton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton46ActionPerformed
-
-    }//GEN-LAST:event_boton46ActionPerformed
-
-    private void boton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton56ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton56ActionPerformed
-
-    private void boton66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton66ActionPerformed
-
-    }//GEN-LAST:event_boton66ActionPerformed
-
-    private void boton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton76ActionPerformed
-        DEKU += 1;//Si se presiona este boton que representa la letra inicial de DEKU el contador sumara 1
-        if (DEKU == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara DEKU
-            boton73.setBackground(Color.green);//Letra D
-            boton74.setBackground(Color.green);//Letra E
-            boton75.setBackground(Color.green);//Letra K
-            boton76.setBackground(Color.green);//Letra U
-
-            //Se volverá visible una estrella al lado de la palabra KIRITO en la lista
-            chulito1.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/3");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/3");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/3");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
-            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
-        }
-    }//GEN-LAST:event_boton76ActionPerformed
-
-    private void boton86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton86ActionPerformed
-        ITACHI += 1;//Si se presiona este boton que representa la letra inicial de ITACHI el contador sumara 1
-        if (ITACHI == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara ITACHI
-            boton81.setBackground(Color.green);//Letra I
-            boton82.setBackground(Color.green);//Letra T
-            boton83.setBackground(Color.green);//Letra A
-            boton84.setBackground(Color.green);//Letra C
-            boton85.setBackground(Color.green);//Letra H
-            boton86.setBackground(Color.green);//Letra I
-
-            //Se volverá visible una estrella al lado de la palabra ITACHI en la lista
-            chulito4.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/3");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/3");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/3");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
-            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
-        }
-    }//GEN-LAST:event_boton86ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnVolver3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver3ActionPerformed
         contenido5.removeAll();
-        hardanime h = new hardanime(name);
+        tema h = new tema(name);//Una instancia
         h.setSize(800, 496);
         h.setLocation(0, 0);
         h.setOpaque(false);
+
         contenido5.add(h);
         contenido5.revalidate();
         contenido5.repaint();
-    }//GEN-LAST:event_jButton2ActionPerformed
-int daux = 1, kaux = 1, eaux = 1, saux = 1;
-    private void pistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pistaActionPerformed
-        //Para mostrar pistas:
-        //tengo en cuenta si ya el contador de la palabra está lleno ademas creo un auxiliar para cerciorarme de no repetir la palabra si ya la encontraron
-        //la pista consiste en crear un fondo verde en la inicial de la letra de un planeta que no haya encontrado el usuario
+    }//GEN-LAST:event_btnVolver3ActionPerformed
 
-        if (DEKU < 2 & daux == 1) { //pista letra inicial DEKU
-            boton76.setBackground(new Color(153, 255, 153));
-            daux = 0;
-        } else if (KIRITO < 2 & kaux == 1) {//pista letra inicial KIRITO
-            boton71.setBackground(new Color(153, 255, 153));
-            kaux = 0;
-        } else if (EREN < 2 & eaux == 1) {//pista letra inicial EREN
-            boton12.setBackground(new Color(153, 255, 153));
-            eaux = 0;
-        } else if (ITACHI < 2 & saux == 1) {//pista letra inicial SASUKE
-            boton81.setBackground(new Color(153, 255, 153));
-            saux = 0;
-        }
-    }//GEN-LAST:event_pistaActionPerformed
+    private void btnVolver3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver3MouseExited
+        labelvolver.setText("");
+    }//GEN-LAST:event_btnVolver3MouseExited
+
+    private void btnVolver3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver3MouseEntered
+        labelvolver.setText(" Menú");
+    }//GEN-LAST:event_btnVolver3MouseEntered
+
+    private void instruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_instruccionesActionPerformed
+        //Mostrar Joption pane de instrucciones
+        JOptionPane.showMessageDialog(null, "𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐀𝐌𝐈𝐄𝐍𝐓𝐎 𝐃𝐄𝐋 𝐉𝐔𝐄𝐆𝐎:\nEste nivel está compuesto por una sopa de letras de dimensiones 8x6 donde encontrarás 4 palabras ocultas"
+            + "\nrelacionadas a nombres de personajes de anime."
+            + "\nAl lado derecho de la pantalla visualizarás la lista de palabras que debes buscar."
+            + "\n𝐏𝐚𝐫𝐚 𝐣𝐮𝐠𝐚𝐫: "
+            + "\n  ⭐Busca las letras de las palabras en cualquier dirección: horizontal, vertical o diagonal, en sentido normal"
+            + "\n     o inverso."
+            + "\n  ⭐Una vez que encuentres una letra de una palabra, selecciona la letra inicial y ultima"
+            + "\n      para que el sistema verifique tu elección.\n"
+            + "  ⭐Si tu selección es correcta se cambiará el fondo de la palabra en la sopa de letras y aparecerá "
+            + "\n      una estrella al lado de la palabra de la lista.\n"
+            + "  ⭐Continúa buscando hasta que hayas encontrado todas las palabras de la lista."
+            + "\n\n𝐏𝐋𝐔𝐒: Si lo deseas puedes pedir pistas o revelar la solución de la sopa de letras al seleccionar dichas opciones."
+            + "\n\n                             ¡𝗗𝗜𝗩𝗜𝗘𝗥𝗧𝗘𝗧𝗘 𝗝𝗨𝗚𝗔𝗡𝗗𝗢 𝗟𝗔 𝗦𝗢𝗣𝗔 𝗗𝗘 𝗟𝗘𝗧𝗥𝗔𝗦 𝗦𝗧𝗔𝗥: 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝗔𝗡𝗜𝐌𝗘!", "STAR GAMES: Sopa de letras STAR", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_instruccionesActionPerformed
 
     private void solucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solucionActionPerformed
         //Al presionar este boton se podra visualizar la solución de la sopa de letras al ver con un fondo verde las letras de las palabras propuestas al usuario
@@ -1225,38 +922,374 @@ int daux = 1, kaux = 1, eaux = 1, saux = 1;
         chulito4.setVisible(true);
     }//GEN-LAST:event_solucionActionPerformed
 
-    private void instruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_instruccionesActionPerformed
-        //Mostrar Joption pane de instrucciones
-        JOptionPane.showMessageDialog(null, "𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐀𝐌𝐈𝐄𝐍𝐓𝐎 𝐃𝐄𝐋 𝐉𝐔𝐄𝐆𝐎:\nEste nivel está compuesto por una sopa de letras de dimensiones 8x6 donde encontrarás 4 palabras ocultas"
-            + "\nrelacionadas a nombres de planetas del sistema solar."
-            + "\nAl lado derecho de la pantalla visualizarás la lista de palabras que debes buscar."
-            + "\n𝐏𝐚𝐫𝐚 𝐣𝐮𝐠𝐚𝐫: "
-            + "\n  ⭐Busca las letras de las palabras en cualquier dirección: horizontal, vertical o diagonal, en sentido normal"
-            + "\n     o inverso."
-            + "\n  ⭐Una vez que encuentres una letra de una palabra, selecciona la letra inicial y ultima"
-            + "\n      para que el sistema verifique tu elección.\n"
-            + "  ⭐Si tu selección es correcta se cambiará el fondo de la palabra en la sopa de letras y aparecerá "
-            + "\n      una estrella al lado de la palabra de la lista.\n"
-            + "  ⭐Continúa buscando hasta que hayas encontrado todas las palabras de la lista."
-            + "\n\n𝐏𝐋𝐔𝐒: Si lo deseas puedes pedir pistas o revelar la solución de la sopa de letras al seleccionar dichas opciones."
-            + "\n\n                             ¡𝗗𝗜𝗩𝗜𝗘𝗥𝗧𝗘𝗧𝗘 𝗝𝗨𝗚𝗔𝗡𝗗𝗢 𝗟𝗔 𝗦𝗢𝗣𝗔 𝗗𝗘 𝗟𝗘𝗧𝗥𝗔𝗦 𝗦𝗧𝗔𝗥: 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝗣𝗟𝗔𝗡𝗘𝗧𝗔𝗦!", "STAR GAMES: Sopa de letras STAR", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_instruccionesActionPerformed
+    private void pistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pistaActionPerformed
+        //Para mostrar pistas:
+        //tengo en cuenta si ya el contador de la palabra está lleno ademas creo un auxiliar para cerciorarme de no repetir la palabra si ya la encontraron
+        //la pista consiste en crear un fondo verde en la inicial de la letra de un planeta que no haya encontrado el usuario
 
-    private void siguiente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguiente1ActionPerformed
+        if (DEKU < 2 & daux == 1) { //pista letra inicial DEKU
+            boton76.setBackground(new Color(153, 255, 153));
+            daux = 0;
+        } else if (KIRITO < 2 & kaux == 1) {//pista letra inicial KIRITO
+            boton71.setBackground(new Color(153, 255, 153));
+            kaux = 0;
+        } else if (EREN < 2 & eaux == 1) {//pista letra inicial EREN
+            boton12.setBackground(new Color(153, 255, 153));
+            eaux = 0;
+        } else if (ITACHI < 2 & saux == 1) {//pista letra inicial SASUKE
+            boton81.setBackground(new Color(153, 255, 153));
+            saux = 0;
+        }
+    }//GEN-LAST:event_pistaActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         contenido5.removeAll();
-        tema m = new tema(name);
-        m.setSize(800, 496);
-        m.setLocation(0, 0);
-        m.setOpaque(false);
-        contenido5.add(m);
+        hardanime h = new hardanime(name);
+        h.setSize(800, 496);
+        h.setLocation(0, 0);
+        h.setOpaque(false);
+        contenido5.add(h);
         contenido5.revalidate();
         contenido5.repaint();
-    }//GEN-LAST:event_siguiente1ActionPerformed
+    }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void contenido5MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contenido5MouseMoved
+    private void boton86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton86ActionPerformed
+        ITACHI += 1;//Si se presiona este boton que representa la letra inicial de ITACHI el contador sumara 1
+        if (ITACHI == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara ITACHI
+            boton81.setBackground(Color.green);//Letra I
+            boton82.setBackground(Color.green);//Letra T
+            boton83.setBackground(Color.green);//Letra A
+            boton84.setBackground(Color.green);//Letra C
+            boton85.setBackground(Color.green);//Letra H
+            boton86.setBackground(Color.green);//Letra I
+
+            //Se volverá visible una estrella al lado de la palabra ITACHI en la lista
+            chulito4.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/3");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/3");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/3");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
+            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
+        }
+    }//GEN-LAST:event_boton86ActionPerformed
+
+    private void boton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton76ActionPerformed
+        DEKU += 1;//Si se presiona este boton que representa la letra inicial de DEKU el contador sumara 1
+        if (DEKU == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara DEKU
+            boton73.setBackground(Color.green);//Letra D
+            boton74.setBackground(Color.green);//Letra E
+            boton75.setBackground(Color.green);//Letra K
+            boton76.setBackground(Color.green);//Letra U
+
+            //Se volverá visible una estrella al lado de la palabra KIRITO en la lista
+            chulito1.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/3");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/3");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/3");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
+            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
+        }
+    }//GEN-LAST:event_boton76ActionPerformed
+
+    private void boton66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton66ActionPerformed
+
+    }//GEN-LAST:event_boton66ActionPerformed
+
+    private void boton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton56ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_contenido5MouseMoved
+    }//GEN-LAST:event_boton56ActionPerformed
 
+    private void boton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton46ActionPerformed
+
+    }//GEN-LAST:event_boton46ActionPerformed
+
+    private void boton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton36ActionPerformed
+
+    }//GEN-LAST:event_boton36ActionPerformed
+
+    private void boton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton26ActionPerformed
+        KIRITO += 1;//Si se presiona este boton que representa la letra inicial de KIRITO el contador sumara 1
+        if (KIRITO == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara KIRITO
+            boton71.setBackground(Color.green);//Letra K
+            boton62.setBackground(Color.green);//Letra I
+            boton53.setBackground(Color.green);//Letra R
+            boton44.setBackground(Color.green);//Letra I
+            boton35.setBackground(Color.green);//Letra T
+            boton26.setBackground(Color.green);//Letra O
+
+            //Se volverá visible una estrella al lado de la palabra KIRITO en la lista
+            chulito2.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/3");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/3");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/3");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
+            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
+        }
+    }//GEN-LAST:event_boton26ActionPerformed
+
+    private void boton85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton85ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton85ActionPerformed
+
+    private void boton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton75ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton75ActionPerformed
+
+    private void boton65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton65ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton65ActionPerformed
+
+    private void boton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton55ActionPerformed
+
+    }//GEN-LAST:event_boton55ActionPerformed
+
+    private void boton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton45ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton45ActionPerformed
+
+    private void boton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton35ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton35ActionPerformed
+
+    private void boton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton25ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton25ActionPerformed
+
+    private void boton84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton84ActionPerformed
+
+    }//GEN-LAST:event_boton84ActionPerformed
+
+    private void boton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton74ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton74ActionPerformed
+
+    private void boton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton64ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton64ActionPerformed
+
+    private void boton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton54ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton54ActionPerformed
+
+    private void boton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton34ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton34ActionPerformed
+
+    private void boton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton44ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton44ActionPerformed
+
+    private void boton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton24ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton24ActionPerformed
+
+    private void boton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton16ActionPerformed
+
+    }//GEN-LAST:event_boton16ActionPerformed
+
+    private void boton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton15ActionPerformed
+
+    private void boton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton14ActionPerformed
+
+    private void boton83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton83ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton83ActionPerformed
+
+    private void boton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton73ActionPerformed
+        DEKU += 1;//Si se presiona este boton que representa la letra inicial de DEKU el contador sumara 1
+        if (DEKU == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara DEKU
+            boton73.setBackground(Color.green);//Letra D
+            boton74.setBackground(Color.green);//Letra E
+            boton75.setBackground(Color.green);//Letra K
+            boton76.setBackground(Color.green);//Letra U
+
+            //Se volverá visible una estrella al lado de la palabra KIRITO en la lista
+            chulito1.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/3");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/3");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/3");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
+            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
+        }
+    }//GEN-LAST:event_boton73ActionPerformed
+
+    private void boton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton53ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton53ActionPerformed
+
+    private void boton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton72ActionPerformed
+
+    }//GEN-LAST:event_boton72ActionPerformed
+
+    private void boton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton42ActionPerformed
+        EREN += 1;//Si se presiona este boton que representa la letra inicial de EREN el contador sumara 1
+        if (EREN == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara EREN
+            boton12.setBackground(Color.green);//Letra E
+            boton22.setBackground(Color.green);//Letra R
+            boton32.setBackground(Color.green);//Letra E
+            boton42.setBackground(Color.green);//Letra N
+
+            //Se volverá visible una estrella al lado de la palabra EREN en la lista
+            chulito3.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/3");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/3");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/3");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
+            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
+        }
+    }//GEN-LAST:event_boton42ActionPerformed
+
+    private void boton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton32ActionPerformed
+
+    }//GEN-LAST:event_boton32ActionPerformed
+
+    private void boton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton12ActionPerformed
+        EREN += 1;//Si se presiona este boton que representa la letra inicial de EREN el contador sumara 1
+        if (EREN == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara EREN
+            boton12.setBackground(Color.green);//Letra E
+            boton22.setBackground(Color.green);//Letra R
+            boton32.setBackground(Color.green);//Letra E
+            boton42.setBackground(Color.green);//Letra N
+
+            //Se volverá visible una estrella al lado de la palabra EREN en la lista
+            chulito3.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/3");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/3");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/3");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
+            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
+        }
+    }//GEN-LAST:event_boton12ActionPerformed
+
+    private void boton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton71ActionPerformed
+        KIRITO += 1;//Si se presiona este boton que representa la letra inicial de KIRITO el contador sumara 1
+        if (KIRITO == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara KIRITO
+            boton71.setBackground(Color.green);//Letra K
+            boton62.setBackground(Color.green);//Letra I
+            boton53.setBackground(Color.green);//Letra R
+            boton44.setBackground(Color.green);//Letra I
+            boton35.setBackground(Color.green);//Letra T
+            boton26.setBackground(Color.green);//Letra O
+
+            //Se volverá visible una estrella al lado de la palabra KIRITO en la lista
+            chulito2.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/3");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/3");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/3");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
+            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
+        }
+    }//GEN-LAST:event_boton71ActionPerformed
+
+    private void boton81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton81ActionPerformed
+        ITACHI += 1;//Si se presiona este boton que representa la letra inicial de SASUKE el contador sumara 1
+        if (ITACHI == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara SASUKE
+            boton81.setBackground(Color.green);//Letra S
+            boton82.setBackground(Color.green);//Letra A
+            boton83.setBackground(Color.green);//Letra S
+            boton84.setBackground(Color.green);//Letra U
+            boton85.setBackground(Color.green);//Letra K
+            boton86.setBackground(Color.green);//Letra E
+
+            //Se volverá visible una estrella al lado de la palabra SASUKE en la lista
+            chulito4.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/3");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/3");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/3");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (EREN >= 2 && ITACHI >= 2 && DEKU >= 2 && KIRITO >= 2) {
+            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
+        }
+    }//GEN-LAST:event_boton81ActionPerformed
+
+    private void boton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton31ActionPerformed
+
+    }//GEN-LAST:event_boton31ActionPerformed
+
+    private void boton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton61ActionPerformed
+
+    }//GEN-LAST:event_boton61ActionPerformed
+
+    private void boton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton11ActionPerformed
+
+    }//GEN-LAST:event_boton11ActionPerformed
+int ITACHI = 0; int KIRITO = 0;int EREN = 0;
+    int cont; int DEKU = 0;int daux = 1, kaux = 1, eaux = 1, saux = 1;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton boton11;
@@ -1307,6 +1340,7 @@ int daux = 1, kaux = 1, eaux = 1, saux = 1;
     private javax.swing.JButton boton84;
     private javax.swing.JButton boton85;
     private javax.swing.JButton boton86;
+    private javax.swing.JButton btnVolver3;
     private javax.swing.JLabel chulito1;
     private javax.swing.JLabel chulito2;
     private javax.swing.JLabel chulito3;
@@ -1319,9 +1353,9 @@ int daux = 1, kaux = 1, eaux = 1, saux = 1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel labelvolver;
     private javax.swing.JLabel palabrasencontradas;
     private javax.swing.JButton pista;
-    private javax.swing.JButton siguiente1;
     private javax.swing.JButton solucion;
     private javax.swing.JLabel sopadeletras;
     // End of variables declaration//GEN-END:variables

@@ -664,7 +664,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Este nivel est&#xe1; compuesto por una sopa de letras de dimensiones 7x5 donde encontrar&#xe1;s "/>
+            <Property name="text" type="java.lang.String" value="Este nivel est&#xe1; compuesto por una sopa de letras de dimensiones 8x8 donde encontrar&#xe1;s "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
@@ -675,7 +675,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="3 palabras ocultas relacionadas a nombres de planetas del sistema solar."/>
+            <Property name="text" type="java.lang.String" value="6 palabras ocultas relacionadas a nombres de planetas del sistema solar."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
@@ -774,7 +774,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Si lo deseas puedes pedir pistas o revelar la soluci&#xf3;n de la sopa de letras. "/>
+            <Property name="text" type="java.lang.String" value="Tienes disponible solo 4 PISTAS o puedes revelar la soluci&#xf3;n de la sopa de letras. "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">

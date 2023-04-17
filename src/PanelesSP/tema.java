@@ -99,31 +99,32 @@ public class tema extends javax.swing.JPanel {
         contenido2Layout.setHorizontalGroup(
             contenido2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenido2Layout.createSequentialGroup()
-                .addGap(180, 180, 180)
-                .addComponent(jLabel1))
-            .addGroup(contenido2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
                 .addGroup(contenido2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelplanetas, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(contenido2Layout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addComponent(labelanime, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(60, 60, 60)
-                .addComponent(labelmusica, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(contenido2Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(botonplanetas)
-                .addGap(163, 163, 163)
-                .addComponent(botonanime)
-                .addGap(168, 168, 168)
-                .addComponent(botonmusica))
+                        .addGap(42, 42, 42)
+                        .addComponent(labelplanetas, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(labelanime, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60)
+                        .addComponent(labelmusica, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(contenido2Layout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addComponent(botonplanetas, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(119, 119, 119)
+                        .addComponent(botonanime, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(112, 112, 112)
+                        .addComponent(botonmusica, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(32, 32, 32))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido2Layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addGap(165, 165, 165))
         );
         contenido2Layout.setVerticalGroup(
             contenido2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenido2Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(64, 64, 64)
                 .addComponent(jLabel1)
-                .addGap(72, 72, 72)
+                .addGap(58, 58, 58)
                 .addGroup(contenido2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelplanetas, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(contenido2Layout.createSequentialGroup()
@@ -144,13 +145,13 @@ public class tema extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(contenido2, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(contenido2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(contenido2, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(contenido2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -170,7 +171,7 @@ public class tema extends javax.swing.JPanel {
     private void botonanimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonanimeActionPerformed
  //Anthony Zabs helped :)
         nivelanime n = new nivelanime(user);
-        n.setSize(800, 500);
+        n.setSize(800, 496);
         n.setLocation(0, 0);
         n.setOpaque(false);
         contenido2.removeAll();

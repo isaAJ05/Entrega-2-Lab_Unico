@@ -548,7 +548,7 @@
                                   <EmptySpace min="-2" pref="293" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="labelvolver" min="-2" pref="61" max="-2" attributes="0"/>
@@ -664,7 +664,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Este nivel est&#xe1; compuesto por una sopa de letras de dimensiones 7x5 donde encontrar&#xe1;s "/>
+            <Property name="text" type="java.lang.String" value="Este nivel est&#xe1; compuesto por una sopa de letras de dimensiones 8x8 donde encontrar&#xe1;s "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
@@ -675,7 +675,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="3 palabras ocultas relacionadas a nombres de planetas del sistema solar."/>
+            <Property name="text" type="java.lang.String" value="6 palabras ocultas relacionadas a nombres de personajes de anime."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
@@ -785,7 +785,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&#xa1;DIVIERTETE JUGANDO LA SOPA DE LETRAS STAR: VERSI&#xd3;N PLANETAS!"/>
+            <Property name="text" type="java.lang.String" value="&#xa1;DIVIERTETE JUGANDO LA SOPA DE LETRAS STAR: VERSI&#xd3;N ANIME!"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel15">

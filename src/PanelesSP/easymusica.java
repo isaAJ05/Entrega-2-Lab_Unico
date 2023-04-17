@@ -1,8 +1,11 @@
+package PanelesSP;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package PanelesSP;
+
+
 
 import java.awt.Color;
 import java.util.Random;
@@ -34,7 +37,7 @@ public class easymusica extends javax.swing.JPanel {
         {boton71, boton72, boton73, boton74, boton75},};//matriz de botones
 
         //Vector de personajes de anime [4] pero solo se usan 3 espacios
-        String[] animes = {"NARUTO", "SHOTO", "GOKU", ""};
+        String[] cantantes = {"TAYLOR", "ELVIS", "JOE", ""};
 
         //Asignacion de letras a texto de la matriz de botones
         for (i = 0; i < 7; i++) {
@@ -50,33 +53,35 @@ public class easymusica extends javax.swing.JPanel {
                 //De acuerdo a mi matriz planteada:
                 //i representará mis filas
                 //j representará mis columnas
-                // TIERRA 
-                if (i < 6 && j == 0) { // Posición vertica: Fila 1-6, columna 1
-                    String caracter = animes[0].substring(i, i + 1);//extraer caracteres de la palabra NARUTO
+                // TAYLOR
+                if (i >=1 && i<=6 && j == 1) { // Posición vertical inversa: Fila 1-6, columna 2
+                    String caracter = cantantes[0].substring(auxt, auxt2);//extraer caracteres de la palabra taylor
+                    auxt2= auxt;
+                    auxt-=1;
                     botones[i][j].setText(caracter);//se le asignan las letras correspondientes
-                    // LUFFY
-                } else if (i > 1 && i < 7 && j < 6) { //Posición Diagonal: fila de 1-5, columnas 0-5
-                    if (i == 2 && j == 4) {
-                        String caracter2 = animes[1].substring(0, 1);//extracción de caracter personalizado 
-                        botones[i][j].setText(caracter2);//LETRA S
-                    } else if (i == 3 && j == 3) {
-                        String caracter21 = animes[1].substring(1, 2);
-                        botones[i][j].setText(caracter21);//LETRA H
-                    } else if (i == 4 && j == 2) {
-                        String caracter22 = animes[1].substring(2, 3);
-                        botones[i][j].setText(caracter22);//LETRA O
-                    } else if (i == 5 && j == 1) {
-                        String caracter23 = animes[1].substring(3, 4);
-                        botones[i][j].setText(caracter23);//LETRA T
-                    } else if (i == 6 && j == 0) {
-                        String caracter24 = animes[1].substring(4, 5);
-                        botones[i][j].setText(caracter24);//LETRA O
-                    }
-                    //GOKU
-                } else if (i == 1 && j >= 1 && j < 5) { //Posición Horizontal : fila 1, columna 1-4
-                    String caracter3 = animes[2].substring(j - 1, j);
+                    //JOE
+                } else if (i <=2 && j ==4) { //Posición vertical : fila 0-2, columna 4
+                    String caracter3 =cantantes[2].substring(i, i+1);       
                     botones[i][j].setText(caracter3);
-
+                    // ELVIS
+                }else if (i >= 2 && i <= 6 && j <=5 ) { //Posición Diagonal: fila de 2-6, columnas 0-5
+                    if (i == 2 && j == 0) {
+                        String caracter2 = cantantes[1].substring(0, 1);//extracción de caracter personalizado 
+                        botones[i][j].setText(caracter2);//LETRA E
+                    } else if (i == 3 && j == 1) {
+                        String caracter21 = cantantes[1].substring(1, 2);
+                        botones[i][j].setText(caracter21);//LETRA L
+                    } else if (i == 4 && j == 2) {
+                        String caracter22 = cantantes[1].substring(2, 3);
+                        botones[i][j].setText(caracter22);//LETRA V
+                    } else if (i == 5 && j == 3) {
+                        String caracter23 = cantantes[1].substring(3, 4);
+                        botones[i][j].setText(caracter23);//LETRA I
+                    } else if (i == 6 && j == 4) {
+                        String caracter24 = cantantes[1].substring(4, 5);
+                        botones[i][j].setText(caracter24);//LETRA S
+                    }
+                    
                 }
             }
         }
@@ -146,7 +151,8 @@ public class easymusica extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         chulito3 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        siguiente1 = new javax.swing.JButton();
+        btnVolver3 = new javax.swing.JButton();
+        labelvolver = new javax.swing.JLabel();
 
         contenido4.setBackground(new java.awt.Color(0, 0, 204));
         contenido4.setName("STAR GAMES: Sopa de letras Planetas"); // NOI18N
@@ -418,7 +424,7 @@ public class easymusica extends javax.swing.JPanel {
 
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("PERSONAJES DE ANIME");
+        jLabel2.setText("CANTANTES");
 
         chulito1.setForeground(new java.awt.Color(255, 0, 0));
         chulito1.setText("★");
@@ -426,7 +432,7 @@ public class easymusica extends javax.swing.JPanel {
         jLabel3.setBackground(new java.awt.Color(153, 204, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("SHOTO");
+        jLabel3.setText("TAYLOR");
 
         chulito2.setForeground(new java.awt.Color(255, 0, 0));
         chulito2.setText("★");
@@ -434,7 +440,7 @@ public class easymusica extends javax.swing.JPanel {
         jLabel10.setBackground(new java.awt.Color(153, 204, 255));
         jLabel10.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("GOKU");
+        jLabel10.setText("ELVIS");
 
         chulito3.setForeground(new java.awt.Color(255, 0, 0));
         chulito3.setText("★");
@@ -442,40 +448,41 @@ public class easymusica extends javax.swing.JPanel {
         jLabel12.setBackground(new java.awt.Color(153, 204, 255));
         jLabel12.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("NARUTO");
+        jLabel12.setText("JOE");
 
-        siguiente1.setBackground(new java.awt.Color(255, 153, 255));
-        siguiente1.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        siguiente1.setForeground(new java.awt.Color(0, 0, 51));
-        siguiente1.setText("REGRESAR AL MENÚ");
-        siguiente1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        siguiente1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                siguiente1ActionPerformed(evt);
+        btnVolver3.setBackground(new java.awt.Color(0, 0, 0));
+        btnVolver3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnVolver3.setForeground(new java.awt.Color(255, 255, 255));
+        btnVolver3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atras.png"))); // NOI18N
+        btnVolver3.setContentAreaFilled(false);
+        btnVolver3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVolver3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnVolver3.setMaximumSize(new java.awt.Dimension(50, 39));
+        btnVolver3.setMinimumSize(new java.awt.Dimension(50, 39));
+        btnVolver3.setPreferredSize(new java.awt.Dimension(58, 47));
+        btnVolver3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atrasr.png"))); // NOI18N
+        btnVolver3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atrasr.png"))); // NOI18N
+        btnVolver3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnVolver3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnVolver3MouseExited(evt);
             }
         });
+        btnVolver3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolver3ActionPerformed(evt);
+            }
+        });
+
+        labelvolver.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        labelvolver.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout contenido4Layout = new javax.swing.GroupLayout(contenido4);
         contenido4.setLayout(contenido4Layout);
         contenido4Layout.setHorizontalGroup(
             contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido4Layout.createSequentialGroup()
-                        .addComponent(instrucciones)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(pista, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(solucion)
-                        .addGap(78, 78, 78)
-                        .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(83, 83, 83))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido4Layout.createSequentialGroup()
-                        .addComponent(siguiente)
-                        .addGap(18, 18, 18)
-                        .addComponent(siguiente1)
-                        .addGap(87, 87, 87))))
             .addGroup(contenido4Layout.createSequentialGroup()
                 .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(contenido4Layout.createSequentialGroup()
@@ -561,7 +568,7 @@ public class easymusica extends javax.swing.JPanel {
                 .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(contenido4Layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addContainerGap(84, Short.MAX_VALUE))
+                        .addContainerGap(176, Short.MAX_VALUE))
                     .addGroup(contenido4Layout.createSequentialGroup()
                         .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(contenido4Layout.createSequentialGroup()
@@ -578,25 +585,63 @@ public class easymusica extends javax.swing.JPanel {
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(37, 37, 37))))
+            .addGroup(contenido4Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelvolver, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVolver3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(instrucciones)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pista, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(solucion)
+                .addGap(78, 78, 78)
+                .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(siguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(177, 177, 177))
         );
         contenido4Layout.setVerticalGroup(
             contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenido4Layout.createSequentialGroup()
                 .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(contenido4Layout.createSequentialGroup()
+                        .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido4Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(solucion)
+                                    .addComponent(pista)
+                                    .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(contenido4Layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addComponent(instrucciones)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(chulito1)
+                            .addComponent(jLabel3))
+                        .addGap(14, 14, 14)
+                        .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(chulito2)
+                            .addComponent(jLabel10))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(chulito3)
+                            .addComponent(jLabel12))
+                        .addGap(87, 87, 87))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenido4Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(solucion)
-                            .addComponent(pista)
-                            .addComponent(palabrasencontradas, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(contenido4Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(instrucciones)))
-                .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(contenido4Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
+                        .addComponent(btnVolver3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(labelvolver, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
                         .addComponent(sopadeletras)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                         .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(boton11)
                             .addComponent(boton12)
@@ -639,23 +684,7 @@ public class easymusica extends javax.swing.JPanel {
                             .addComponent(boton63)
                             .addComponent(boton64)
                             .addComponent(boton65))
-                        .addGap(10, 10, 10))
-                    .addGroup(contenido4Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(chulito1)
-                            .addComponent(jLabel3))
-                        .addGap(14, 14, 14)
-                        .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(chulito2)
-                            .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(chulito3)
-                            .addComponent(jLabel12))
-                        .addGap(87, 87, 87)))
+                        .addGap(10, 10, 10)))
                 .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(boton75)
                     .addComponent(boton74)
@@ -663,9 +692,7 @@ public class easymusica extends javax.swing.JPanel {
                     .addComponent(boton72)
                     .addComponent(boton71))
                 .addGap(18, 18, 18)
-                .addGroup(contenido4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(siguiente)
-                    .addComponent(siguiente1))
+                .addComponent(siguiente)
                 .addGap(53, 53, 53))
         );
 
@@ -682,78 +709,77 @@ public class easymusica extends javax.swing.JPanel {
             .addComponent(contenido4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
-int naruto = 0;
+
     int cont;
     private void boton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton11ActionPerformed
-        naruto += 1;//Si se presiona este boton que representa la letra inicial de NARUTO el contador sumara 1
-        if (naruto == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara NARUTO
-            boton11.setBackground(Color.green);//Letra N
-            boton21.setBackground(Color.green);//Letra A
-            boton31.setBackground(Color.green);//Letra R
-            boton41.setBackground(Color.green);//Letra U
-            boton51.setBackground(Color.green);//Letra T
-            boton61.setBackground(Color.green);//Letra O
-            //Se volverá visible una estrella al lado de la palabra VENUS en la lista
-            chulito3.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/3");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/3");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/3");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (naruto >= 2 && goku >= 2 && shoto >= 2) {
-            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
-        }
+      
     }//GEN-LAST:event_boton11ActionPerformed
 
     private void boton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton61ActionPerformed
-        naruto += 1;//Si se presiona este boton que representa la letra inicial de NARUTO el contador sumara 1
-        if (naruto == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara NARUTO
-            boton11.setBackground(Color.green);//Letra N
-            boton21.setBackground(Color.green);//Letra A
-            boton31.setBackground(Color.green);//Letra R
-            boton41.setBackground(Color.green);//Letra U
-            boton51.setBackground(Color.green);//Letra T
-            boton61.setBackground(Color.green);//Letra O
-            //Se volverá visible una estrella al lado de la palabra NARUTO en la lista
-            chulito3.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/3");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/3");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/3");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (naruto >= 2 && goku >= 2 && shoto >= 2) {
-            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
-        }
+        
     }//GEN-LAST:event_boton61ActionPerformed
 
     private void boton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton21ActionPerformed
 
     }//GEN-LAST:event_boton21ActionPerformed
-
+    int ELVIS=0;
     private void boton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton31ActionPerformed
-
+        ELVIS += 1;//Si se presiona este boton que representa la letra inicial de ELVIS el contador sumara 1
+        if (ELVIS == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara ELVIS
+            boton31.setBackground(Color.green);//Letra E
+            boton42.setBackground(Color.green);//Letra L
+            boton53.setBackground(Color.green);//Letra V
+            boton64.setBackground(Color.green);//Letra I
+            boton75.setBackground(Color.green);//Letra S
+            //Se volverá visible una estrella al lado de la palabra JOE en la lista
+            chulito2.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/3");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/3");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/3");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (JOE >= 2 && TAYLOR >= 2 && ELVIS >= 2) {
+            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
+        }
     }//GEN-LAST:event_boton31ActionPerformed
 
     private void boton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton32ActionPerformed
 
     }//GEN-LAST:event_boton32ActionPerformed
-
+    int TAYLOR=0;
     private void boton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton72ActionPerformed
-
+         TAYLOR += 1;//Si se presiona este boton que representa la letra inicial de TAYLOR el contador sumara 1
+        if (TAYLOR == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara TAYLOT
+            boton72.setBackground(Color.green);//Letra T
+            boton62.setBackground(Color.green);//Letra A
+            boton52.setBackground(Color.green);//Letra Y
+            boton42.setBackground(Color.green);//Letra L
+            boton32.setBackground(Color.green);//Letra O
+            boton22.setBackground(Color.green);//Letra R
+            //Se volverá visible una estrella al lado de la palabra TAYLOR en la lista
+            chulito1.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/3");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/3");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/3");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (JOE >= 2 && TAYLOR >= 2 && ELVIS >= 2) {
+            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
+        }
     }//GEN-LAST:event_boton72ActionPerformed
 
     private void boton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton23ActionPerformed
@@ -771,9 +797,30 @@ int naruto = 0;
     private void boton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_boton14ActionPerformed
-
+int JOE=0;
     private void boton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton15ActionPerformed
-
+JOE += 1;//Si se presiona este boton que representa la letra inicial de JOEel contador sumara 1
+        if (JOE == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara JOE
+            boton15.setBackground(Color.green);//Letra J
+            boton25.setBackground(Color.green);//Letra O
+            boton35.setBackground(Color.green);//Letra E
+            //Se volverá visible una estrella al lado de la palabra JOE en la lista
+            chulito3.setVisible(true);
+            //Para contabilizar palabras halladas y mostrarlas al usuario
+            cont += 1;// cada palabra hallada se le suma 1 al contador
+            if (cont == 1) {
+                palabrasencontradas.setText("1/3");
+            } else if (cont == 2) {
+                palabrasencontradas.setText("2/3");
+            } else if (cont == 3) {
+                palabrasencontradas.setText("3/3");
+            }
+        }
+        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
+        if (JOE >= 2 && TAYLOR >= 2 && ELVIS >= 2) {
+            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
+        }
     }//GEN-LAST:event_boton15ActionPerformed
 
     private void boton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton24ActionPerformed
@@ -801,44 +848,18 @@ int naruto = 0;
     }//GEN-LAST:event_boton74ActionPerformed
 
     private void boton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton25ActionPerformed
-        goku += 1;//Si se presiona este boton que representa la letra inicial de GOKU el contador sumara 1
-        if (goku == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palabra GOKU
-            boton22.setBackground(Color.green);//Letra G
-            boton23.setBackground(Color.green);//Letra O
-            boton24.setBackground(Color.green);//Letra K
-            boton25.setBackground(Color.green);//Letra U
-
-            //Se volverá visible una estrella al lado de la palabra GOKU en la lista
-            chulito2.setVisible(true);
-            //Para contabilizar palabras halladas y mostrarlas al usuario
-            cont += 1;// cada palabra hallada se le suma 1 al contador
-            if (cont == 1) {
-                palabrasencontradas.setText("1/3");
-            } else if (cont == 2) {
-                palabrasencontradas.setText("2/3");
-            } else if (cont == 3) {
-                palabrasencontradas.setText("3/3");
-            }
-        }
-        //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (naruto >= 2 && goku >= 2 && shoto >= 2) {
-            JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
-        }
+        
     }//GEN-LAST:event_boton25ActionPerformed
-    int shoto = 0;
+    
     private void boton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton35ActionPerformed
-        shoto += 1;//Si se presiona este boton que representa la letra inicial de SHOTO el contador sumara 1
-        if (shoto == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palabra SHOTO
-            boton35.setBackground(Color.green);//Letra L
-            boton44.setBackground(Color.green);//Letra U
-            boton53.setBackground(Color.green);//Letra F
-            boton62.setBackground(Color.green);//Letra F
-            boton71.setBackground(Color.green);//Letra Y
-
-            //Se volverá visible una estrella al lado de la palabra SHOTO en la lista
-            chulito1.setVisible(true);
+       JOE += 1;//Si se presiona este boton que representa la letra inicial de JOEel contador sumara 1
+        if (JOE == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara JOE
+            boton15.setBackground(Color.green);//Letra J
+            boton25.setBackground(Color.green);//Letra O
+            boton35.setBackground(Color.green);//Letra E
+            //Se volverá visible una estrella al lado de la palabra JOE en la lista
+            chulito3.setVisible(true);
             //Para contabilizar palabras halladas y mostrarlas al usuario
             cont += 1;// cada palabra hallada se le suma 1 al contador
             if (cont == 1) {
@@ -850,7 +871,7 @@ int naruto = 0;
             }
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (naruto >= 2 && goku >= 2 && shoto >= 2) {
+        if (JOE >= 2 && TAYLOR >= 2 && ELVIS >= 2) {
             JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
         }
     }//GEN-LAST:event_boton35ActionPerformed
@@ -868,118 +889,15 @@ int naruto = 0;
     }//GEN-LAST:event_boton65ActionPerformed
 
     private void boton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton75ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton75ActionPerformed
-
-    private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
-        contenido4.removeAll();
-
-        mediumanime m = new mediumanime(name);
-        m.setSize(800, 496);
-        m.setLocation(0, 0);
-        m.setOpaque(false);
-        contenido4.add(m);
-        contenido4.revalidate();
-        contenido4.repaint();
-    }//GEN-LAST:event_siguienteActionPerformed
-
-    private void solucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solucionActionPerformed
-        //Al presionar este boton se podra visualizar la solución de la sopa de letras al ver con un fondo verde las letras de las palabras propuestas al usuario
-        //NARUTO
-        boton11.setBackground(Color.green);//Letra N
-        boton21.setBackground(Color.green);//Letra A
-        boton31.setBackground(Color.green);//Letra R
-        boton41.setBackground(Color.green);//Letra U
-        boton51.setBackground(Color.green);//Letra T
-        boton61.setBackground(Color.green);//Letra O
-        //GOKU
-        boton22.setBackground(Color.green);//Letra G
-        boton23.setBackground(Color.green);//Letra O
-        boton24.setBackground(Color.green);//Letra K
-        boton25.setBackground(Color.green);//Letra U
-
-        //LUFFY
-        boton35.setBackground(Color.green);//Letra L
-        boton44.setBackground(Color.green);//Letra U
-        boton53.setBackground(Color.green);//Letra F
-        boton62.setBackground(Color.green);//Letra F
-        boton71.setBackground(Color.green);//Letra Y
-
-        //MOSTRAR PALABRAS ENCONTRADAS
-        palabrasencontradas.setText("3/3");
-        //MOSTRAR ESTRELLAS (CHULITOS)
-        chulito1.setVisible(true);
-        chulito2.setVisible(true);
-        chulito3.setVisible(true);
-    }//GEN-LAST:event_solucionActionPerformed
-
-    private void instruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_instruccionesActionPerformed
-        //Mostrar Joption pane de instrucciones
-        JOptionPane.showMessageDialog(null, "𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐀𝐌𝐈𝐄𝐍𝐓𝐎 𝐃𝐄𝐋 𝐉𝐔𝐄𝐆𝐎:\nEste nivel está compuesto por una sopa de letras de dimensiones 7x5 donde encontrarás 3 palabras ocultas"
-                + "\nrelacionadas a nombres de planetas del sistema solar."
-                + "\nAl lado derecho de la pantalla visualizarás la lista de palabras que debes buscar."
-                + "\n𝐏𝐚𝐫𝐚 𝐣𝐮𝐠𝐚𝐫: "
-                + "\n  ⭐Busca las letras de las palabras en cualquier dirección: horizontal, vertical o diagonal, en sentido normal"
-                + "\n     o inverso."
-                + "\n  ⭐Una vez que encuentres una letra de una palabra, selecciona la letra inicial y ultima"
-                + "\n      para que el sistema verifique tu elección.\n"
-                + "  ⭐Si tu selección es correcta se cambiará el fondo de la palabra en la sopa de letras y aparecerá "
-                + "\n      una estrella al lado de la palabra de la lista.\n"
-                + "  ⭐Continúa buscando hasta que hayas encontrado todas las palabras de la lista."
-                + "\n\n𝐏𝐋𝐔𝐒: Si lo deseas puedes pedir pistas o revelar la solución de la sopa de letras al seleccionar dichas opciones."
-                + "\n\n                             ¡𝗗𝗜𝗩𝗜𝗘𝗥𝗧𝗘𝗧𝗘 𝗝𝗨𝗚𝗔𝗡𝗗𝗢 𝗟𝗔 𝗦𝗢𝗣𝗔 𝗗𝗘 𝗟𝗘𝗧𝗥𝗔𝗦 𝗦𝗧𝗔𝗥: 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝗣𝗟𝗔𝗡𝗘𝗧𝗔𝗦!", "STAR GAMES: Sopa de letras STAR", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_instruccionesActionPerformed
-    int naux=1 , gaux=1 , laux=1 ;
-    private void pistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pistaActionPerformed
-        //Para mostrar pistas:
-        //tengo en cuenta si ya el contador de la palabra está lleno ademas creo un auxiliar para cerciorarme de no repetir la palabra si ya la encontraron
-        //la pista consiste en crear un fondo verde en la inicial de la letra de un planeta que no haya encontrado el usuario
-
-        if (naruto < 2 & naux == 1) { //pista letra inicial NARUTO
-            boton11.setBackground(new Color(153, 255, 153));
-            naux = 0;
-        } else if (goku < 2 & gaux == 1) {//pista letra inicial GOKU
-            boton22.setBackground(new Color(153, 255, 153));
-            gaux = 0;
-        } else if (shoto < 2 & laux == 1) {//pista letra inicial LUFFY
-            boton35.setBackground(new Color(153, 255, 153));
-            laux = 0;
-        }
-    }//GEN-LAST:event_pistaActionPerformed
-
-    private void siguiente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguiente1ActionPerformed
-        contenido4.removeAll();
-        tema m = new tema(name);
-        m.setSize(800, 496);
-        m.setLocation(0, 0);
-        m.setOpaque(false);
-        contenido4.add(m);
-        contenido4.revalidate();
-        contenido4.repaint();
-    }//GEN-LAST:event_siguiente1ActionPerformed
-
-    private void contenido4MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contenido4MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_contenido4MouseMoved
-
-    private void boton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton41ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton41ActionPerformed
-
-    private void boton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton51ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boton51ActionPerformed
-    int goku = 0;
-    private void boton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton22ActionPerformed
-        goku += 1;//Si se presiona este boton que representa la letra inicial de GOKU el contador sumara 1
-        if (goku == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palabra GOKU
-            boton22.setBackground(Color.green);//Letra G
-            boton23.setBackground(Color.green);//Letra O
-            boton24.setBackground(Color.green);//Letra K
-            boton25.setBackground(Color.green);//Letra U
-
-            //Se volverá visible una estrella al lado de la palabra GOKU en la lista
+         ELVIS += 1;//Si se presiona este boton que representa la letra inicial de ELVIS el contador sumara 1
+        if (ELVIS == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara ELVIS
+            boton31.setBackground(Color.green);//Letra E
+            boton42.setBackground(Color.green);//Letra L
+            boton53.setBackground(Color.green);//Letra V
+            boton64.setBackground(Color.green);//Letra I
+            boton75.setBackground(Color.green);//Letra S
+            //Se volverá visible una estrella al lado de la palabra JOE en la lista
             chulito2.setVisible(true);
             //Para contabilizar palabras halladas y mostrarlas al usuario
             cont += 1;// cada palabra hallada se le suma 1 al contador
@@ -992,22 +910,109 @@ int naruto = 0;
             }
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (naruto >= 2 && goku >= 2 && shoto >= 2) {
+        if (JOE >= 2 && TAYLOR >= 2 && ELVIS >= 2) {
             JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
         }
-    }//GEN-LAST:event_boton22ActionPerformed
+    }//GEN-LAST:event_boton75ActionPerformed
 
-    private void boton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton71ActionPerformed
-        shoto += 1;//Si se presiona este boton que representa la letra inicial de LUFFY el contador sumara 1
-        if (shoto == 2) {// si vale 2:
-            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palabra LUFFY
-            boton35.setBackground(Color.green);//Letra L
-            boton44.setBackground(Color.green);//Letra U
-            boton53.setBackground(Color.green);//Letra F
-            boton62.setBackground(Color.green);//Letra F
-            boton71.setBackground(Color.green);//Letra Y
+    private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
+        contenido4.removeAll();
 
-            //Se volverá visible una estrella al lado de la palabra LUFFY en la lista
+        mediummusica m = new mediummusica(name);
+        m.setSize(800, 496);
+        m.setLocation(0, 0);
+        m.setOpaque(false);
+        contenido4.add(m);
+        contenido4.revalidate();
+        contenido4.repaint();
+    }//GEN-LAST:event_siguienteActionPerformed
+
+    private void solucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solucionActionPerformed
+        //Al presionar este boton se podra visualizar la solución de la sopa de letras al ver con un fondo verde las letras de las palabras propuestas al usuario
+        //TAYLOR
+        boton72.setBackground(Color.green);//Letra T
+            boton62.setBackground(Color.green);//Letra A
+            boton52.setBackground(Color.green);//Letra Y
+            boton42.setBackground(Color.green);//Letra L
+            boton32.setBackground(Color.green);//Letra O
+            boton22.setBackground(Color.green);//Letra R
+        //JOE
+       boton15.setBackground(Color.green);//Letra J
+            boton25.setBackground(Color.green);//Letra O
+            boton35.setBackground(Color.green);//Letra E
+
+        //ELVIS
+         boton31.setBackground(Color.green);//Letra E
+            boton42.setBackground(Color.green);//Letra L
+            boton53.setBackground(Color.green);//Letra V
+            boton64.setBackground(Color.green);//Letra I
+            boton75.setBackground(Color.green);//Letra S
+
+        //MOSTRAR PALABRAS ENCONTRADAS
+        palabrasencontradas.setText("3/3");
+        //MOSTRAR ESTRELLAS (CHULITOS)
+        chulito1.setVisible(true);
+        chulito2.setVisible(true);
+        chulito3.setVisible(true);
+    }//GEN-LAST:event_solucionActionPerformed
+
+    private void instruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_instruccionesActionPerformed
+        //Mostrar Joption pane de instrucciones
+        JOptionPane.showMessageDialog(null, "𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐀𝐌𝐈𝐄𝐍𝐓𝐎 𝐃𝐄𝐋 𝐉𝐔𝐄𝐆𝐎:\nEste nivel está compuesto por una sopa de letras de dimensiones 7x5 donde encontrarás 3 palabras ocultas"
+                + "\nrelacionadas a nombres de cantantes reconocidos."
+                + "\nAl lado derecho de la pantalla visualizarás la lista de palabras que debes buscar."
+                + "\n𝐏𝐚𝐫𝐚 𝐣𝐮𝐠𝐚𝐫: "
+                + "\n  ⭐Busca las letras de las palabras en cualquier dirección: horizontal, vertical o diagonal, en sentido normal"
+                + "\n     o inverso."
+                + "\n  ⭐Una vez que encuentres una letra de una palabra, selecciona la letra inicial y ultima"
+                + "\n      para que el sistema verifique tu elección.\n"
+                + "  ⭐Si tu selección es correcta se cambiará el fondo de la palabra en la sopa de letras y aparecerá "
+                + "\n      una estrella al lado de la palabra de la lista.\n"
+                + "  ⭐Continúa buscando hasta que hayas encontrado todas las palabras de la lista."
+                + "\n\n𝐏𝐋𝐔𝐒: Si lo deseas puedes pedir pistas o revelar la solución de la sopa de letras al seleccionar dichas opciones."
+                + "\n\n                             ¡𝗗𝗜𝗩𝗜𝗘𝗥𝗧𝗘𝗧𝗘 𝗝𝗨𝗚𝗔𝗡𝗗𝗢 𝗟𝗔 𝗦𝗢𝗣𝗔 𝗗𝗘 𝗟𝗘𝗧𝗥𝗔𝗦 𝗦𝗧𝗔𝗥: 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 𝐌𝗨𝗦𝗜𝐂𝗔!", "STAR GAMES: Sopa de letras STAR", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_instruccionesActionPerformed
+    int jaux=1 , eaux=1 , taux=1 ;
+    private void pistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pistaActionPerformed
+        //Para mostrar pistas:
+        //tengo en cuenta si ya el contador de la palabra está lleno ademas creo un auxiliar para cerciorarme de no repetir la palabra si ya la encontraron
+        //la pista consiste en crear un fondo verde en la inicial de la letra de un planeta que no haya encontrado el usuario
+
+        if (JOE < 2 & jaux == 1) { //pista letra inicial JOE
+            boton15.setBackground(new Color(153, 255, 153));
+            jaux = 0;
+        } else if (ELVIS < 2 & eaux == 1) {//pista letra inicial ELVIS
+            boton31.setBackground(new Color(153, 255, 153));
+            eaux = 0;
+        } else if (TAYLOR < 2 & taux == 1) {//pista letra inicial TAYLOR
+            boton72.setBackground(new Color(153, 255, 153));
+            taux = 0;
+        }
+    }//GEN-LAST:event_pistaActionPerformed
+
+    private void contenido4MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contenido4MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contenido4MouseMoved
+
+    private void boton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton41ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton41ActionPerformed
+
+    private void boton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton51ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton51ActionPerformed
+    
+    private void boton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton22ActionPerformed
+         TAYLOR += 1;//Si se presiona este boton que representa la letra inicial de TAYLOR el contador sumara 1
+        if (TAYLOR == 2) {// si vale 2:
+            //se obtendra un color verde en el fondo de los botones que contienen las letras de la palara TAYLOT
+            boton72.setBackground(Color.green);//Letra T
+            boton62.setBackground(Color.green);//Letra A
+            boton52.setBackground(Color.green);//Letra Y
+            boton42.setBackground(Color.green);//Letra L
+            boton32.setBackground(Color.green);//Letra O
+            boton22.setBackground(Color.green);//Letra R
+            //Se volverá visible una estrella al lado de la palabra TAYLOR en la lista
             chulito1.setVisible(true);
             //Para contabilizar palabras halladas y mostrarlas al usuario
             cont += 1;// cada palabra hallada se le suma 1 al contador
@@ -1020,10 +1025,34 @@ int naruto = 0;
             }
         }
         //JOPTION PANE para mostrar aviso de que ha ganado al usuario
-        if (naruto >= 2 && goku >= 2 && shoto >= 2) {
+        if (JOE >= 2 && TAYLOR >= 2 && ELVIS >= 2) {
             JOptionPane.showMessageDialog(null, "¡Felicidades " + name + "! \nHas resuelto el primer nivel\nPresiona NEXT LEVEL para seguir con el siguiente");
         }
+    }//GEN-LAST:event_boton22ActionPerformed
+
+    private void boton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton71ActionPerformed
+        
     }//GEN-LAST:event_boton71ActionPerformed
+
+    private void btnVolver3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver3MouseEntered
+        labelvolver.setText(" Menú");
+    }//GEN-LAST:event_btnVolver3MouseEntered
+
+    private void btnVolver3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver3MouseExited
+        labelvolver.setText("");
+    }//GEN-LAST:event_btnVolver3MouseExited
+
+    private void btnVolver3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver3ActionPerformed
+        contenido4.removeAll();
+        tema h = new tema(name);//Una instancia
+        h.setSize(800, 496);
+        h.setLocation(0, 0);
+        h.setOpaque(false);
+
+        contenido4.add(h);
+        contenido4.revalidate();
+        contenido4.repaint();
+    }//GEN-LAST:event_btnVolver3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1062,6 +1091,7 @@ int naruto = 0;
     private javax.swing.JButton boton73;
     private javax.swing.JButton boton74;
     private javax.swing.JButton boton75;
+    private javax.swing.JButton btnVolver3;
     private javax.swing.JLabel chulito1;
     private javax.swing.JLabel chulito2;
     private javax.swing.JLabel chulito3;
@@ -1071,10 +1101,10 @@ int naruto = 0;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel labelvolver;
     private javax.swing.JLabel palabrasencontradas;
     private javax.swing.JButton pista;
     private javax.swing.JButton siguiente;
-    private javax.swing.JButton siguiente1;
     private javax.swing.JButton solucion;
     private javax.swing.JLabel sopadeletras;
     // End of variables declaration//GEN-END:variables

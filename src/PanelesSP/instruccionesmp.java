@@ -14,12 +14,12 @@ import javax.swing.JFrame;
  *
  * @author USUARIO
  */
-public class instruccionesep extends javax.swing.JPanel {
+public class instruccionesmp extends javax.swing.JPanel {
     /**
      * Creates new form instruccionesep
      */
     private String name = null;
-    public instruccionesep(String user) {
+    public instruccionesmp(String user) {
         initComponents();
         this.name = user;
         
@@ -334,11 +334,11 @@ public class instruccionesep extends javax.swing.JPanel {
 
         jLabel3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Este nivel está compuesto por una sopa de letras de dimensiones 7x5 donde encontrarás ");
+        jLabel3.setText("Este nivel está compuesto por una sopa de letras de dimensiones 8x6 donde encontrarás ");
 
         jLabel4.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("3 palabras ocultas relacionadas a nombres de planetas del sistema solar.");
+        jLabel4.setText("4 palabras ocultas relacionadas a nombres de planetas del sistema solar.");
 
         jLabel6.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -456,11 +456,6 @@ public class instruccionesep extends javax.swing.JPanel {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelitoLayout.createSequentialGroup()
                         .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelitoLayout.createSequentialGroup()
-                                .addGap(55, 55, 55)
-                                .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jLabel13)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelitoLayout.createSequentialGroup()
                                 .addGap(39, 39, 39)
                                 .addComponent(jLabel15)
                                 .addGap(18, 18, 18)
@@ -480,38 +475,45 @@ public class instruccionesep extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel11)
-                                    .addComponent(jLabel9))))
+                                    .addComponent(jLabel9)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelitoLayout.createSequentialGroup()
+                                .addGap(55, 55, 55)
+                                .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel13))))
                         .addGap(0, 14, Short.MAX_VALUE)))
                 .addContainerGap(19, Short.MAX_VALUE))
             .addGroup(panelitoLayout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelitoLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel7)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(panelitoLayout.createSequentialGroup()
                         .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnVolver4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panelitoLayout.createSequentialGroup()
                                 .addGap(6, 6, 6)
                                 .addComponent(labelvolver1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelitoLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jLabel1)
-                                .addGap(293, 293, 293))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelitoLayout.createSequentialGroup()
-                                .addGap(34, 34, 34)
+                        .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(panelitoLayout.createSequentialGroup()
+                                .addGap(45, 45, 45)
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(labelvolver, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelitoLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelitoLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel3))
-                                .addGap(0, 0, Short.MAX_VALUE))))))
+                                    .addGroup(panelitoLayout.createSequentialGroup()
+                                        .addGap(0, 172, Short.MAX_VALUE)
+                                        .addComponent(jLabel1)
+                                        .addGap(293, 293, 293))
+                                    .addGroup(panelitoLayout.createSequentialGroup()
+                                        .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel6)
+                                            .addComponent(jLabel3))
+                                        .addGap(0, 0, Short.MAX_VALUE))))))
+                    .addGroup(panelitoLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel7)
+                        .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(panelitoLayout.createSequentialGroup()
                 .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelitoLayout.createSequentialGroup()
@@ -538,9 +540,9 @@ public class instruccionesep extends javax.swing.JPanel {
                         .addComponent(labelvolver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(labelvolver1, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -589,7 +591,7 @@ public class instruccionesep extends javax.swing.JPanel {
 
     private void botonokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonokActionPerformed
         panelito.removeAll();
-        easy e = new easy(name);//Una instancia
+        medium e = new medium(name);//Una instancia
         e.setSize(800, 496);
         e.setLocation(0, 0);
         e.setOpaque(false);

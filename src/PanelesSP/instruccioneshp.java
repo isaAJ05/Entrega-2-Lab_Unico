@@ -14,12 +14,12 @@ import javax.swing.JFrame;
  *
  * @author USUARIO
  */
-public class instruccionesep extends javax.swing.JPanel {
+public class instruccioneshp extends javax.swing.JPanel {
     /**
      * Creates new form instruccionesep
      */
     private String name = null;
-    public instruccionesep(String user) {
+    public instruccioneshp(String user) {
         initComponents();
         this.name = user;
         
@@ -334,11 +334,11 @@ public class instruccionesep extends javax.swing.JPanel {
 
         jLabel3.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Este nivel está compuesto por una sopa de letras de dimensiones 7x5 donde encontrarás ");
+        jLabel3.setText("Este nivel está compuesto por una sopa de letras de dimensiones 8x8 donde encontrarás ");
 
         jLabel4.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("3 palabras ocultas relacionadas a nombres de planetas del sistema solar.");
+        jLabel4.setText("6 palabras ocultas relacionadas a nombres de planetas del sistema solar.");
 
         jLabel6.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -374,7 +374,7 @@ public class instruccionesep extends javax.swing.JPanel {
 
         jLabel14.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Si lo deseas puedes pedir pistas o revelar la solución de la sopa de letras. ");
+        jLabel14.setText("Tienes disponible solo 4 PISTAS o puedes revelar la solución de la sopa de letras. ");
 
         jLabel2.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 153, 255));
@@ -589,7 +589,7 @@ public class instruccionesep extends javax.swing.JPanel {
 
     private void botonokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonokActionPerformed
         panelito.removeAll();
-        easy e = new easy(name);//Una instancia
+        hard e = new hard(name);//Una instancia
         e.setSize(800, 496);
         e.setLocation(0, 0);
         e.setOpaque(false);
