@@ -1,5 +1,6 @@
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.util.Random;
@@ -7,6 +8,8 @@ import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import java.awt.Image;
 import java.awt.Dimension;
+import java.awt.Point;
+import java.awt.Toolkit;
 /**
  *
  * @author Paula Núñez, Isabella Arrieta y Natalia Carpintero
@@ -14,7 +17,8 @@ import java.awt.Dimension;
 public class Mesa1 extends javax.swing.JFrame {
 private String user;
     public Mesa1(String name) {
-         
+         Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
         this.user = name;
         initComponents();
         this.setLocationRelativeTo(null);

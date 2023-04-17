@@ -2,8 +2,11 @@
 import PanelesCarreraNave.InfoCarrerasPanel;
 import PanelesCarreraNave.CarreraPANELcarros;
 import java.awt.BorderLayout;
+import java.awt.Cursor;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -18,7 +21,8 @@ public class Pista extends javax.swing.JFrame {
         this.user = name;
 
         initComponents();
-
+Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
         this.setLocationRelativeTo(null);//centrar ventana
         this.setTitle(" Carrera de Autos Espaciales"); //Titulo 
         

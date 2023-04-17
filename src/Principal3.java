@@ -1,7 +1,11 @@
 //GEN-FIRST:event_magentaActionPerformed
 import java.awt.Color;//GEN-LAST:event_magentaActionPerformed
+import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.Point;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 import rompecabezas.rompecabezasMALO;
 
 public class Principal3 extends javax.swing.JFrame {
@@ -12,6 +16,8 @@ public class Principal3 extends javax.swing.JFrame {
     public Principal3(String user) {
         initComponents();
         this.setLocationRelativeTo(null);
+        Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
         this.name = user;
     }
 

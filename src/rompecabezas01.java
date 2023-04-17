@@ -1,6 +1,9 @@
 
+import java.awt.Cursor;
 import rompecabezas.*;
 import java.awt.Font;
+import java.awt.Point;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
@@ -30,6 +33,8 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
     private String user;
 
     public rompecabezas01(String name) {
+        Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
         this.user = name;
         initComponents();
         this.setSize(800, 500);

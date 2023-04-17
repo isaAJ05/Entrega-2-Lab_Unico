@@ -1,13 +1,19 @@
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.Point;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 
 
 public class mant extends javax.swing.JFrame {
 
     private String user = null;
     public mant(String name) {
+        Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
         initComponents();
         this.setLocationRelativeTo(null);
         this.user = name;

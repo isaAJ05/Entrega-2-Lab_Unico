@@ -1,7 +1,11 @@
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.Point;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 
 
 public class Principal2 extends javax.swing.JFrame {
@@ -10,6 +14,9 @@ public class Principal2 extends javax.swing.JFrame {
     public Principal2() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
+        Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
     }
 
     @SuppressWarnings("unchecked")

@@ -1,6 +1,10 @@
 
 
+import java.awt.Cursor;
 import java.awt.Dimension;
+import java.awt.Point;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 
 import rompecabezas.*;
 
@@ -9,6 +13,8 @@ public class rompecabezas extends javax.swing.JFrame {
   private String user;
     public rompecabezas(String name) {
         this.user = name;
+        Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
         setPreferredSize(new Dimension(800, 500));
         this.setResizable(false);
         this.setTitle("ROMPECABEZAS");

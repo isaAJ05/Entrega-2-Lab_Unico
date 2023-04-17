@@ -1,5 +1,8 @@
 
+import java.awt.Cursor;
 import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
@@ -7,6 +10,8 @@ import javax.swing.ImageIcon;
 public class SeleccionNavePanel extends javax.swing.JPanel {
 
     public SeleccionNavePanel() {
+        Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
         initComponents();
     }
 

@@ -3,6 +3,10 @@ import PanelesEscaletaYSerpiente.AvataresPanel;
 import PanelesEscaletaYSerpiente.GamePanel1;
 import PanelesEscaletaYSerpiente.InfoPanel;
 import java.awt.BorderLayout;
+import java.awt.Cursor;
+import java.awt.Point;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 
@@ -10,6 +14,8 @@ public class SerpienteGAME extends javax.swing.JFrame {
 
     private String user=null;
     public SerpienteGAME(String name) {
+        Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
         this.user=name;
         initComponents();
         this.setLocationRelativeTo(null); //centrar ventana

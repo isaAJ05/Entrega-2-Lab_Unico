@@ -2,8 +2,11 @@
 import PanelesSP.inicio;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
+import java.awt.Cursor;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
@@ -23,6 +26,8 @@ public class SOPASTARthisno extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         inicio i = new inicio(user);
+        Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
         i.setSize(800, 496);
         i.setLocation(0, 0);
         i.setOpaque(false);
