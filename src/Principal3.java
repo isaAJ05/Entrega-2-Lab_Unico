@@ -242,7 +242,7 @@ public class Principal3 extends javax.swing.JFrame {
 
     private void blueActionPerformed(java.awt.event.ActionEvent evt) {                                     
         // SOPA DE LETRAS
-     SOPASTAR a=new SOPASTAR(name);
+     ASOPAstar a=new ASOPAstar(name);
       a.setVisible(true);
       this.dispose();
     }                                    
