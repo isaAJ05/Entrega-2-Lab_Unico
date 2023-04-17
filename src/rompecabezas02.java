@@ -139,10 +139,12 @@ public class rompecabezas02 extends javax.swing.JFrame implements ActionListener
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        btnVolver1 = new javax.swing.JButton();
+        labelvolver = new javax.swing.JLabel();
+        volver1 = new javax.swing.JButton();
         rompecabezas = new javax.swing.JLabel();
         limpiar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        volver = new javax.swing.JButton();
         PIEZAS = new javax.swing.JPanel();
         p1 = new javax.swing.JButton();
         p2 = new javax.swing.JButton();
@@ -174,13 +176,52 @@ public class rompecabezas02 extends javax.swing.JFrame implements ActionListener
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 51));
-        jPanel1.setLayout(null);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnVolver1.setBackground(new java.awt.Color(255, 153, 255));
+        btnVolver1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnVolver1.setForeground(new java.awt.Color(0, 0, 51));
+        btnVolver1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar.png"))); // NOI18N
+        btnVolver1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVolver1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnVolver1.setMaximumSize(new java.awt.Dimension(50, 39));
+        btnVolver1.setMinimumSize(new java.awt.Dimension(50, 39));
+        btnVolver1.setPreferredSize(new java.awt.Dimension(58, 47));
+        btnVolver1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar1.png"))); // NOI18N
+        btnVolver1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar1.png"))); // NOI18N
+        btnVolver1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnVolver1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnVolver1MouseExited(evt);
+            }
+        });
+        btnVolver1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolver1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnVolver1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        labelvolver.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        labelvolver.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(labelvolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+
+        volver1.setBackground(new java.awt.Color(0, 0, 153));
+        volver1.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        volver1.setText("Volver");
+        volver1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volver1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(volver1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
         rompecabezas.setFont(new java.awt.Font("Elephant", 1, 48)); // NOI18N
         rompecabezas.setForeground(new java.awt.Color(51, 51, 255));
         rompecabezas.setText("ROMPECABEZAS");
-        jPanel1.add(rompecabezas);
-        rompecabezas.setBounds(210, 30, 506, 60);
+        jPanel1.add(rompecabezas, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, -1, -1));
 
         limpiar.setBackground(new java.awt.Color(0, 0, 153));
         limpiar.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
@@ -190,25 +231,12 @@ public class rompecabezas02 extends javax.swing.JFrame implements ActionListener
                 limpiarActionPerformed(evt);
             }
         });
-        jPanel1.add(limpiar);
-        limpiar.setBounds(640, 400, 111, 26);
+        jPanel1.add(limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 400, 111, -1));
 
         jLabel3.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Haga click en las piezas en el orden que considere correcto.");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(40, 400, 490, 30);
-
-        volver.setBackground(new java.awt.Color(0, 0, 153));
-        volver.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
-        volver.setText("Volver");
-        volver.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volverActionPerformed(evt);
-            }
-        });
-        jPanel1.add(volver);
-        volver.setBounds(30, 30, 110, 26);
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 490, 30));
 
         PIEZAS.setBackground(new java.awt.Color(0, 0, 51));
         PIEZAS.setMaximumSize(new java.awt.Dimension(300, 117));
@@ -330,8 +358,7 @@ public class rompecabezas02 extends javax.swing.JFrame implements ActionListener
         });
         PIEZAS.add(p12);
 
-        jPanel1.add(PIEZAS);
-        PIEZAS.setBounds(50, 130, 296, 222);
+        jPanel1.add(PIEZAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
 
         ROMPECABEZAS.setBackground(new java.awt.Color(0, 0, 51));
         ROMPECABEZAS.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
@@ -352,22 +379,20 @@ public class rompecabezas02 extends javax.swing.JFrame implements ActionListener
         ROMPECABEZAS.add(pieza11);
         ROMPECABEZAS.add(pieza12);
 
-        jPanel1.add(ROMPECABEZAS);
-        ROMPECABEZAS.setBounds(460, 130, 296, 222);
+        jPanel1.add(ROMPECABEZAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 130, -1, -1));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoespacio (1).png"))); // NOI18N
         fondo.setMaximumSize(new java.awt.Dimension(800, 500));
         fondo.setMinimumSize(new java.awt.Dimension(800, 500));
         fondo.setOpaque(true);
         fondo.setPreferredSize(new java.awt.Dimension(800, 500));
-        jPanel1.add(fondo);
-        fondo.setBounds(0, 0, 800, 490);
+        jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 490));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -376,12 +401,6 @@ public class rompecabezas02 extends javax.swing.JFrame implements ActionListener
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
-        rompecabezas a = new rompecabezas(user);
-        a.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_volverActionPerformed
 
     private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
         for (int i = 0; i < 4; i++) {
@@ -441,6 +460,27 @@ public class rompecabezas02 extends javax.swing.JFrame implements ActionListener
         // TODO add your handling code here:
     }//GEN-LAST:event_p12ActionPerformed
 
+    private void volver1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volver1ActionPerformed
+        rompecabezas a = new rompecabezas(user);
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_volver1ActionPerformed
+
+    private void btnVolver1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver1ActionPerformed
+         Principal3 p = new Principal3(user);
+        p.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnVolver1ActionPerformed
+
+    private void btnVolver1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver1MouseEntered
+          labelvolver.setText(" Inicio");  
+    }//GEN-LAST:event_btnVolver1MouseEntered
+
+    private void btnVolver1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver1MouseExited
+          labelvolver.setText("");  
+    }//GEN-LAST:event_btnVolver1MouseExited
+
+    
     /**
      * @param args the command line arguments
      */
@@ -488,9 +528,11 @@ public class rompecabezas02 extends javax.swing.JFrame implements ActionListener
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PIEZAS;
     private javax.swing.JPanel ROMPECABEZAS;
+    private javax.swing.JButton btnVolver1;
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelvolver;
     private javax.swing.JButton limpiar;
     private javax.swing.JButton p1;
     private javax.swing.JButton p10;
@@ -517,6 +559,6 @@ public class rompecabezas02 extends javax.swing.JFrame implements ActionListener
     private javax.swing.JLabel pieza8;
     private javax.swing.JLabel pieza9;
     private javax.swing.JLabel rompecabezas;
-    private javax.swing.JButton volver;
+    private javax.swing.JButton volver1;
     // End of variables declaration//GEN-END:variables
 }

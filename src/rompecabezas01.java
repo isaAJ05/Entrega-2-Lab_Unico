@@ -1,5 +1,4 @@
 
-
 import rompecabezas.*;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -12,7 +11,6 @@ import javax.swing.UIManager;
 
 // Créditos gif ganador: https://tenor.com/view/cute-panda-happy-love-yay-gif-16763329
 // Créditos gif perdedor: https://images.app.goo.gl/FLzFLSCFVXRhy6NX8
-
 public class rompecabezas01 extends javax.swing.JFrame implements ActionListener {
 
     JLabel[][] status;
@@ -28,11 +26,11 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
     ImageIcon pp7 = new ImageIcon(CL.getResource("imagenes/r7.png"));
     ImageIcon pp8 = new ImageIcon(CL.getResource("imagenes/r8.png"));
     ImageIcon pp9 = new ImageIcon(CL.getResource("imagenes/r9.png"));
- 
+
     private String user;
 
     public rompecabezas01(String name) {
-        this.user=name;
+        this.user = name;
         initComponents();
         this.setSize(800, 500);
         this.setVisible(true);
@@ -103,23 +101,23 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
             if (k) {
                 ImageIcon ganaste = new ImageIcon(CL.getResource("imagenes/happy.gif"));
                 JOptionPane.showMessageDialog(null, "¡FELICIDADES!\nEres todo un ganador.", "ROMPECABEZAS", JOptionPane.PLAIN_MESSAGE, ganaste);
-            for (int i = 0; i < 3; i++) {
-                for (int j = 0; j < 3; j++) {
-                    piezas[i][j].setEnabled(true);
-                    status[i][j].setIcon(null);
-                    contador = 0;
+                for (int i = 0; i < 3; i++) {
+                    for (int j = 0; j < 3; j++) {
+                        piezas[i][j].setEnabled(true);
+                        status[i][j].setIcon(null);
+                        contador = 0;
+                    }
                 }
-            }
             } else {
                 ImageIcon perdiste = new ImageIcon(CL.getResource("imagenes/sad.gif"));
                 JOptionPane.showMessageDialog(null, "GAME OVER\nPerdiste esta vez,\nsuerte para la próxima.", "ROMPECABEZAS", JOptionPane.PLAIN_MESSAGE, perdiste);
-            for (int i = 0; i < 3; i++) {
-                for (int j = 0; j < 3; j++) {
-                    piezas[i][j].setEnabled(true);
-                    status[i][j].setIcon(null);
-                    contador = 0;
+                for (int i = 0; i < 3; i++) {
+                    for (int j = 0; j < 3; j++) {
+                        piezas[i][j].setEnabled(true);
+                        status[i][j].setIcon(null);
+                        contador = 0;
+                    }
                 }
-            }
             }
         }
     }
@@ -128,9 +126,11 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnVolver1 = new javax.swing.JButton();
+        labelvolver = new javax.swing.JLabel();
+        volver = new javax.swing.JButton();
         rompecabezas = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        volver = new javax.swing.JButton();
         PIEZAS = new javax.swing.JPanel();
         p1 = new javax.swing.JButton();
         p2 = new javax.swing.JButton();
@@ -156,15 +156,37 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        rompecabezas.setFont(new java.awt.Font("Elephant", 1, 48)); // NOI18N
-        rompecabezas.setForeground(new java.awt.Color(51, 51, 255));
-        rompecabezas.setText("ROMPECABEZAS");
-        getContentPane().add(rompecabezas);
-        rompecabezas.setBounds(210, 30, 506, 60);
+        btnVolver1.setBackground(new java.awt.Color(255, 153, 255));
+        btnVolver1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnVolver1.setForeground(new java.awt.Color(0, 0, 51));
+        btnVolver1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar.png"))); // NOI18N
+        btnVolver1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVolver1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnVolver1.setMaximumSize(new java.awt.Dimension(50, 39));
+        btnVolver1.setMinimumSize(new java.awt.Dimension(50, 39));
+        btnVolver1.setPreferredSize(new java.awt.Dimension(58, 47));
+        btnVolver1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar1.png"))); // NOI18N
+        btnVolver1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar1.png"))); // NOI18N
+        btnVolver1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnVolver1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnVolver1MouseExited(evt);
+            }
+        });
+        btnVolver1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolver1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnVolver1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 51));
+        labelvolver.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        labelvolver.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(labelvolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 60, 20));
 
         volver.setBackground(new java.awt.Color(0, 0, 153));
         volver.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
@@ -174,6 +196,15 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
                 volverActionPerformed(evt);
             }
         });
+        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
+
+        rompecabezas.setFont(new java.awt.Font("Elephant", 1, 48)); // NOI18N
+        rompecabezas.setForeground(new java.awt.Color(51, 51, 255));
+        rompecabezas.setText("ROMPECABEZAS");
+        getContentPane().add(rompecabezas, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, -1, -1));
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 51));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         PIEZAS.setBackground(new java.awt.Color(0, 0, 51));
         PIEZAS.setPreferredSize(new java.awt.Dimension(300, 231));
@@ -274,6 +305,8 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
         });
         PIEZAS.add(p9);
 
+        jPanel1.add(PIEZAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 120, -1, -1));
+
         ROMPECABEZAS.setBackground(new java.awt.Color(0, 0, 51));
         ROMPECABEZAS.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         ROMPECABEZAS.setPreferredSize(new java.awt.Dimension(300, 231));
@@ -288,9 +321,12 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
         ROMPECABEZAS.add(pieza8);
         ROMPECABEZAS.add(pieza9);
 
+        jPanel1.add(ROMPECABEZAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(442, 120, -1, -1));
+
         jLabel3.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Haga click en las piezas en el orden que considere correcto.");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 385, 490, 30));
 
         limpiar.setBackground(new java.awt.Color(0, 0, 153));
         limpiar.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
@@ -300,61 +336,16 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
                 limpiarActionPerformed(evt);
             }
         });
+        jPanel1.add(limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(641, 385, 111, -1));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoespacio (1).png"))); // NOI18N
         fondo.setMaximumSize(new java.awt.Dimension(800, 500));
         fondo.setMinimumSize(new java.awt.Dimension(800, 500));
         fondo.setOpaque(true);
         fondo.setPreferredSize(new java.awt.Dimension(800, 500));
+        jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 490));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(110, 110, 110)
-                .addComponent(limpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(volver, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(PIEZAS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(64, 64, 64)
-                        .addComponent(ROMPECABEZAS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(58, 58, 58))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(volver)
-                .addGap(61, 61, 61)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ROMPECABEZAS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PIEZAS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(limpiar))
-                .addContainerGap(73, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 800, 490);
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -415,7 +406,20 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
 
     }//GEN-LAST:event_p9ActionPerformed
 
-   
+    private void btnVolver1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver1ActionPerformed
+        Principal3 p = new Principal3(user);
+        p.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnVolver1ActionPerformed
+
+    private void btnVolver1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver1MouseEntered
+        labelvolver.setText(" Inicio");
+    }//GEN-LAST:event_btnVolver1MouseEntered
+
+    private void btnVolver1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver1MouseExited
+         labelvolver.setText("");  
+    }//GEN-LAST:event_btnVolver1MouseExited
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -452,9 +456,11 @@ public class rompecabezas01 extends javax.swing.JFrame implements ActionListener
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PIEZAS;
     private javax.swing.JPanel ROMPECABEZAS;
+    private javax.swing.JButton btnVolver1;
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelvolver;
     private javax.swing.JButton limpiar;
     private javax.swing.JButton p1;
     private javax.swing.JButton p2;

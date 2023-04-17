@@ -22,6 +22,10 @@ public class Principal2 extends javax.swing.JFrame {
         labeluser = new javax.swing.JLabel();
         volver = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,7 +72,27 @@ public class Principal2 extends javax.swing.JFrame {
         panel.add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/general/stella (2).png"))); // NOI18N
-        panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 458, 286));
+        panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 80, 380, 286));
+
+        jLabel2.setFont(new java.awt.Font("Engravers MT", 1, 25)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 204, 0));
+        jLabel2.setText("STAR GAMES");
+        panel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, 230, -1));
+
+        jLabel3.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Hola, mi nombre es Stella y");
+        panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 300, -1));
+
+        jLabel4.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("seré tu guía el día de hoy");
+        panel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 290, -1));
+
+        jLabel5.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("¿Cuál es su nombre?");
+        panel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, 210, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,12 +122,6 @@ public class Principal2 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_OKActionPerformed
 
-    private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
-        Principal a = new Principal();
-        a.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_volverActionPerformed
-
     private void nombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nombreKeyTyped
         int press = evt.getKeyChar();
 
@@ -119,6 +137,12 @@ public class Principal2 extends javax.swing.JFrame {
     private void panelKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_panelKeyPressed
        
     }//GEN-LAST:event_panelKeyPressed
+
+    private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
+        Principal a = new Principal();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_volverActionPerformed
     @Override
     public void paint(Graphics g) {
         super.paint(g);
@@ -154,10 +178,10 @@ public class Principal2 extends javax.swing.JFrame {
 //        int[] yt5 = {200, 220, 260};
 //        gr.fillPolygon(xt5, yt5, 3);
 
-        gr.setColor(Color.orange);
-        Font f3 = new Font("Engravers MT", Font.BOLD, 25);
-        gr.setFont(f3);
-        gr.drawString("STAR Games" + "", 310, 100);
+//        gr.setColor(Color.orange);
+//        Font f3 = new Font("Engravers MT", Font.BOLD, 25);
+//        gr.setFont(f3);
+//        gr.drawString("STAR Games" + "", 310, 100);
 
 //        g.fillOval(141, 200, 8, 13);
 //        g.fillOval(167, 200, 8, 13);
@@ -171,12 +195,12 @@ public class Principal2 extends javax.swing.JFrame {
 //        gr.setColor(Color.yellow);
 //        gr.fillRect(133, 185, 35, 9);
 
-        gr.setColor(Color.white);
-        Font f2 = new Font("Monospaced", Font.PLAIN, 18);
-        gr.setFont(f2);
-        gr.drawString("Hola, mi nombre es Stella y", 300, 160);
-        gr.drawString("seré tu guía el día de hoy", 300, 180);
-        gr.drawString("¿Cuál es su nombre?", 350, 230);
+//        gr.setColor(Color.white);
+//        Font f2 = new Font("Monospaced", Font.PLAIN, 18);
+//        gr.setFont(f2);
+//        gr.drawString("Hola, mi nombre es Stella y", 300, 160);
+//        gr.drawString("seré tu guía el día de hoy", 300, 180);
+//        gr.drawString("¿Cuál es su nombre?", 350, 230);
 
     }
 
@@ -224,6 +248,10 @@ public class Principal2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton OK;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel labeluser;
     private javax.swing.JTextField nombre;
     private javax.swing.JPanel panel;

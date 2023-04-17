@@ -72,7 +72,6 @@ private String user;
         SumCartasDE = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         AjustesBlackJack = new javax.swing.JButton();
-        AjustesBlackJack1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         Repartir = new javax.swing.JButton();
         Pedir1Carta = new javax.swing.JButton();
@@ -82,6 +81,8 @@ private String user;
         Slipt = new javax.swing.JButton();
         valdRepartir = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        btnVolver1 = new javax.swing.JButton();
+        labelvolver = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(36, 39, 38));
@@ -124,16 +125,6 @@ private String user;
             }
         });
         jPanel2.add(AjustesBlackJack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, -1));
-
-        AjustesBlackJack1.setBackground(new java.awt.Color(102, 255, 153));
-        AjustesBlackJack1.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
-        AjustesBlackJack1.setText("Volver ←");
-        AjustesBlackJack1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AjustesBlackJack1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(AjustesBlackJack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Engravers MT", 0, 14)); // NOI18N
         jLabel2.setText("Cartas");
@@ -196,6 +187,35 @@ private String user;
         jLabel4.setForeground(new java.awt.Color(255, 204, 0));
         jLabel4.setText("STAR GAMES");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 220, -1));
+
+        btnVolver1.setBackground(new java.awt.Color(0, 0, 0));
+        btnVolver1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnVolver1.setForeground(new java.awt.Color(0, 0, 51));
+        btnVolver1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar.png"))); // NOI18N
+        btnVolver1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVolver1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnVolver1.setMaximumSize(new java.awt.Dimension(50, 39));
+        btnVolver1.setMinimumSize(new java.awt.Dimension(50, 39));
+        btnVolver1.setPreferredSize(new java.awt.Dimension(58, 47));
+        btnVolver1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar1.png"))); // NOI18N
+        btnVolver1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar1.png"))); // NOI18N
+        btnVolver1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnVolver1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnVolver1MouseExited(evt);
+            }
+        });
+        btnVolver1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolver1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnVolver1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 450, -1, -1));
+
+        labelvolver.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jPanel2.add(labelvolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 460, 70, 20));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 260, 500));
 
@@ -526,11 +546,19 @@ private String user;
         cambio.setVisible(true);
     }//GEN-LAST:event_AjustesBlackJackActionPerformed
 
-    private void AjustesBlackJack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjustesBlackJack1ActionPerformed
-        Principal3 a = new Principal3(user);
-        a.setVisible(true);
+    private void btnVolver1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver1MouseEntered
+ labelvolver.setText(" Inicio");
+    }//GEN-LAST:event_btnVolver1MouseEntered
+
+    private void btnVolver1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver1MouseExited
+ labelvolver.setText("");
+    }//GEN-LAST:event_btnVolver1MouseExited
+
+    private void btnVolver1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver1ActionPerformed
+        Principal3 p = new Principal3(user);
+        p.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_AjustesBlackJack1ActionPerformed
+    }//GEN-LAST:event_btnVolver1ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -574,7 +602,6 @@ private String user;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AjustesBlackJack;
-    private javax.swing.JButton AjustesBlackJack1;
     private javax.swing.JLabel C1DE;
     private javax.swing.JLabel C1US;
     private javax.swing.JLabel C2DE;
@@ -587,10 +614,12 @@ private String user;
     private javax.swing.JButton Slipt;
     private javax.swing.JLabel SumCartasDE;
     private javax.swing.JLabel SumCartasUs;
+    private javax.swing.JButton btnVolver1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel labelvolver;
     private javax.swing.JLabel valdRepartir;
     // End of variables declaration//GEN-END:variables
 
