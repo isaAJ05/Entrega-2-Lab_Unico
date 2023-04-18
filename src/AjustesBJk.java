@@ -1,6 +1,10 @@
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Graphics;
+import java.awt.Point;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 
 public class AjustesBJk extends javax.swing.JFrame {
 
@@ -10,6 +14,8 @@ public class AjustesBJk extends javax.swing.JFrame {
     public AjustesBJk() {
         initComponents();
         this.setLocationRelativeTo(null);
+        Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
     }
 
     /**

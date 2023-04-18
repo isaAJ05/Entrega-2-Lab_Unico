@@ -1,8 +1,11 @@
 
 import PanelesSP.inicio;
 import java.awt.BorderLayout;
+import java.awt.Cursor;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -19,6 +22,8 @@ public class ASOPAstar extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);//centrar ventana
         this.setTitle("Sopa de Letras"); //Titulo 
 
+        Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
         this.setLocationRelativeTo(null);
         inicio i = new inicio(user);
         i.setSize(800, 500);

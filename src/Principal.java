@@ -1,17 +1,26 @@
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.Point;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 
 /**
  *
  * @author nunez, Arrieta, Carpintero 
  */
+
+// Créditos cursor: https://www.cursors-4u.com/cursor/2011/12/08/sparkly-smiley-star.html
 public class Principal extends javax.swing.JFrame {
 
     public Principal() {
         initComponents();
         this.setLocationRelativeTo(null);
+        Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
+        this.setResizable(false);
     }
 
   

@@ -4,6 +4,10 @@ import PanelesEscaletaYSerpiente.JuegoPanel;
 import PanelesEscaletaYSerpiente.InfoPanel;
 import PanelesEscaletaYSerpiente.JuegoPanel;
 import java.awt.BorderLayout;
+import java.awt.Cursor;
+import java.awt.Point;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 
@@ -11,6 +15,8 @@ public class SerpienteGAME extends javax.swing.JFrame {
 
     private String user=null;
     public SerpienteGAME(String name) {
+        Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
         this.user=name;
         initComponents();
         this.setLocationRelativeTo(null); //centrar ventana
@@ -39,7 +45,8 @@ public class SerpienteGAME extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Volver = new javax.swing.JButton();
+        btnVolver1 = new javax.swing.JButton();
+        labelvolver = new javax.swing.JLabel();
         JugarBTN = new javax.swing.JButton();
         visible = new javax.swing.JPanel();
         InfoBTN = new javax.swing.JButton();
@@ -50,13 +57,35 @@ public class SerpienteGAME extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Volver.setText("Volver");
-        Volver.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VolverActionPerformed(evt);
+        btnVolver1.setBackground(new java.awt.Color(255, 153, 255));
+        btnVolver1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnVolver1.setForeground(new java.awt.Color(0, 0, 51));
+        btnVolver1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar.png"))); // NOI18N
+        btnVolver1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVolver1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnVolver1.setMaximumSize(new java.awt.Dimension(50, 39));
+        btnVolver1.setMinimumSize(new java.awt.Dimension(50, 39));
+        btnVolver1.setPreferredSize(new java.awt.Dimension(58, 47));
+        btnVolver1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar1.png"))); // NOI18N
+        btnVolver1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar1.png"))); // NOI18N
+        btnVolver1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnVolver1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnVolver1MouseExited(evt);
             }
         });
-        getContentPane().add(Volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 15, -1, -1));
+        btnVolver1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolver1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnVolver1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        labelvolver.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        labelvolver.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(labelvolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 60, 20));
 
         JugarBTN.setText("Jugar!");
         JugarBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -72,11 +101,11 @@ public class SerpienteGAME extends javax.swing.JFrame {
         visible.setLayout(visibleLayout);
         visibleLayout.setHorizontalGroup(
             visibleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 756, Short.MAX_VALUE)
+            .addGap(0, 779, Short.MAX_VALUE)
         );
         visibleLayout.setVerticalGroup(
             visibleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 401, Short.MAX_VALUE)
+            .addGap(0, 384, Short.MAX_VALUE)
         );
 
         getContentPane().add(visible, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
@@ -113,16 +142,24 @@ public class SerpienteGAME extends javax.swing.JFrame {
         ShowPanel(AvatarP);
     }//GEN-LAST:event_BTNAvatarActionPerformed
 
-    private void VolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverActionPerformed
-        Principal3 a = new Principal3(user);
-        a.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_VolverActionPerformed
-
     private void JugarBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JugarBTNActionPerformed
         JuegoPanel Game=new JuegoPanel();
         ShowPanel(Game);
     }//GEN-LAST:event_JugarBTNActionPerformed
+
+    private void btnVolver1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver1ActionPerformed
+       Principal3 p = new Principal3(user);
+        p.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnVolver1ActionPerformed
+
+    private void btnVolver1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver1MouseEntered
+         labelvolver.setText(" Inicio");
+    }//GEN-LAST:event_btnVolver1MouseEntered
+
+    private void btnVolver1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolver1MouseExited
+        labelvolver.setText("");  
+    }//GEN-LAST:event_btnVolver1MouseExited
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -160,8 +197,9 @@ public class SerpienteGAME extends javax.swing.JFrame {
     private javax.swing.JButton BTNAvatar;
     private javax.swing.JButton InfoBTN;
     private javax.swing.JButton JugarBTN;
-    private javax.swing.JButton Volver;
+    private javax.swing.JButton btnVolver1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel labelvolver;
     private javax.swing.JPanel visible;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,5 +1,8 @@
 
+import java.awt.Cursor;
 import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
@@ -7,6 +10,8 @@ import javax.swing.ImageIcon;
 public class SeleccionNavePanel extends javax.swing.JPanel {
 
     public SeleccionNavePanel() {
+        Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
         initComponents();
     }
 
@@ -22,6 +27,8 @@ public class SeleccionNavePanel extends javax.swing.JPanel {
         NaranjacBTN = new javax.swing.JButton();
         VerdecBTN = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        labelvolver = new javax.swing.JLabel();
+        btnVolver1 = new javax.swing.JButton();
 
         setOpaque(false);
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -89,6 +96,24 @@ public class SeleccionNavePanel extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(204, 204, 255));
         jLabel4.setText("En proceso la habilitacion para poder seleccionar nave. Por favor siga con la carrera.");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 470, -1));
+
+        labelvolver.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        labelvolver.setForeground(new java.awt.Color(255, 255, 255));
+        labelvolver.setText("jLabel1");
+        add(labelvolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
+
+        btnVolver1.setBackground(new java.awt.Color(255, 153, 255));
+        btnVolver1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnVolver1.setForeground(new java.awt.Color(0, 0, 51));
+        btnVolver1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar.png"))); // NOI18N
+        btnVolver1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVolver1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnVolver1.setMaximumSize(new java.awt.Dimension(50, 39));
+        btnVolver1.setMinimumSize(new java.awt.Dimension(50, 39));
+        btnVolver1.setPreferredSize(new java.awt.Dimension(58, 47));
+        btnVolver1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar1.png"))); // NOI18N
+        btnVolver1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/stellar1.png"))); // NOI18N
+        add(btnVolver1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private Image imagen;
@@ -132,9 +157,11 @@ public class SeleccionNavePanel extends javax.swing.JPanel {
     private javax.swing.JButton AzulcBTN;
     private javax.swing.JButton NaranjacBTN;
     private javax.swing.JButton VerdecBTN;
+    private javax.swing.JButton btnVolver1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel labelvolver;
     // End of variables declaration//GEN-END:variables
 }

@@ -2,8 +2,11 @@
 import PanelesCarreraNave.InfoCarrerasPanel;
 import PanelesCarreraNave.CarreraPANELcarros;
 import java.awt.BorderLayout;
+import java.awt.Cursor;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -18,7 +21,8 @@ public class Pista extends javax.swing.JFrame {
         this.user = name;
 
         initComponents();
-
+Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
         this.setLocationRelativeTo(null);//centrar ventana
         this.setTitle(" Carrera de Autos Espaciales"); //Titulo 
         
@@ -53,7 +57,6 @@ public class Pista extends javax.swing.JFrame {
 
         Visible = new javax.swing.JPanel();
         InfoBTN = new javax.swing.JButton();
-        btnVolver = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         SelectNAVEbtn = new javax.swing.JButton();
@@ -77,17 +80,6 @@ public class Pista extends javax.swing.JFrame {
             }
         });
         Visible.add(InfoBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 450, -1, -1));
-
-        btnVolver.setBackground(new java.awt.Color(153, 153, 255));
-        btnVolver.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        btnVolver.setForeground(new java.awt.Color(51, 51, 51));
-        btnVolver.setText("Volver ←");
-        btnVolver.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVolverActionPerformed(evt);
-            }
-        });
-        Visible.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Engravers MT", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 204, 0));
@@ -160,12 +152,6 @@ public class Pista extends javax.swing.JFrame {
        ShowPanel(Cpanel); //Llamar el metodo para mostrar el panel 
     }//GEN-LAST:event_btnStartActionPerformed
 
-    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
-        Principal3 a = new Principal3(user);
-        a.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btnVolverActionPerformed
-
     private void InfoBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoBTNActionPerformed
         InfoCarrerasPanel InfoPANEL=new InfoCarrerasPanel();
         ShowPanel(InfoPANEL);//Llamar el metodo para mostrar el panel 
@@ -175,6 +161,7 @@ public class Pista extends javax.swing.JFrame {
          SeleccionNavePanel NavePanel=new SeleccionNavePanel();
         ShowPanel(NavePanel);//Llamar el metodo para mostrar el panel 
     }//GEN-LAST:event_SelectNAVEbtnActionPerformed
+
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -215,7 +202,6 @@ public class Pista extends javax.swing.JFrame {
     private javax.swing.JButton SelectNAVEbtn;
     private javax.swing.JPanel Visible;
     private javax.swing.JButton btnStart;
-    private javax.swing.JButton btnVolver;
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

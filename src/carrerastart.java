@@ -1,11 +1,14 @@
 
 
+import java.awt.Cursor;
 import javax.swing.JLabel;
 import java.awt.Graphics;
 import javax.swing.ImageIcon;
 import java.awt.Image;
 import javax.swing.JPanel;
 import java.awt.Dimension;
+import java.awt.Point;
+import java.awt.Toolkit;
 
 
 // Paula NUñez, Isabella Arrieta Y Natalia Carpintero
@@ -17,6 +20,8 @@ public class carrerastart extends javax.swing.JFrame {
     
 private String user;
     public carrerastart(String name) {
+        Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon(getClass().getResource("cursor/cursorimg.png")).getImage(),new Point(0,0),"Custom Cursor");
+        this.setCursor(cursor);
         initComponents();
         this.user = name;
         this.setLocationRelativeTo(null); //centrar ventana
